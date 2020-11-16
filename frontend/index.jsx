@@ -3,6 +3,11 @@ import ReactDOM from "react-dom";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
+
+    //test start here
+    window.login = login
+
+    //test ends here
     ReactDOM.render(<h1>Welcome to BenchBnB</h1>, root);
 });
 
