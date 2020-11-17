@@ -29,15 +29,15 @@ class SessionForm extends React.Component {
     render() {
         const { errors, formType, processForm, currentUser } = this.props;
         const { first_name, last_name, email, password } = this.state;
+        console.log(errors);
        
-        const signUpFields = formType === 'signup' ? <>
+        const signUpFields = formType === 'signup' ? <>    
             <label> First name:
                 <input onChange={this.update('first_name')} type="text" name="firstname" value={first_name} />
             </label>
-
             <label> Last name:
                         <input onChange={this.update('last_name')} type="text" name="lastname" value={last_name} />
-            </label> </> : '' ;
+            </label></> : '' ;
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
