@@ -1,7 +1,7 @@
 class Api::SessionsController < ApplicationController
     # before_action :require_logged_in, only: [:destroy]
     def create
-        @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
+        @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
         if @user.nil?
             render json: ['Nope. Wrong credentials!'], status: 401
         else

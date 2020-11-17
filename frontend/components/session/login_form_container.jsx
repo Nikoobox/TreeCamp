@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mapState = (state, ownProps) => {
+const mapState = (state) => {
     return {
         errors: state.errors,
         formType: 'login'
     }
 }
 
-const mapDisp = (dispatch, ownProps) => {
+const mapDisp = (dispatch) => {
     return {
         processForm: (user) => dispatch(login(user))
     }
