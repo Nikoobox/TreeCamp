@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.login = login
     //test ends here
 
-    ReactDOM.render(<h1>Welcome to TreeCamp</h1>, root);
+    // ReactDOM.render(<h1>Welcome to TreeCamp</h1>, root);
+    ReactDOM.render(<Root store={store}/>, root);
 });
 
 
