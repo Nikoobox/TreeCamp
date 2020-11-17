@@ -4,9 +4,9 @@ import { signup } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapState = (state) => {
-    // console.log(state)
+    console.log(state)
     return {
-        errors: state.errors,
+        errors: state.errors.session,
         formType: 'signup'
     }
 }

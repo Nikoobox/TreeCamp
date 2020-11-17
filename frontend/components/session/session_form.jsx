@@ -27,17 +27,21 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        const { errors, formType, processForm, currentUser } = this.props;
+        const { errors, formType, processForm} = this.props;
         const { first_name, last_name, email, password } = this.state;
-        console.log(errors);
-       
+        // console.log(errors);
+    //    debugger
+        const renderErrs = errors.map(err => {
+        return <div>{err}</div>
+        })
         const signUpFields = formType === 'signup' ? <>    
             <label> First name:
                 <input onChange={this.update('first_name')} type="text" name="firstname" value={first_name} />
             </label>
             <label> Last name:
                         <input onChange={this.update('last_name')} type="text" name="lastname" value={last_name} />
-            </label></> : '' ;
+            </label></> : ' ';
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -55,6 +59,10 @@ class SessionForm extends React.Component {
 
                     <button> {formType} </button>
                 </form>
+
+                <div>
+                    {renderErrs}    
+                </div>
             </div>
         )
     }
