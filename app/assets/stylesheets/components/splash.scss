@@ -1,6 +1,5 @@
 .splash-main{
     margin: 52px 32px 0;
-    // letter-spacing: 1px;
 }
 .splash-main-title-box{
     width:60%;
@@ -19,11 +18,10 @@
 }
 
 .splash-main-search-box{
-
+    margin-bottom: 50px;
     .search-box-inner{
         box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
         padding:17px;
-        
         .search-box-input{
             font-weight: 300;
             padding: 14px;
@@ -47,6 +45,7 @@
             margin-left: 10px;
             font-size: 16px;
             letter-spacing: 1px;
+            cursor: pointer;
         }
         .search-box-dates{
             color:$mainLightGreen;
@@ -57,15 +56,44 @@
             background: white;
             box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
         }
-
         .search-box-button{
             background:$mainLightGreen;
             color:white;
-            
-            border:1px solid transparent;
+            border:2px solid transparent;
             font-size: 1rem;
+            transition: ease-out all 0.2s;
+            &:hover{
+                color:$mainLightGreen;
+                background: white;
+                border:2px solid $mainLightGreen;
+            }
         }
-
     }
+}
 
+.splash-explore-box{
+    margin-bottom: 50px;
+    .image-box{
+        position: relative;
+    }
+    .image-box-box{
+        position: absolute;
+        color:white;
+        background: $mainDarkerGrey;
+        font-size: 20px;
+        height:250px;
+        width:250px;
+        // transform: translate(-50%, -50%);
+        top:150px;
+        left:5%;
+        z-index:100;
+        display:flex; 
+        justify-content:center;
+        align-items:center;
+    }
+    .image-box-image{
+        width:100%;
+        // padding:auto 0;
+        // position: relative;
+    }
 }

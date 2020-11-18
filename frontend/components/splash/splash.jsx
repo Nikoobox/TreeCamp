@@ -19,12 +19,20 @@ class Splash extends React.Component{
                     <div className='search-box-inner'>
 
                         <input type="search" placeholder='Climb the tallest tree ...' className='search-box-input'/>
-                        {/* <div className='search-box-buttons'> */}
-                            <button className='search-box-dates'>Enter dates</button>
-                            <button className='search-box-all-listings'>All listings</button>
-                            <button className='search-box-button'>Search</button>
-                        {/* </div> */}
+                        
+                        <button className='search-box-dates'>Enter dates</button>
+                        <button className='search-box-all-listings'>All listings</button>
+                        <button className='search-box-button'>Search</button>
 
+                    </div>
+                </div>
+
+                <div className='splash-explore-box'>
+                    <div className='image-box'> 
+                        <img src={window.splash_tree_house} alt="" className='image-box-image'/>
+                        <div className='image-box-box'>
+                            Explore something ...
+                        </div>
                     </div>
                 </div>
                

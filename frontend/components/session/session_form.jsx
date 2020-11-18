@@ -58,8 +58,11 @@ class SessionForm extends React.Component {
                 <h1> {message} </h1>
                 <h1>{headerMessage}</h1>
 
+
                 <form onSubmit={this.handleSubmit} className='session-form'>
 
+                    <button onClick={this.demoUser} className='demo-user-button'> Demo User </button>
+                    
                     {signUpFields}
                      
                     <input onChange={this.update('email')} type="email" name="email" value={email} placeholder='Email password' className='session-form-input'/>
@@ -69,7 +72,6 @@ class SessionForm extends React.Component {
                     <button className='session-form-button'> {buttonText} </button>
                 </form>
 
-                <button onClick={this.demoUser}> Demo User </button>
 
                 <div> {renderErrs} </div>
             </div>

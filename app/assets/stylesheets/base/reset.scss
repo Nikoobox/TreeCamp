@@ -4,21 +4,22 @@
     box-sizing: border-box;
   }
 
-  ul {
+ul {
   list-style: none;
 }
  
 body{
   font-family: 'Calibre', sans-serif;
-  // letter-spacing: 1px;
-  // font-family: 'Varela Round', sans-serif!important;
-  
 }
 
 a{
   text-decoration: none;
 }
 
-// *, *:before, *:after {
-//   box-sizing: inherit;
-// }
+//removing blue outline on all buttons
+button:focus { outline:0; }
+
+//removing input blue outlines
+input:focus {
+  outline: none;
+}

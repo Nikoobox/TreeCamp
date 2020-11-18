@@ -68,5 +68,28 @@ input{
   border-radius:25px;
   border:1px solid transparent;
   font-size: 1rem;
+  &:hover{
+    // background:white;
+    // color:rgb(13, 14, 14);
+    // border:1px solid rgb(13, 14, 14);
+    cursor: pointer;
+  }
+}
+
+.demo-user-button{
+  border-radius: 0;
+  margin-bottom: 10px;
+  background:rgb(13, 14, 14);
+  color:white;
+  padding: 14px;
+  border:1px solid transparent;
+  font-size: 1rem;
+  transition: ease-out all 0.2s;
+  &:hover{
+    background:white;
+    color:rgb(13, 14, 14);
+    border:1px solid rgb(13, 14, 14);
+    cursor: pointer;
+  }
 }
 
