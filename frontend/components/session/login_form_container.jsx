@@ -16,7 +16,8 @@ const mapState = (state) => {
 const mapDisp = (dispatch) => {
     return {
         processForm: (user) => dispatch(login(user)),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        login: (user) => dispatch(login(user)),
     }
 }
 

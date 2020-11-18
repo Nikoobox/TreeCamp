@@ -7,7 +7,6 @@ import {openModal} from './actions/modal_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    // const store = configureStore();
 
     let store;
     if (window.currentUser) {
@@ -22,16 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         store = configureStore();
     }
-
-
-
+    
     //test start here
     window.login = login
     window.openModal = openModal;
     window.dispatch = store.dispatch;
     //test ends here
 
-    // ReactDOM.render(<h1>Welcome to TreeCamp</h1>, root);
     ReactDOM.render(<Root store={store}/>, root);
 });
 

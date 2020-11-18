@@ -6,23 +6,25 @@ class SessionForm extends React.Component {
         super(props);
 
         this.state = {
-            first_name: "",
-            last_name: "",
-            email: "",
-            password: "" };
+            first_name: "", last_name: "", email: "", password: "" };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
+    }
+
+    demoUser(e) {
+        e.preventDefault();
+        const user = {
+            first_name: "demo", last_name: "user", email: "demo@gmail.com", password: "1234567"
+        };
+        this.props.login(user);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        console.log(this.state)
         this.props.processForm(user);
-        console.log(this.props.errors);
-        //if no errors then close modal, otherwise show error messages
-        if (this.props.errors.length === 0){
-            this.props.closeModal();
-        }
     }
 
     update(field) {
@@ -32,9 +34,8 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        const { errors, formType, message, processForm, closeModal, buttonText} = this.props;
+        const { errors, formType, message, buttonText} = this.props;
         const { first_name, last_name, email, password } = this.state;
-        // console.log(errors);
 
         const renderErrs = errors.map((err, idx) => {
         return <div key={idx}> {err} </div>
@@ -42,15 +43,11 @@ class SessionForm extends React.Component {
 
         const signUpFields = formType === 'Sign Up' ? <div className='session-form-signup'>    
             <input onChange={this.update('first_name')} 
-                type="text" name="firstname" 
-                value={first_name} 
-                placeholder='First name' 
+                type="text" name="firstname" value={first_name} placeholder='First name' 
                 className='session-form-input'/>
 
             <input onChange={this.update('last_name')} 
-                type="text" name="lastname" 
-                value={last_name} 
-                placeholder='Last name' 
+                type="text" name="lastname" value={last_name} placeholder='Last name' 
                 className='session-form-input'/>
             </div> : '';
 
@@ -72,9 +69,9 @@ class SessionForm extends React.Component {
                     <button className='session-form-button'> {buttonText} </button>
                 </form>
 
-                <div>
-                    {renderErrs}    
-                </div>
+                <button onClick={this.demoUser}> Demo User </button>
+
+                <div> {renderErrs} </div>
             </div>
         )
     }

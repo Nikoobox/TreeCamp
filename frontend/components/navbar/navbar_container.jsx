@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import Greeting from './greeting';
+import Navbar from './navbar';
 import { openModal } from '../../actions/modal_actions';
 
 const mapState = state => {
     let currentUserId = state.session.id;
-    
+
     return {
         currentUser: state.entities.users[currentUserId]
     }
@@ -19,4 +19,4 @@ const mapDisp = dispatch => {
     }
 }
 
-export default connect(mapState, mapDisp)(Greeting);
+export default connect(mapState, mapDisp)(Navbar);
