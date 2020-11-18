@@ -18,6 +18,11 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+        console.log(this.props.errors);
+        //if no errors then close modal, otherwise show error messages
+        if (this.props.errors.length === 0){
+            this.props.closeModal();
+        }
     }
 
     update(field) {
@@ -27,37 +32,44 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        const { errors, formType, processForm} = this.props;
+        const { errors, formType, message, processForm, closeModal, buttonText} = this.props;
         const { first_name, last_name, email, password } = this.state;
         // console.log(errors);
-    //    debugger
-        const renderErrs = errors.map(err => {
-        return <div>{err}</div>
+
+        const renderErrs = errors.map((err, idx) => {
+        return <div key={idx}> {err} </div>
         })
-        const signUpFields = formType === 'signup' ? <>    
-            <label> First name:
-                <input onChange={this.update('first_name')} type="text" name="firstname" value={first_name} />
-            </label>
-            <label> Last name:
-                        <input onChange={this.update('last_name')} type="text" name="lastname" value={last_name} />
-            </label></> : ' ';
+
+        const signUpFields = formType === 'Sign Up' ? <div className='session-form-signup'>    
+            <input onChange={this.update('first_name')} 
+                type="text" name="firstname" 
+                value={first_name} 
+                placeholder='First name' 
+                className='session-form-input'/>
+
+            <input onChange={this.update('last_name')} 
+                type="text" name="lastname" 
+                value={last_name} 
+                placeholder='Last name' 
+                className='session-form-input'/>
+            </div> : '';
+
+        const headerMessage = formType === 'Log In' ? 'Welcome back!' : 'Join Tree Camp';
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <h1> {formType} </h1>
+            <div className='session-modal'>
+                <h1> {message} </h1>
+                <h1>{headerMessage}</h1>
 
-                    <label> Email: 
-                        <input onChange={this.update('email')} type="email" name="email" value={email} />
-                    </label>
-
-                    <label> Password: 
-                        <input onChange={this.update('password')} type="password" name="password" value={password} />
-                    </label>
+                <form onSubmit={this.handleSubmit} className='session-form'>
 
                     {signUpFields}
+                     
+                    <input onChange={this.update('email')} type="email" name="email" value={email} placeholder='Email password' className='session-form-input'/>
+                    
+                    <input onChange={this.update('password')} type="password" name="password" value={password} placeholder='Create a password' className='session-form-input'/>
 
-                    <button> {formType} </button>
+                    <button className='session-form-button'> {buttonText} </button>
                 </form>
 
                 <div>

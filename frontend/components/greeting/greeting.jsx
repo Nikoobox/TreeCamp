@@ -15,9 +15,12 @@ class Greeting extends React.Component {
             </div>
         ) : (
                 <div>
-                    <Link to="/signup">Sign Up</Link>
+                    {/* <Link to="/signup" onClick={() => this.props.openModal('signup')}>Sign Up</Link>
                     <br/>
-                    <Link to="/login">Log In</Link>
+                    <Link to="/login" onClick={() => this.props.openModal('login')}>Log In</Link> */}
+                    <Link to="/" onClick={() => this.props.openModal('signup')}>Sign Up</Link>
+                    <br />
+                    <Link to="/" onClick={() => this.props.openModal('login')}>Log In</Link>
                 </div>
             )
         return (
