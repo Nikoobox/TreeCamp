@@ -1,6 +1,13 @@
 .splash-main{
-    margin: 52px 32px 0;
+    margin: 52px 32px;
+    @media (min-width: 1200px){
+        margin: 52px 100px;
+    }
+    @media (min-width: 1600px){
+        margin: 52px 150px;
+    }
 }
+
 .splash-main-title-box{
     width:60%;
     margin-bottom: 35px ;
@@ -15,21 +22,35 @@
     font-size: 20px;
     font-weight: 300;
     margin-top: 24px;
+    line-height: 1.5em;
 }
 
 .splash-main-search-box{
+    width:100%;
     margin-bottom: 50px;
     .search-box-inner{
+        display:flex;
         box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
         padding:17px;
-        .search-box-input{
-            font-weight: 300;
-            padding: 14px;
-            font-size:16px;
+        .search-box-inner-input{
             width: 48%;
-            border:none;
-            letter-spacing: 1px;
             box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
+            display:flex;
+            justify-content: center;
+            text-align: center;
+            span{
+                margin:auto;
+                padding-left: 10px;
+            }
+            .search-box-input{
+                font-weight: 300;
+                padding: 14px;
+                font-size:16px;
+                width: 100%;
+                border:none;
+                letter-spacing: 1px;
+                // box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
+            }
         }
         .search-box-input::-webkit-input-placeholder{
             color: grey;
@@ -81,19 +102,24 @@
         color:white;
         background: $mainDarkerGrey;
         font-size: 20px;
-        height:250px;
-        width:250px;
+        // height:50%;
+        width:30%;
         // transform: translate(-50%, -50%);
-        top:150px;
+        top:25%;
         left:5%;
         z-index:100;
         display:flex; 
         justify-content:center;
         align-items:center;
+        &:after{
+            
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+
+        }
     }
     .image-box-image{
         width:100%;
-        // padding:auto 0;
-        // position: relative;
     }
 }
