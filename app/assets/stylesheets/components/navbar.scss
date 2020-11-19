@@ -6,16 +6,23 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 0 30px;
-    position:sticky;
-	top:0;
+<<<<<<< HEAD
+    // position:sticky;
+	// top:0;
+=======
+    // position:fixed;
+>>>>>>> auth
 }
 // position:sticky;
 // 	top:0;
 
 .nav-logo-image{
-    color: black;
+    color: $mainAlmostBlack;
     font-size: 1.5rem;
     letter-spacing: 2px;
+    span{
+        color:$mainDarkGreen;
+    }
 }
 
 .nav-right {
@@ -24,14 +31,12 @@
     justify-content: space-between;
     overflow: hidden;
     line-height: 1;
-    // width:100%;
 }
 
 .nav-right {
     a{
         display:block;
-        color:black;
-        // padding-left: 20%;
+        color:$mainAlmostBlack;
         padding-top:auto;
         padding-bottom: auto;
         width:100%; 
