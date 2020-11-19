@@ -8,11 +8,10 @@
     padding: 0 30px;
 }
 
-
 .nav-logo-image{
     color: $mainAlmostBlack;
     font-size: 1.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     span{
         color:$mainDarkGreen;
     }
@@ -20,27 +19,47 @@
 
 .nav-right {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    overflow: hidden;
-    line-height: 1;
+    align-items: center;
 }
 
 .nav-right {
+    li{
+        margin:auto
+    }
     a{
-        display:block;
         color:$mainAlmostBlack;
-        padding-top:auto;
-        padding-bottom: auto;
-        width:100%; 
-        // transition: ease-out 0.3s all;
+        margin-left: 20px;
+        text-align: center;
+        // transition: ease-in all 0.2s;
+        padding:2px;
+        // cursor: pointer;
+        &:hover{
+            border-bottom:2px solid $mainLightGreen;
+            cursor: pointer;
+        }
     }
 }
-.nav-right {
-    a:hover{
-        border-bottom:2px solid $mainLightGreen;
-    }
+// .nav-right {
+//     a:hover{
+//         border-bottom:2px solid $mainLightGreen;
+//     }
 
+// }
+
+.navbar-logout-btn{
+    background: $mainLightGreen;
+    color:white;
+    border: 2px solid transparent;
+    margin-left: 20px;
+    padding:5px;
+    transition: ease-out all 0.2s;
+    &:hover{
+        background: white;
+        border: 2px solid $mainLightGreen;
+        color: $mainLightGreen;
+        cursor: pointer;
+    }
 }
 
 

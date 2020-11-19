@@ -14,24 +14,26 @@ class Navbar extends React.Component{
         const { currentUser, logout } = this.props;
         const element = <FontAwesomeIcon icon={faTree} />
 
-        // const whenCurrentUser = currentUser === 'true' ? 
-        //     <>
-        //     <Link to="/" onClick={() => this.props.openModal('signup')} >Sign Up</Link>    
-        //     <Link to="/" onClick={() => this.props.openModal('login')} >Log In</Link> </> : <button onClick={() => logout()}>Log Out</button>
+        const whenCurrentUser = !currentUser ? 
+            <>
+                <li> <Link to="/" onClick={() => this.props.openModal('signup')} >Sign Up</Link>  </li>    
+                <li><Link to="/" onClick={() => this.props.openModal('login')} >Log In</Link> </li>
+            </> : 
+            <li ><button onClick={() => logout()} className='navbar-logout-btn'>Log Out</button></li>
 
         return(
             <div className='navbar-container'>
                 <a href="/" className='nav-logo-image'><span>TREE</span>{element}CAMP</a>
 
-                <div className='nav-right'>
-
-                    <Link to="/" >About</Link>
-                    {/* {whenCurrentUser} */}
-                    <Link to="/" onClick={() => this.props.openModal('signup')} >Sign Up</Link>
+                <ul className='nav-right'>
+                    <li>  <Link to="/" >About</Link> </li>
+                    {/* <Link to="/" >About</Link> */}
+                    {whenCurrentUser}
+                    {/* <Link to="/" onClick={() => this.props.openModal('signup')} >Sign Up</Link>
                 
-                    <Link to="/" onClick={() => this.props.openModal('login')} >Log In</Link>
+                    <Link to="/" onClick={() => this.props.openModal('login')} >Log In</Link> */}
                    
-                </div>
+                </ul>
 
             </div>
         )
