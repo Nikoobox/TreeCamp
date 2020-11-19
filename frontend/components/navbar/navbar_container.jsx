@@ -5,7 +5,7 @@ import Navbar from './navbar';
 import { openModal } from '../../actions/modal_actions';
 
 const mapState = state => {
-    console.log(state);
+    // console.log(state);
     let currentUserId = state.session.id;
 
     return {

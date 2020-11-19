@@ -1,6 +1,7 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import { receiveErrors } from '../../actions/session_actions';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 // import '../../app/assets/stylesheets/components/modal.scss';
@@ -36,7 +37,10 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => {
+            dispatch(closeModal());
+            dispatch(receiveErrors([]))
+        },
     };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);
