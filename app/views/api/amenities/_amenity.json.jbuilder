@@ -1,0 +1,1 @@
+json.extract! amenity, :id, :spot_id, :portable_water, :kitchen, :shower, :wifi, :electricity, :bug_spray, :zip_line

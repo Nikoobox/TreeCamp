@@ -1,0 +1,1 @@
+json.extract! essential, :id, :spot_id, :elevator, :campfire, :toilet, :pets
