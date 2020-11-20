@@ -15,7 +15,7 @@ class SpotIndex extends React.Component{
     render(){
         const {spots, fetchSpot } = this.props;
         // const { title, description, price, location, country, rating, latitude, longitude } = this.props.posts;
-        console.log(this.props);
+        // console.log(this.props);
         const postsRand = spots.map((spot, idx)=>{
             return <SpotIndexCard spot={spot} fetchSpot={fetchSpot} key={idx}/>
         })

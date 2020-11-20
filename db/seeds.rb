@@ -15,15 +15,15 @@ user = User.create!({
     password: "1234567"
 })
 
-# spot1 = Spot.create!({
-#     host_id: 1, 
-#     title: "Main Tree House", 
-#     description: "very very tall tree", 
-#     price: 200,
-#     location: 'Oslo',
-#     country: 'Norway',
-#     rating: 9,
-#     latitude: 100.00,
-#     longitude: 200.00,
-# })
+spot1 = Spot.create!({
+    host_id: 1, 
+    title: "Main Tree House", 
+    description: "very very tall tree", 
+    price: 200,
+    location: 'Oslo',
+    country: 'Norway',
+    rating: 9,
+    latitude: 100.00,
+    longitude: 200.00,
+})
 
