@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all;
+Spot.destroy_all;
 
 user = User.create!({
     first_name: "demo", 
@@ -15,15 +16,15 @@ user = User.create!({
     password: "1234567"
 })
 
-# spot1 = Spot.create!({
-#     host_id: 1, 
-#     title: "Main Tree House", 
-#     description: "very very tall tree", 
-#     price: 200,
-#     location: 'Oslo',
-#     country: 'Norway',
-#     rating: 9,
-#     latitude: 100.00,
-#     longitude: 200.00,
-# })
+spot1 = Spot.create!({
+    host_id: user.id, 
+    title: "Main Tree House", 
+    description: "very very tall tree", 
+    price: 200,
+    location: 'Oslo',
+    country: 'Norway',
+    rating: 9,
+    latitude: 100.00,
+    longitude: 200.00,
+})
 
