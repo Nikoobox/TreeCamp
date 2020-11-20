@@ -1,0 +1,1 @@
+json.extract! detail, :id, :spot_id, :min_nights, :check_in, :check_out, :cancelation_policy, :on_arrival

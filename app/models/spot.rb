@@ -4,20 +4,24 @@ class Spot < ApplicationRecord
     belongs_to :user,
         foreign_key: :host_id,
         class_name: 'User'
+
+    has_one :area,
+        foreign_key: :spot_id,
+        class_name: 'Area'
    
-    has_many :essentials,
+    has_one :essential,
         foreign_key: :spot_id,
         class_name: 'Essential'
 
-    has_many :amenities,
+    has_one :amenity,
         foreign_key: :spot_id,
         class_name: 'Amenity'    
 
-    has_many :details,
+    has_one :detail,
         foreign_key: :spot_id,
         class_name: 'Detail'  
 
-     has_many :activities,
+     has_one :activity,
         foreign_key: :spot_id,
         class_name: 'Activity'  
 
@@ -29,4 +33,7 @@ class Spot < ApplicationRecord
         foreign_key: :spot_id,
         class_name: 'Review'  
 
+
+    # testing active storage images
+    has_one_attached :photo
 end

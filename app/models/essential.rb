@@ -1,4 +1,4 @@
-class Essintial < ApplicationRecord
+class Essential < ApplicationRecord
     validates :spot_id, :elevator, :campfire, :toilet, :pets, presence: true
 
     validates :elevator, inclusion: {in: [true, false]}
@@ -9,5 +9,4 @@ class Essintial < ApplicationRecord
     belongs_to :spot,
         foreign_key: :spot_id,
         class_name: 'Spot'
-   
 end

@@ -1,0 +1,1 @@
+json.extract! area, :id, :spot_id, :num_sites, :max_guests, :ada_access
