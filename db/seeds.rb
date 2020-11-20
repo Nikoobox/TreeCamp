@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all;
+Spot.destroy_all;
 
 user = User.create!({
     first_name: "demo", 
@@ -16,7 +17,7 @@ user = User.create!({
 })
 
 spot1 = Spot.create!({
-    host_id: 1, 
+    host_id: user.id, 
     title: "Main Tree House", 
     description: "very very tall tree", 
     price: 200,
