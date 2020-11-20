@@ -6,6 +6,19 @@ class User < ApplicationRecord
     validates :first_name, presence: true
     validates :last_name, presence: true
 
+     has_many :spots,
+        foreign_key: :host_id,
+        class_name: 'Spot'
+    
+    has_many :bookings,
+        foreign_key: :visitor_id,
+        class_name: 'Booking'
+
+    has_many :reviews,
+        foreign_key: :author_id,
+        class_name: 'Review'
+
+        
     attr_reader :password
     after_initialize :ensure_session_token
     def self.find_by_credentials(email, password)

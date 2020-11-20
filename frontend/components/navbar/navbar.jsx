@@ -10,7 +10,7 @@ class Navbar extends React.Component{
 
 
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         const { currentUser, logout } = this.props;
         const element = <FontAwesomeIcon icon={faTree} />
 

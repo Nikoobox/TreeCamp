@@ -1,0 +1,44 @@
+.spot-index-container{
+    // margin: 52px 32px;
+    span{
+        font-size:18px;
+        // margin-bottom: 30px;
+    }
+}
+.spot-index-card{
+    margin-top:24px;
+    width:33.33%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    img{
+        width:100%;
+        object-fit: cover;
+    }
+    .card-data{
+        padding:12px;
+        .card-header{
+            margin-bottom: 25px;
+            .card-header-title{
+                font-size:20px;
+                margin-bottom: 5px;;
+            }
+            .card-header-location{
+                font-size:14px;
+                font-weight:300;
+            }
+        }
+
+        .card-footer{
+            display:flex;
+            justify-content:space-between;
+            .card-footer-rating{
+                color:$mainLightGreen;
+                font-weight:bold;
+            }
+            .card-footer-price{
+                font-size:18px;
+            }
+        }
+    }
+
+}

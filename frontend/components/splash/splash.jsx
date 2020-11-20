@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import SpotIndexContainer from '../spot/spot_index_container';
 
 class Splash extends React.Component{
     constructor(props){
@@ -42,7 +43,8 @@ class Splash extends React.Component{
                         </div>
                     </div>
                 </div>
-               
+
+                <SpotIndexContainer />
             </div>
         )
     }

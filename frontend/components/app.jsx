@@ -6,6 +6,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import NavbarContainer from './navbar/navbar_container';
 import SplashContainer from './splash/splash_container';
+// import SpotIndexContainer from './spot/spot_index_container';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
         {/* <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} /> */}
         <SplashContainer />
+        {/* <SpotIndexContainer /> */}
     </div>
 );
 
