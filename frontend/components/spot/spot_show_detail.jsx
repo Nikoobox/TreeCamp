@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSprayCan } from '@fortawesome/free-solid-svg-icons';
 
 
 class SpotShowDetail extends React.Component {
@@ -10,7 +8,7 @@ class SpotShowDetail extends React.Component {
     }
 
     render() {
-        const { title, description, price, location, country, rating, area, essential, amenity, detail } = this.props.spot;
+        const { detail } = this.props.spot;
 
         // const bugsIcon = <FontAwesomeIcon icon={faSprayCan} />
 

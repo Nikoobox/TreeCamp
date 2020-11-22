@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSprayCan, faBolt, faWifi, faShower, faUtensils, faHandHoldingWater, faDog, faToiletPaper, faArrowsAltV, faFire, faWheelchair, faUser, faMapMarkerAlt, faGreaterThan, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-
+import { faSprayCan, faBolt, faWifi, faShower, faUtensils, faHandHoldingWater, faDog, faToiletPaper, faArrowsAltV, faFire, faWheelchair, faUser, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
 
 class SpotShowCard extends React.Component{
     constructor(props){
@@ -10,10 +9,8 @@ class SpotShowCard extends React.Component{
     }
 
     render(){
-        const { title, description, price, location, country, rating, area, essential, amenity, detail } = this.props.spot;
+        const { area, essential, amenity } = this.props.spot;
 
-        const greaterIcon = <FontAwesomeIcon icon={faGreaterThan} />
-        const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} />
         const mapMarkerAlt = <FontAwesomeIcon icon={faMapMarkerAlt} />
         const userIcon = <FontAwesomeIcon icon={faUser} />
         const wheelChairIcon = <FontAwesomeIcon icon={faWheelchair} />
@@ -27,7 +24,6 @@ class SpotShowCard extends React.Component{
         const wifiIcon = <FontAwesomeIcon icon={faWifi} />
         const elIcon = <FontAwesomeIcon icon={faBolt} />
         const bugsIcon = <FontAwesomeIcon icon={faSprayCan} />
-        
         
         return(
             <div className='cards-container'>
@@ -93,7 +89,6 @@ class SpotShowCard extends React.Component{
                             {essential.pets ? 'Pet friendly' : 'Please no pets'}
                         </div>
                     </div>
-
                 </div>
 
                 <div className='cards cards-amenity'>

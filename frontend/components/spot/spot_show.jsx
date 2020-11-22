@@ -5,6 +5,7 @@ import { faGreaterThan, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import SpotShowCard from './spot_show_card';
 import SpotShowDetail from './spot_show_detail';
 import SpotShowActivity from './spot_show_activity';
+import SpotShowBookingWidget from './spot_show_booking_widget';
 
 class SpotShow extends React.Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class SpotShow extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         if (!this.props.spot || !this.props.spot.area) return null;
         
         const {spot} = this.props;
@@ -52,30 +54,13 @@ class SpotShow extends React.Component {
 
                     </div>
 
-                    <div className='booking-widget'>
-                        bookingwidget comes here
-                    </div>
+                    <SpotShowBookingWidget spot={spot}/>
+                   
 
                 </div>
                 <SpotShowCard spot={spot}/>
-                
                 <SpotShowDetail spot={spot}/>
-
                 <SpotShowActivity spot={spot} />
-                {/* <div className='activities-container'>
-                    <div className='title'>Activities</div>
-                    <div className='sub'>Offered on the Host's property or nearby.</div>
-                    <div className='boxes-container'>
-                        <div className='box'>
-                            <div className='box-icon'>
-
-                            </div>
-                            <div className='box-title'>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 
             </div>
         )
