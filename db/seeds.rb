@@ -22,7 +22,7 @@ user = User.create!({
 spot1 = Spot.create!({
     host_id: user.id, 
     title: "Main Tree House", 
-    description: "very very tall tree", 
+    description: "The trendy treehouse is located on the west coast of Norway. The view is breathtaking. Imagine seeing the sunset from this spectacular place", 
     price: 200,
     location: 'Oslo',
     country: 'Norway',

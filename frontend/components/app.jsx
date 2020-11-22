@@ -6,6 +6,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import NavbarContainer from './navbar/navbar_container';
 import SplashContainer from './splash/splash_container';
+import SpotShowContainer from './spot/spot_show_container';
 // import SpotIndexContainer from './spot/spot_index_container';
 import Modal from './modal/modal';
 
@@ -19,10 +20,13 @@ const App = () => (
             {/* <h1> Tree Camp </h1> */}
             {/* <GreetingContainer /> */}
 
-        {/* <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} /> */}
-        <SplashContainer />
-        {/* <SpotIndexContainer /> */}
+        <Switch>
+            <Route exact path="/" component={SplashContainer} />
+            <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+            {/* <Route path="/posts/:postId/edit" component={EditPostFormContainer} /> */}
+        </Switch>
+
+        {/* <SplashContainer /> */}
     </div>
 );
 

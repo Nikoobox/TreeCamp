@@ -1,0 +1,86 @@
+.show-spot-container{
+    margin: 52px 32px;
+
+    .container-img{
+        width:50%;
+    }
+
+    .content{
+        display:flex;
+        margin-bottom: 35px;
+
+        .content-data{
+            width:65%;
+            display: block;
+            .container-location{
+                font-size:15px;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                span{
+                    font-size: 12px;
+                }
+            }
+            .container-title{
+                font-size:36px;
+                margin-bottom:20px;
+            }
+            .container-rating{
+                margin-bottom:20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid $lightGrey;
+                span{
+                    color: $mainLightGreen;
+                    font-weight: bold;
+                }
+            }
+            .container-host-description{
+                display:flex;
+                .host-info{
+                    width:40%;
+                    font-size:14px;
+                }
+                .description{
+                    line-height: 1.4;
+                    width:60%;
+                    font-size:16px;
+                }
+            }
+        }
+
+        .booking-widget{
+            width:35%
+        }
+
+    }
+
+    .cards-container{
+        display:flex;
+        .cards{
+            width:220px;
+            border: 1px solid $lightGrey;
+            margin: 0 10px 20px 10px;
+            padding: 15px 5px 15px 15px;
+            
+            .cards-name{
+                font-size:20px;
+                margin-bottom: 15px;
+            }
+            .item-container{
+                display:flex;
+                margin-bottom: 10px;
+                font-size:15px;
+                font-weight: 300;
+                .item-icon{
+                    width:10%;
+                    margin-right:10px;
+                }
+                .item-info{
+                    width:90%;
+                }
+                .na{
+                color:#777777;
+            }
+            }
+        }
+    }
+}

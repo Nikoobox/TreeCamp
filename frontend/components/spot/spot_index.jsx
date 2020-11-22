@@ -20,13 +20,15 @@ class SpotIndex extends React.Component{
             return <SpotIndexCard spot={spot} fetchSpot={fetchSpot} key={idx}/>
         })
 
-        return <div className='spot-index-container'>
+        return (
+            <div className='spot-index-container'>
                 <span>Recently viewed listings</span>
-            {/* {spots.map((spot, idx)=>{
+                {/* {spots.map((spot, idx)=>{
                 return <SpotIndexCard spot={spot} fetchSpot={fetchSpot} key={idx} />
             })} */}
-            {postsRand}
-        </div>
+                {postsRand}
+            </div>
+        )
     }
 }
 

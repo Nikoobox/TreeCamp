@@ -37,6 +37,8 @@ class SpotIndexCard extends React.Component {
                         </div>
                     </div>
 
+                    <Link to={`/spots/${this.props.spot.id}`}>Show more</Link>
+
                 </div>
 
             </div>
