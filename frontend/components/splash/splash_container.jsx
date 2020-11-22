@@ -1,22 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { logout } from '../../actions/session_actions';
+// import { fetchUsers, updateUser } from '../../actions/user_actions';
 import Splash from './splash';
-// import { openModal } from '../../actions/modal_actions';
 
 const mapState = state => {
     let currentUserId = state.session.id;
 
     return {
-        currentUser: state.entities.users[currentUserId]
+        currentUser: state.entities.users[currentUserId],
+
     }
 }
 
 // const mapDisp = dispatch => {
 //     return {
-//         logout: () => dispatch(logout()),
-//         openModal: modal => dispatch(openModal(modal))
+//         fetchUsers: () => dispatch(fetchUsers()),
+//         updateUser: (user) => dispatch(updateUser(user)),
 //     }
 // }
 
 export default connect(mapState, null)(Splash);
+// export default connect(mapState, mapDisp)(Splash);

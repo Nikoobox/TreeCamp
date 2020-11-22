@@ -9,9 +9,7 @@ class SpotShowDetail extends React.Component {
 
     render() {
         const { detail } = this.props.spot;
-
-        // const bugsIcon = <FontAwesomeIcon icon={faSprayCan} />
-
+        // console.log(this.props);
 
         return (
             <div className='details-container'>

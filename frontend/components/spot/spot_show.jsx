@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGreaterThan, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import SpotShowCard from './spot_show_card';
@@ -13,15 +12,18 @@ class SpotShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchSpot(this.props.match.params.spotId)
+        this.props.fetchSpot(this.props.match.params.spotId);
+        this.props.fetchUsers();
     }
 
     render() {
-        console.log(this.props)
-        if (!this.props.spot || !this.props.spot.area) return null;
-        
-        const {spot} = this.props;
-        const { title, description, price, location, country, rating, area, essential, amenity, detail, activity} = this.props.spot;
+        // console.log(this.props)
+        if (!this.props.spot || !this.props.spot.area || !this.props.users) return null;
+
+        const {spot, users} = this.props;
+        const host = users[spot.host_id];
+    
+        const { title, description, location, country, rating} = this.props.spot;
         const greaterIcon = <FontAwesomeIcon icon={faGreaterThan} />
         const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp } />
 
@@ -45,7 +47,10 @@ class SpotShow extends React.Component {
 
                         <div className='container-host-description'>
                             <div className='host-info'>
-                                add host name
+                                <div className='host-info-container'>
+                                    <div className='hosted-by'>Hosted by</div>
+                                    <div className='host-name'>{host.first_name} {host.last_name}</div>
+                                </div>
                             </div>
                             <div className='description'>
                                 {description}
@@ -56,7 +61,6 @@ class SpotShow extends React.Component {
 
                     <SpotShowBookingWidget spot={spot}/>
                    
-
                 </div>
                 <SpotShowCard spot={spot}/>
                 <SpotShowDetail spot={spot}/>

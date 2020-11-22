@@ -1,10 +1,8 @@
 .show-spot-container{
     margin: 100px 32px;
-
     .container-img{
         width:50%;
     }
-
     .content{
         display:flex;
         margin-bottom: 35px;
@@ -36,23 +34,43 @@
             .container-host-description{
                 display:flex;
                 .host-info{
-                    width:40%;
+                    display:flex;
+                    justify-content: center;
+                    width:30%;
                     font-size:14px;
+                    .host-info-container{
+                        border: 2px solid $mainLightGreen;
+                        border-radius:50%;
+                        text-align:center;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items:center;
+                        width: 100px;
+                        height:100px;
+                        .hosted-by{
+                            font-weight: bold;
+                            margin-bottom: 3px;
+                        }
+                        .host-name{
+                            font-weight:300;
+                        }
+                    }
                 }
                 .description{
                     line-height: 1.4;
                     width:60%;
                     font-size:16px;
                 }
-               
             }
-
         }
+
 
         .booking-widget{
             width:330px;
             height:100%;
             border: 1px solid $lightGrey;
+            margin-left:20px;
             .price-container{
                 padding: 13px 10px;
                 border: 1px solid $lightGrey;
@@ -92,7 +110,6 @@
                     color: $midGrey;
                     }
                 }
-                
                 .guests-container{
                     text-align:center;
                     width: 110px;
@@ -122,10 +139,10 @@
                         border:2px solid $mainLightGreen; 
                     }
                 }
-            }
-            
+            }  
         }
     }
+
 
     .cards-container{
         width:65%;
@@ -136,8 +153,7 @@
             width:220px;
             border: 1px solid $lightGrey;
             margin: 0 10px 40px 10px;
-            padding: 15px 5px 15px 15px;
-            
+            padding: 15px 5px 15px 15px; 
             .cards-name{
                 font-size:20px;
                 margin-bottom: 15px;
@@ -158,6 +174,7 @@
         }
     }
 
+    
     .details-container{
         width:65%;
         display:flex;
@@ -218,10 +235,5 @@
                 }
             }
         }
-
-      
     }
-
-
-
 }
