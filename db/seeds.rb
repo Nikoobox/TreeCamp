@@ -20,6 +20,13 @@ user = User.create!({
     password: "1234567"
 })
 
+user2 = User.create!({
+    first_name: "Nikolay", 
+    last_name: "Shatalov", 
+    email: "nikoobox@gmail.com", 
+    password: "1234567"
+})
+
 spot1 = Spot.create!({
     host_id: user.id, 
     title: "Main Tree House", 
