@@ -28,6 +28,13 @@ class SpotShowActivity extends React.Component {
                 <div className='box-title'> Fishing </div>
             </div>
             : '';
+        
+        const fishingRend = activity.fishing ?
+            <div className='box'>
+                <div className='box-icon'> {fishingIcon} </div>
+                <div className='box-title'> Fishing </div>
+            </div>
+            : '';
 
         return (
             <div className='activities-container'>
