@@ -44,21 +44,25 @@
                     width:60%;
                     font-size:16px;
                 }
+               
             }
+
         }
 
         .booking-widget{
             width:35%
         }
-
     }
 
     .cards-container{
+        width:65%;
         display:flex;
+        border-bottom: 1px solid $lightGrey;
+        margin-bottom: 30px;
         .cards{
             width:220px;
             border: 1px solid $lightGrey;
-            margin: 0 10px 20px 10px;
+            margin: 0 10px 40px 10px;
             padding: 15px 5px 15px 15px;
             
             .cards-name{
@@ -67,7 +71,7 @@
             }
             .item-container{
                 display:flex;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
                 font-size:15px;
                 font-weight: 300;
                 .item-icon{
@@ -77,10 +81,74 @@
                 .item-info{
                     width:90%;
                 }
-                .na{
-                color:#777777;
-            }
             }
         }
     }
+
+    .details-container{
+        width:65%;
+        display:flex;
+        margin-bottom: 35px;
+        border-bottom: 1px solid $lightGrey;
+        .details{
+            width:20%;
+        }
+        .details-cl{
+            width:40%;
+            .details-item{
+                font-weight: 300;
+                margin-bottom: 15px;
+            }
+            span{
+                font-weight: bold;;
+            }
+        }
+    }
+
+
+     .activities-container{
+        width:65%;
+        margin-bottom: 35px;
+        border-bottom: 1px solid $lightGrey;
+        .title{
+            display:block;
+            margin-bottom: 10px;
+        }
+         .sub{
+            display:block;
+            font-weight:300;
+            color: $midGrey;
+            font-size:15px;
+            margin-bottom: 30px;
+        }
+        .boxes{
+            display: flex;
+            .box{
+                display:flex;
+                flex-direction: column;
+                margin: 0 10px 20px 10px;
+                .box-icon{
+                    border: 1px solid $lightGrey;
+                    height:100px;
+                    width:100px;
+                    font-size: 36px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .box-title{
+                    display:block;
+                    text-align:center;
+                    width:100px;
+                    margin-bottom: 5px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+      
+    }
+
+
+
 }

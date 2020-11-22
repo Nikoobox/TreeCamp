@@ -16,6 +16,10 @@ json.detail do
     json.partial! 'api/details/detail', detail: @spot.detail
 end
 
+json.activity do 
+    json.partial! 'api/activities/activity', activity: @spot.activity
+end
+
 
 
     # json.partial! 'detail', detail: detail
