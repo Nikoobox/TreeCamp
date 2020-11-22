@@ -1,5 +1,5 @@
 .show-spot-container{
-    margin: 52px 32px;
+    margin: 100px 32px;
 
     .container-img{
         width:50%;
@@ -44,21 +44,98 @@
                     width:60%;
                     font-size:16px;
                 }
+               
             }
+
         }
 
         .booking-widget{
-            width:35%
+            width:330px;
+            height:100%;
+            border: 1px solid $lightGrey;
+            .price-container{
+                padding: 13px 10px;
+                border: 1px solid $lightGrey;
+                .price{
+                    font-size:22px;
+                    font-weight: bold;
+                }
+                span{
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $midGrey;
+                }
+            }
+            .row{
+                display: flex;
+                .check-in-container{
+                    text-align:center;
+                    width: 110px;
+                    padding: 13px 10px;
+                    border: 1px solid $lightGrey;
+                    .check-in{
+                        margin-bottom: 5px;
+                    }
+                    span{
+                    color: $midGrey;
+                    }
+                }
+                .check-out-container{
+                    text-align:center;
+                    width: 110px;
+                    padding: 13px 10px;
+                    border: 1px solid $lightGrey;
+                    .check-out{
+                        margin-bottom: 5px;
+                    }
+                    span{
+                    color: $midGrey;
+                    }
+                }
+                
+                .guests-container{
+                    text-align:center;
+                    width: 110px;
+                    padding: 13px 10px;
+                    border: 1px solid $lightGrey;
+                    .guests{
+                        margin-bottom: 5px;
+                    }
+                }
+                
+            }
+            .button-container{
+                padding: 13px 10px;
+                height:100%;
+                display:block;
+                button{
+                    color:white;
+                    background: $mainLightGreen;
+                    width:100%;
+                    padding: 15px 15px;
+                    font-size:18px;
+                    letter-spacing: 0.2px;
+                    border:2px solid transparent;
+                    &:hover{
+                        color: $mainLightGreen;
+                        background: white;
+                        border:2px solid $mainLightGreen; 
+                    }
+                }
+            }
+            
         }
-
     }
 
     .cards-container{
+        width:65%;
         display:flex;
+        border-bottom: 1px solid $lightGrey;
+        margin-bottom: 30px;
         .cards{
             width:220px;
             border: 1px solid $lightGrey;
-            margin: 0 10px 20px 10px;
+            margin: 0 10px 40px 10px;
             padding: 15px 5px 15px 15px;
             
             .cards-name{
@@ -67,7 +144,7 @@
             }
             .item-container{
                 display:flex;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
                 font-size:15px;
                 font-weight: 300;
                 .item-icon{
@@ -77,10 +154,74 @@
                 .item-info{
                     width:90%;
                 }
-                .na{
-                color:#777777;
-            }
             }
         }
     }
+
+    .details-container{
+        width:65%;
+        display:flex;
+        margin-bottom: 35px;
+        border-bottom: 1px solid $lightGrey;
+        .details{
+            width:20%;
+        }
+        .details-cl{
+            width:40%;
+            .details-item{
+                font-weight: 300;
+                margin-bottom: 15px;
+            }
+            span{
+                font-weight: bold;;
+            }
+        }
+    }
+
+
+     .activities-container{
+        width:65%;
+        margin-bottom: 35px;
+        border-bottom: 1px solid $lightGrey;
+        .title{
+            display:block;
+            margin-bottom: 10px;
+        }
+         .sub{
+            display:block;
+            font-weight:300;
+            color: $midGrey;
+            font-size:15px;
+            margin-bottom: 30px;
+        }
+        .boxes{
+            display: flex;
+            .box{
+                display:flex;
+                flex-direction: column;
+                margin: 0 10px 20px 10px;
+                .box-icon{
+                    border: 1px solid $lightGrey;
+                    height:100px;
+                    width:100px;
+                    font-size: 36px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .box-title{
+                    display:block;
+                    text-align:center;
+                    width:100px;
+                    margin: 5px 0;
+                    font-weight: 300;
+                }
+            }
+        }
+
+      
+    }
+
+
+
 }

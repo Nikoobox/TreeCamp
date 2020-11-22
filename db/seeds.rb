@@ -11,6 +11,7 @@ Area.destroy_all;
 Essential.destroy_all;
 Amenity.destroy_all;
 Detail.destroy_all;
+Activity.destroy_all;
 
 user = User.create!({
     first_name: "demo", 
@@ -59,11 +60,19 @@ amenity1 = Amenity.create!({
 
 detail1 = Detail.create!({
     spot_id: spot1.id, 
-    min_nights: true, 
+    min_nights: '3', 
     check_in: 'after 12pm',
     check_out: 'after 10am',
     cancelation_policy: 'Strict',
     on_arrival: 'Meet and greet'
+})
 
+activity1 = Activity.create!({
+    spot_id: spot1.id, 
+    biking: true, 
+    fishing: true, 
+    stargazing: true, 
+    hiking: true,
+    wildlife_watching: true
 })
 

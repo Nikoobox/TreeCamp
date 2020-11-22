@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SpotShow from "./spot_show.jsx";
 import { fetchSpot } from '../../actions/spot_actions';
+// import { fetchUser } from '../../actions/user_actions';
 
 const mapState = (state, ownProps) => {
     // console.log(ownProps)
