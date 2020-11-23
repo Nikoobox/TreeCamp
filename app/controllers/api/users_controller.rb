@@ -12,9 +12,12 @@ class Api::UsersController < ApplicationController
             login!(@user)
             render :show
         else
-            #[errors could be in array]
             render json: @user.errors.full_messages, status: 401
         end
+    end
+
+    def show
+    
     end
 
     def user_params
