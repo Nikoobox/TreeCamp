@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// import DayPickerInput from 'react-day-picker/DayPickerInput';
 
 class SpotShowBookingWidget extends React.Component {
     constructor(props) {
@@ -10,9 +10,6 @@ class SpotShowBookingWidget extends React.Component {
     render() {
         const { price } = this.props.spot;
 
-        // const bugsIcon = <FontAwesomeIcon icon={faSprayCan} />
-
-
         return (
             <div className='booking-widget'>
                 <div className='price-container'>
@@ -21,22 +18,24 @@ class SpotShowBookingWidget extends React.Component {
                 </div>
 
                 <div className='row'>
-                    <div className='check-in-container'>
-                        <div className='check-in'>Check in</div>
-                        <span>Select date</span>
+                    <div className='check-container'>
+                        <div className='check'>Check in</div>
+                        <div className='check-in-date'>
+                            <input type='date' placeholder='Select date' />
+                        </div>
                     </div>
 
-                    <div className='check-out-container'>
-                        <div className='check-out'>Check out</div>
-                        <span>Select date</span>
+                    <div className='check-container'>
+                        <div className='check'>Check out</div>
+                        <div className='check-out-date'>
+                            <input placeholder='Select date' />
+                        </div>
                     </div>
 
                     <div className='guests-container'>
                         <div className='guests'>Guests</div>
                         <div className='guest-selection'>- 2 +</div>
                     </div>
-
-                    
 
                 </div>
                 <div className='button-container'>

@@ -29,8 +29,11 @@ class SpotShow extends React.Component {
 
         return (
             <div className='show-spot-container'>
-                <img src={window.tree_hotel_sweden} className='container-img' />
-            
+                <div className='show-spot-images'>
+                    <img src={window.tree_hotel_sweden1} className='img-1' />
+                    <img src={window.tree_hotel_sweden2} className='img-2' />
+                </div>
+               
                 <div className='content'>
                     <div className='content-data'>
                         <div className='container-location'>
@@ -60,7 +63,7 @@ class SpotShow extends React.Component {
                     </div>
 
                     <SpotShowBookingWidget spot={spot}/>
-                   
+                    {/* <SpotShowCard spot={spot} /> */}
                 </div>
                 <SpotShowCard spot={spot}/>
                 <SpotShowDetail spot={spot}/>

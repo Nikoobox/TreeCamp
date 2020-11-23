@@ -15,7 +15,7 @@ class SpotIndexCard extends React.Component {
 
         return <div className='spot-index-card'>
                 <div className='card-img'>
-                    <img src={window.tree_hotel_sweden} className='' />
+                    <img src={window.tree_hotel_sweden1} className='' />
                 </div>
 
                 <div className='card-data'>

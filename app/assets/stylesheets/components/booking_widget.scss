@@ -1,0 +1,72 @@
+        .booking-widget{
+            background:white;
+            position:sticky;
+            top:75px;
+            margin-top:-50px;
+            width:330px;
+            height:100%;
+            border: 1px solid $lightGrey;
+            margin-left:20px;
+            .price-container{
+                padding: 13px 10px;
+                border: 1px solid $lightGrey;
+                .price{
+                    font-size:22px;
+                    font-weight: bold;
+                }
+            }
+            .row{
+                display: flex;
+                .check-container{
+                    text-align:left;
+                    width: 110px;
+                    padding: 13px 10px;
+                    border: 1px solid $lightGrey;
+                    .check{
+                        margin-bottom: 5px;
+                    }
+                    .check-in-date{
+                        font-size:14px;
+                        input{
+                            width:95px;
+                        }
+                    }
+                    .check-out-date{
+                        font-size:14px;
+                        input{
+                            width:95px;
+                        }
+                    }
+                    
+                }
+                .guests-container{
+                    text-align:center;
+                    width: 110px;
+                    padding: 13px 10px;
+                    border: 1px solid $lightGrey;
+                    .guests{
+                        margin-bottom: 5px;
+                    }
+                }
+                
+            }
+            .button-container{
+                padding: 13px 10px;
+                height:100%;
+                display:block;
+                button{
+                    color:white;
+                    background: $mainLightGreen;
+                    width:100%;
+                    padding: 15px 15px;
+                    font-size:18px;
+                    letter-spacing: 0.2px;
+                    border:2px solid transparent;
+                    &:hover{
+                        color: $mainLightGreen;
+                        background: white;
+                        border:2px solid $mainLightGreen; 
+                    }
+                }
+            }  
+        }

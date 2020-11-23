@@ -28,7 +28,6 @@ export const login = (user) => dispatch => {
     return APIUtil.login(user)
         .then(currentUser => {
             dispatch(receiveCurrentUser(currentUser)), 
-            // dispatch(receiveErrors([])),
             dispatch(closeModal())
         }, 
         (err) => { 
@@ -40,7 +39,6 @@ export const signup = (user) => dispatch => {
     return APIUtil.signup(user)
     .then((currentUser) => {
         dispatch(receiveCurrentUser(currentUser)),
-        // dispatch(receiveErrors([])),
         dispatch(closeModal())
     },
     err => (

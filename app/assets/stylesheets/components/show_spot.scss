@@ -1,11 +1,20 @@
 .show-spot-container{
     margin: 100px 32px;
-    .container-img{
-        width:50%;
+    .img-1{
+        width:60%;
+        height:480px;
+        padding:5px;
+        object-fit: cover;
+    }
+    .img-2{
+        width:40%;
+        height:480px;
+        padding:5px;
+        object-fit: cover;
     }
     .content{
         display:flex;
-        margin-bottom: 35px;
+        padding-bottom: 60px;
 
         .content-data{
             width:65%;
@@ -65,82 +74,89 @@
             }
         }
 
-
-        .booking-widget{
-            width:330px;
-            height:100%;
-            border: 1px solid $lightGrey;
-            margin-left:20px;
-            .price-container{
-                padding: 13px 10px;
-                border: 1px solid $lightGrey;
-                .price{
-                    font-size:22px;
-                    font-weight: bold;
-                }
-                span{
-                    font-size: 12px;
-                    font-weight: 300;
-                    color: $midGrey;
-                }
-            }
-            .row{
-                display: flex;
-                .check-in-container{
-                    text-align:center;
-                    width: 110px;
-                    padding: 13px 10px;
-                    border: 1px solid $lightGrey;
-                    .check-in{
-                        margin-bottom: 5px;
-                    }
-                    span{
-                    color: $midGrey;
-                    }
-                }
-                .check-out-container{
-                    text-align:center;
-                    width: 110px;
-                    padding: 13px 10px;
-                    border: 1px solid $lightGrey;
-                    .check-out{
-                        margin-bottom: 5px;
-                    }
-                    span{
-                    color: $midGrey;
-                    }
-                }
-                .guests-container{
-                    text-align:center;
-                    width: 110px;
-                    padding: 13px 10px;
-                    border: 1px solid $lightGrey;
-                    .guests{
-                        margin-bottom: 5px;
-                    }
-                }
+        //BOOKING WIDGET CODE WAS MOVED TO SEPARATE FILE
+        // .booking-widget{
+        //     background:white;
+        //     position:sticky;
+        //     top:75px;
+        //     margin-top:-50px;
+        //     width:330px;
+        //     height:100%;
+        //     border: 1px solid $lightGrey;
+        //     margin-left:20px;
+        //     .price-container{
+        //         padding: 13px 10px;
+        //         border: 1px solid $lightGrey;
+        //         .price{
+        //             font-size:22px;
+        //             font-weight: bold;
+        //         }
+        //         .check-in{
+        //             input{
+        //                 border: none;
+        //                 font-size: 12px;
+        //                 font-weight: 300;
+        //                 color: $midGrey;
+        //             }
+        //         }
+        //     }
+        //     .row{
+        //         display: flex;
+        //         .check-in-container{
+        //             text-align:center;
+        //             width: 110px;
+        //             padding: 13px 10px;
+        //             border: 1px solid $lightGrey;
+        //             .check-in{
+        //                 margin-bottom: 5px;
+        //             }
+        //             span{
+        //             color: $midGrey;
+        //             }
+        //         }
+        //         .check-out-container{
+        //             text-align:center;
+        //             width: 110px;
+        //             padding: 13px 10px;
+        //             border: 1px solid $lightGrey;
+        //             .check-out{
+        //                 margin-bottom: 5px;
+        //             }
+        //             span{
+        //             color: $midGrey;
+        //             }
+        //         }
+        //         .guests-container{
+        //             text-align:center;
+        //             width: 110px;
+        //             padding: 13px 10px;
+        //             border: 1px solid $lightGrey;
+        //             .guests{
+        //                 margin-bottom: 5px;
+        //             }
+        //         }
                 
-            }
-            .button-container{
-                padding: 13px 10px;
-                height:100%;
-                display:block;
-                button{
-                    color:white;
-                    background: $mainLightGreen;
-                    width:100%;
-                    padding: 15px 15px;
-                    font-size:18px;
-                    letter-spacing: 0.2px;
-                    border:2px solid transparent;
-                    &:hover{
-                        color: $mainLightGreen;
-                        background: white;
-                        border:2px solid $mainLightGreen; 
-                    }
-                }
-            }  
-        }
+        //     }
+        //     .button-container{
+        //         padding: 13px 10px;
+        //         height:100%;
+        //         display:block;
+        //         button{
+        //             color:white;
+        //             background: $mainLightGreen;
+        //             width:100%;
+        //             padding: 15px 15px;
+        //             font-size:18px;
+        //             letter-spacing: 0.2px;
+        //             border:2px solid transparent;
+        //             &:hover{
+        //                 color: $mainLightGreen;
+        //                 background: white;
+        //                 border:2px solid $mainLightGreen; 
+        //             }
+        //         }
+        //     }  
+        // }
     }
 
 
@@ -194,7 +210,6 @@
             }
         }
     }
-
 
      .activities-container{
         width:65%;
