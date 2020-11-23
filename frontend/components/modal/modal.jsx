@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { receiveErrors } from '../../actions/session_actions';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
-// import '../../app/assets/stylesheets/components/modal.scss';
+
 
 function Modal({ modal, closeModal }) {
     if (!modal) {

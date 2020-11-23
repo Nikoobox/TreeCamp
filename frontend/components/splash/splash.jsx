@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -34,6 +33,7 @@ class Splash extends React.Component{
 
                     </div>
                 </div>
+                <SpotIndexContainer />
 
                 <div className='splash-explore-box'>
                     <div className='image-box'> 
@@ -44,7 +44,7 @@ class Splash extends React.Component{
                     </div>
                 </div>
 
-                <SpotIndexContainer />
+                
             </div>
         )
     }

@@ -9,24 +9,23 @@ class SpotIndex extends React.Component{
 
     componentDidMount(){
         this.props.fetchSpots()
-        // console.log(this.props.spots)
     }
 
     render(){
         const {spots, fetchSpot } = this.props;
-        // const { title, description, price, location, country, rating, latitude, longitude } = this.props.posts;
-        // console.log(this.props);
-        const postsRand = spots.map((spot, idx)=>{
+        
+        const spotsRand = spots.map((spot, idx)=>{
             return <SpotIndexCard spot={spot} fetchSpot={fetchSpot} key={idx}/>
         })
 
         return (
             <div className='spot-index-container'>
                 <span>Recently viewed listings</span>
-                {/* {spots.map((spot, idx)=>{
-                return <SpotIndexCard spot={spot} fetchSpot={fetchSpot} key={idx} />
-            })} */}
-                {postsRand}
+                <div className='collection'>
+                    {spotsRand}
+                </div>
+
+                
             </div>
         )
     }

@@ -11,38 +11,42 @@ class SpotIndexCard extends React.Component {
     render() {
         // console.log(this.props)
         // const { posts } = this.props;
-        const { title, description, price, location, country, rating, latitude, longitude } = this.props.spot;
+        const { title, price, location, country, rating} = this.props.spot;
 
-        return <div className='spot-index-card'>
-                <div className='card-img'>
-                    <img src={window.tree_hotel_sweden1} className='' />
-                </div>
-
-                <div className='card-data'>
-                    <div className='card-header'>
-                        <div className='card-header-title'>
-                            {title}
-                        </div>
-                        <div className='card-header-location'>
-                            {country} {location}
-                        </div>
+        return (
+            <Link to={`/spots/${this.props.spot.id}`} className='spot-index-card'>
+                {/* <div className='spot-index-card'> */}
+                    <div className='card-img'>
+                        <img src={window.tree_hotel_sweden1} className='' />
                     </div>
 
-                    <div className='card-footer'>
-                        <div className='card-footer-rating'>
-                        <FontAwesomeIcon icon={faThumbsUp} /> {rating}%
+                    <div className='card-data'>
+                        <div className='card-header'>
+                            <div className='card-header-title'>
+                                {title}
+                            </div>
+                            <div className='card-header-location'>
+                                {country} {location}
+                            </div>
                         </div>
-                        <div className='card-footer-price'>
-                         ${price}/night
+
+                        <div className='card-footer'>
+                            <div className='card-footer-rating'>
+                            <FontAwesomeIcon icon={faThumbsUp} /> {rating}%
+                            </div>
+                            <div className='card-footer-price'>
+                            ${price}/night
+                            </div>
                         </div>
+
+                        {/* <Link to={`/spots/${this.props.spot.id}`}>Show more</Link> */}
+
                     </div>
+                    </Link>
 
-                    <Link to={`/spots/${this.props.spot.id}`}>Show more</Link>
-
-                </div>
-
-            </div>
-    }
+)
+}
 }
 
 export default SpotIndexCard;
+{/* </div> */}
