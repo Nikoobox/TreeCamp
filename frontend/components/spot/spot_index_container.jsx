@@ -4,7 +4,6 @@ import SpotIndex from "./spot_index.jsx";
 import { fetchSpots, fetchSpot } from '../../actions/spot_actions';
 
 const mapState = state => {
-  // console.log(state)
   return {
     spots : Object.values(state.entities.spots)
   }

@@ -1,6 +1,8 @@
 class Spot < ApplicationRecord
     validates :host_id, :title, :description, :price, :location, :country, :rating, :latitude, :longitude, presence: true
 
+    has_many_attached :photos
+
     belongs_to :user,
         foreign_key: :host_id,
         class_name: 'User'
@@ -35,5 +37,5 @@ class Spot < ApplicationRecord
 
 
     # testing active storage images
-    has_one_attached :photo
+    # has_one_attached :photo
 end

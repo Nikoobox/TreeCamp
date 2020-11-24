@@ -1,5 +1,5 @@
 class Amenity < ApplicationRecord
-    validates :spot_id, :portable_water,:kitchen, :shower, :wifi, :electricity, :bug_spray, :zip_line, presence: true
+    # validates :spot_id, :portable_water,:kitchen, :shower, :wifi, :electricity, :bug_spray, :zip_line, presence: true
 
     validates :portable_water, inclusion: {in: [true, false]}
     validates :kitchen, inclusion: {in: [true, false]}

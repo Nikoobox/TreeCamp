@@ -1,5 +1,5 @@
 class Essential < ApplicationRecord
-    validates :spot_id, :elevator, :campfire, :toilet, :pets, presence: true
+    # validates :spot_id, :elevator, :campfire, :toilet, :pets, presence: true
 
     validates :elevator, inclusion: {in: [true, false]}
     validates :campfire, inclusion: {in: [true, false]}

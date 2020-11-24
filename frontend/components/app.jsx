@@ -17,13 +17,9 @@ const App = () => (
             <NavbarContainer />
         </header>
 
-            {/* <h1> Tree Camp </h1> */}
-            {/* <GreetingContainer /> */}
-
         <Switch>
             <Route exact path="/" component={SplashContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-            {/* <Route path="/posts/:postId/edit" component={EditPostFormContainer} /> */}
         </Switch>
 
         {/* <SplashContainer /> */}

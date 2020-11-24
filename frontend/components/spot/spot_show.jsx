@@ -4,7 +4,8 @@ import { faGreaterThan, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import SpotShowCard from './spot_show_card';
 import SpotShowDetail from './spot_show_detail';
 import SpotShowActivity from './spot_show_activity';
-import SpotShowBookingWidget from './spot_show_booking_widget';
+// import SpotBookingForm from './spot_booking_form';
+import SpotBookingWidgetContainer from '../booking/spot_booking_widget_container';
 
 class SpotShow extends React.Component {
     constructor(props) {
@@ -17,12 +18,14 @@ class SpotShow extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
-        if (!this.props.spot || !this.props.spot.area || !this.props.users) return null;
-
-        const {spot, users} = this.props;
+        if (!this.props.spot || !this.props.spot.area || !this.props.users){
+            return null;
+        }
+        // console.log(this.props);
+        const {spot, users, spots, createBooking, deleteBooking, currentUserId} = this.props;
         const host = users[spot.host_id];
     
+
         const { title, description, location, country, rating} = this.props.spot;
         const greaterIcon = <FontAwesomeIcon icon={faGreaterThan} />
         const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp } />
@@ -59,16 +62,14 @@ class SpotShow extends React.Component {
                                 {description}
                             </div>
                         </div>
-
                     </div>
-
-                    <SpotShowBookingWidget spot={spot}/>
-                    {/* <SpotShowCard spot={spot} /> */}
+                    
+                    {/* <SpotBookingForm props={this.props}/> */}
+                    <SpotBookingWidgetContainer spot={spot}/>
                 </div>
                 <SpotShowCard spot={spot}/>
                 <SpotShowDetail spot={spot}/>
                 <SpotShowActivity spot={spot} />
-                
             </div>
         )
     }

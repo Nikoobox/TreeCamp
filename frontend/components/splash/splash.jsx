@@ -34,7 +34,7 @@ class Splash extends React.Component{
                     </div>
                 </div>
                 <SpotIndexContainer />
-
+{/* window[spot.name] */}
                 <div className='splash-explore-box'>
                     <div className='image-box'> 
                         <img src={window.splash_tree_house} alt="" className='image-box-image'/>

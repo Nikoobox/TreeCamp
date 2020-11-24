@@ -17,9 +17,9 @@ const mapDisp = (dispatch) => {
     return {
         processForm: (user) => dispatch(login(user)),
         closeModal: () => {
-            dispatch(closeModal()); 
-            dispatch(receiveErrors([]))
-        },
+                        dispatch(closeModal()); 
+                        dispatch(receiveErrors([]))
+                        },
 
         login: (user) => dispatch(login(user)),
     }

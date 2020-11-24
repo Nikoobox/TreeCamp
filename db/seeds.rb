@@ -1,10 +1,12 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
+
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
 User.destroy_all;
 Spot.destroy_all;
 Area.destroy_all;
@@ -13,6 +15,8 @@ Amenity.destroy_all;
 Detail.destroy_all;
 Activity.destroy_all;
 Booking.destroy_all;
+
+
 
 # USERS
 user = User.create!({
@@ -50,8 +54,13 @@ user4 = User.create!({
     password: "1234567"
 })
 
-
 # SPOTS
+# img1 = open('https://app-treecamp-dev.amazonaws.com/treecamp_photos/11.jpg')
+# img2 = open('https://app-treecamp-dev.amazonaws.com/treecamp_photos/12.jpg')
+
+# spot1.photos.attach(io: img1, filename: '11.jpg')
+# spot1.photos.attach(io: img2, filename: '12.jpg')
+
 spot1 = Spot.create!({
     host_id: user1.id, 
     title: "Main Tree House", 
@@ -64,6 +73,8 @@ spot1 = Spot.create!({
     longitude: 200.00,
 })
 
+
+
 spot2 = Spot.create!({
     host_id: user2.id, 
     title: "The Cinder Cone", 
@@ -75,6 +86,12 @@ spot2 = Spot.create!({
     latitude: 100.00,
     longitude: 200.00,
 })
+# us-east-1
+# img31 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/31.jpg')
+# img32 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp_photos/32.jpg')
+
+# spot3.photos.attach(io: img31, filename: '31.jpg')
+# spot3.photos.attach(io: img32, filename: '32.jpg')
 
 spot3 = Spot.create!({
     host_id: user3.id, 
@@ -133,8 +150,8 @@ essential3 = Essential.create!({
     spot_id: spot3.id, 
     elevator: true, 
     campfire: true,
-    toilet: true,
-    pets: true
+    toilet: false,
+    pets: false
 })
 
 # AMENITY
@@ -155,9 +172,9 @@ amenity2 = Amenity.create!({
     kitchen: true,
     shower: true,
     wifi: true,
-    electricity: true,
-    bug_spray: true,
-    zip_line: true
+    electricity: false,
+    bug_spray: false,
+    zip_line: false
 })
 
 amenity3 = Amenity.create!({

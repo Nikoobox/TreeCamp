@@ -12,9 +12,9 @@ class SpotIndex extends React.Component{
     }
 
     render(){
-        const {spots, fetchSpot } = this.props;
+        const { spots, fetchSpot } = this.props;
         
-        const spotsRand = spots.map((spot, idx)=>{
+        const allSpots = spots.map((spot, idx)=>{
             return <SpotIndexCard spot={spot} fetchSpot={fetchSpot} key={idx}/>
         })
 
@@ -22,7 +22,7 @@ class SpotIndex extends React.Component{
             <div className='spot-index-container'>
                 <span>Recently viewed listings</span>
                 <div className='collection'>
-                    {spotsRand}
+                    { allSpots }
                 </div>
 
                 

@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.getState = store.dispatch;
     window.fetchSpots = fetchSpots;
+    
 
     //test ends here
 

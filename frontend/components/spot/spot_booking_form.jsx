@@ -1,19 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import DayPickerInput from 'react-day-picker/DayPickerInput';
 
-class SpotShowBookingWidget extends React.Component {
+class SpotBookingForm extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+
+        this.state = {
+            checkin_date: undefined,
+            checkout_date: undefined,
+            num_visitors: 0,
+            total_cost: 0
+        }
+    }
+
+    update(field) {
+        return (e) => {
+            this.setState({ [field]: e.currentTarget.value })
+        }
     }
 
     render() {
-        const { price } = this.props.spot;
-
+        const { spot, spots, errorsBooking, createBooking, deleteBooking, currentUserId } = this.props;
+        // console.log(this.state);
+        console.log(this.props);
+        
         return (
-            <div className='booking-widget'>
+            // <form className='booking-widget'>
+            <form className='booking-widget' onSubmit={() => createBooking(this.state)}>
                 <div className='price-container'>
-                    <div className='price'>${price}</div>
+                    <div className='price'>${spot.price}</div>
                     <span>per night</span>
                 </div>
 
@@ -41,9 +56,9 @@ class SpotShowBookingWidget extends React.Component {
                 <div className='button-container'>
                     <button>Instant book</button>
                 </div>
-            </div>
+            </form>
         )
     }
 }
 
-export default SpotShowBookingWidget
+export default SpotBookingForm
