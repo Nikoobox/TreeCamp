@@ -39,7 +39,7 @@ class Splash extends React.Component{
                     <div className='image-box'> 
                         <img src={window.splash_tree_house} alt="" className='image-box-image'/>
                         <div className='image-box-box'>
-                            Explore something ...
+                            Own a tree house? Earn money with Treecamp
                         </div>
                     </div>
                 </div>

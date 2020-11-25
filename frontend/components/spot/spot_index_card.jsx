@@ -19,7 +19,6 @@ class SpotIndexCard extends React.Component {
                     <div className='card-img'>
                         <img src={`${photoUrls[0]}`} alt="" />
                     </div>
-                    {/* <img src={`${photoUrls[0]}`} alt=""/> */}
                     <div className='card-data'>
                         <div className='card-header'>
                             <div className='card-header-title'>

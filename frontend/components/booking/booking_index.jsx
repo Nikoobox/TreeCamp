@@ -20,11 +20,13 @@ class BookingIndex extends React.Component {
         console.log(`bookings: ${this.props.bookings.length}`);
         if (this.props.bookings.length === 0 || Object.keys(this.props.spots).length === 0) return null;
         
-        const { currentUser, spots, bookings, fetchBookings, fetchBooking, deleteBooking, fetchSpot, fetchSpots} = this.props;
+        const { currentUser, spots, bookings,deleteBooking} = this.props;
 
         const rendIndexItems = bookings.map((booking, idx)=>{
             return <BookingIndexItem spots={spots} booking={booking} deleteBooking={deleteBooking} key={idx} num={idx+1}/>
         })
+
+        const bookingPlSing = bookings.length === 1 ? 'booking' : 'bookings'
 
         return (
             <div className='booking-index-container'>
@@ -36,7 +38,7 @@ class BookingIndex extends React.Component {
                         </div>
                     </div>
                     <div className='user-num-of-bookings'>
-                        Congrats! You have {bookings.length} bookings coming up!
+                        Congrats! You have {bookings.length} {bookingPlSing} coming up!
                     </div>
                 </div>
                 <div className='right-column'>
