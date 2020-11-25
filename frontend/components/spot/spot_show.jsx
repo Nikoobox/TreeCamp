@@ -1,10 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGreaterThan, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import SpotShowCard from './spot_show_card';
 import SpotShowDetail from './spot_show_detail';
 import SpotShowActivity from './spot_show_activity';
-// import SpotBookingForm from './spot_booking_form';
 import SpotBookingWidgetContainer from '../booking/spot_booking_widget_container';
 
 class SpotShow extends React.Component {
@@ -21,8 +21,8 @@ class SpotShow extends React.Component {
         if (!this.props.spot || !this.props.spot.area || !this.props.users){
             return null;
         }
-        // console.log(this.props);
-        const {spot, users, spots, createBooking, deleteBooking, currentUserId} = this.props;
+
+        const {spot, users} = this.props;
         const host = users[spot.host_id];
     
 
@@ -33,10 +33,10 @@ class SpotShow extends React.Component {
         return (
             <div className='show-spot-container'>
                 <div className='show-spot-images'>
-                    <img src={window.tree_hotel_sweden1} className='img-1' />
-                    <img src={window.tree_hotel_sweden2} className='img-2' />
+                    <img src={`${spot.photoUrls[0]}`} className='img-1' />
+                    <img src={`${spot.photoUrls[1]}`} className='img-2' />
                 </div>
-               
+                
                 <div className='content'>
                     <div className='content-data'>
                         <div className='container-location'>
@@ -64,7 +64,6 @@ class SpotShow extends React.Component {
                         </div>
                     </div>
                     
-                    {/* <SpotBookingForm props={this.props}/> */}
                     <SpotBookingWidgetContainer spot={spot}/>
                 </div>
                 <SpotShowCard spot={spot}/>
@@ -75,4 +74,4 @@ class SpotShow extends React.Component {
     }
 }
 
-export default SpotShow;
+export default withRouter(SpotShow);

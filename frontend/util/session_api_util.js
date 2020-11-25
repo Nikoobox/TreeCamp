@@ -12,7 +12,6 @@ export const login = user => {
         url: '/api/session',
         method: 'POST',
         data: { user }
-
     })
 };
 

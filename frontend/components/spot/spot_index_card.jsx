@@ -11,15 +11,15 @@ class SpotIndexCard extends React.Component {
     render() {
         // console.log(this.props)
         // const { posts } = this.props;
-        const { title, price, location, country, rating} = this.props.spot;
+        const { title, price, location, country, rating, photoUrls} = this.props.spot;
 
         return (
             <Link to={`/spots/${this.props.spot.id}`} className='spot-index-card'>
                 {/* <div className='spot-index-card'> */}
                     <div className='card-img'>
-                        <img src={window.tree_hotel_sweden1} className='' />
+                        <img src={`${photoUrls[0]}`} alt="" />
                     </div>
-
+                    {/* <img src={`${photoUrls[0]}`} alt=""/> */}
                     <div className='card-data'>
                         <div className='card-header'>
                             <div className='card-header-title'>

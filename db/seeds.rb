@@ -73,11 +73,17 @@ spot1 = Spot.create!({
     longitude: 200.00,
 })
 
+img11 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/11.jpg')
+img12 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/12.jpg')
+
+spot1.photos.attach(io: img11, filename: '11.jpg')
+spot1.photos.attach(io: img12, filename: '12.jpg')
+
 
 
 spot2 = Spot.create!({
     host_id: user2.id, 
-    title: "The Cinder Cone", 
+    title: "The HemLoft", 
     description: "The HemLoft is a self-funded secret creation that is built on crown land in Canada. It hangs on a precipitous slope, in a towering stand of hemlocks, about a five minute walk from the nearest road.", 
     price: 150,
     location: 'Whistler',
@@ -86,12 +92,12 @@ spot2 = Spot.create!({
     latitude: 100.00,
     longitude: 200.00,
 })
-# us-east-1
-# img31 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/31.jpg')
-# img32 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp_photos/32.jpg')
 
-# spot3.photos.attach(io: img31, filename: '31.jpg')
-# spot3.photos.attach(io: img32, filename: '32.jpg')
+img21 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/21.jpg')
+img22 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/22.jpg')
+
+spot2.photos.attach(io: img21, filename: '21.jpg')
+spot2.photos.attach(io: img22, filename: '22.jpg')
 
 spot3 = Spot.create!({
     host_id: user3.id, 
@@ -105,6 +111,11 @@ spot3 = Spot.create!({
     longitude: 200.00,
 })
 
+img31 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/31.jpg')
+img32 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/32.jpg')
+
+spot3.photos.attach(io: img31, filename: '31.jpg')
+spot3.photos.attach(io: img32, filename: '32.jpg')
 
 # AREAS
 area1 = Area.create!({

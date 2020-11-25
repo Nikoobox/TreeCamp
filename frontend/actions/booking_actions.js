@@ -46,6 +46,6 @@ export const updateBooking = booking => dispatch => {
 export const deleteBooking = bookingId => dispatch => {
     return APIUtil.deleteBooking(bookingId)
     .then(() => {
-        return dispatch(removeBooking(booking))
+        return dispatch(removeBooking(bookingId))
     })
 }

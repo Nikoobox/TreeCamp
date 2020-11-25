@@ -7,7 +7,7 @@ import SignupFormContainer from './session/signup_form_container';
 import NavbarContainer from './navbar/navbar_container';
 import SplashContainer from './splash/splash_container';
 import SpotShowContainer from './spot/spot_show_container';
-// import SpotIndexContainer from './spot/spot_index_container';
+import BookingIndexContainer from './booking/booking_index_container';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -20,9 +20,9 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={SplashContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+            <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
         </Switch>
 
-        {/* <SplashContainer /> */}
     </div>
 );
 

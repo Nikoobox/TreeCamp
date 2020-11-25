@@ -1,0 +1,100 @@
+.booking-index-container{
+    display:flex;
+    margin: 150px 32px;
+    @media (min-width: 1200px){
+        margin: 150px 100px;
+    }
+    @media (min-width: 1600px){
+        margin: 150px 150px;
+    }
+    .left-column{
+        width:30%;
+        margin: 10px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        .user-info{
+            display:flex;
+            justify-content: center;
+            margin:30px 0;
+            font-size:14px;
+            .user-info-container{
+                border: 2px solid $mainLightGreen;
+                border-radius:50%;
+                text-align:center;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                width: 150px;
+                height:150px;
+                .sub{
+                    font-weight: bold;
+                    margin-bottom: 3px;
+                }
+                .user-name{
+                    font-weight:300;
+                    font-size: 22px;
+                }
+            }
+        }
+        .user-num-of-bookings{
+            font-size: 14px;
+        }
+
+    }
+    .right-column{
+        width:70%;
+        margin: 10px;
+        .right-column-title{
+            margin: 0 10px 30px 10px;
+        }
+        .booked-items{
+            .card-booked-item{
+                display: flex;
+                margin-bottom:40px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                .card-image{
+                    width:50%;
+                    margin:10px;
+                    img{
+                        width:100%;
+                    }
+                }
+                .card-info-container{
+                    width:50%;
+                    margin:10px;
+                    .item-name{
+                        font-size: 22px;
+                        margin-bottom: 15px;
+                    }
+                    .item{
+                        font-size:15px;
+                        margin-bottom: 10px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                    .delete-booking-btn-container{
+                        margin-top:20px;
+                        .delete-booking-btn{
+                            background: $mainLightGreen;
+                            color:white;
+                            padding:10px;
+                            font-size:16px;
+                            letter-spacing: 0.2px;
+                            border: 2px solid transparent;
+                            transition: ease-out all 0.2s;
+                            &:hover{
+                                cursor:pointer;
+                                background: white;
+                                color:$mainLightGreen;
+                                border: 2px solid $mainLightGreen;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

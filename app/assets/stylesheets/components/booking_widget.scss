@@ -29,12 +29,14 @@
                         font-size:14px;
                         input{
                             width:95px;
+                            cursor: pointer;
                         }
                     }
                     .check-out-date{
                         font-size:14px;
                         input{
                             width:95px;
+                            cursor: pointer;
                         }
                     }
                     
@@ -46,6 +48,15 @@
                     border: 1px solid $lightGrey;
                     .guests{
                         margin-bottom: 5px;
+                    }
+                    .guest-selection{
+                        display:flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        .guest-num{
+                            font-size:20px;
+                            cursor: pointer;
+                        }
                     }
                 }
                 
@@ -65,7 +76,8 @@
                     &:hover{
                         color: $mainLightGreen;
                         background: white;
-                        border:2px solid $mainLightGreen; 
+                        border:2px solid $mainLightGreen;
+                        cursor: pointer; 
                     }
                 }
             }  
