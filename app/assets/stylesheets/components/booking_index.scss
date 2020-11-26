@@ -1,6 +1,6 @@
 .booking-index-container{
     display:flex;
-    margin: 150px 32px;
+    margin: 130px 32px;
     @media (min-width: 1200px){
         margin: 150px 100px;
     }
@@ -34,7 +34,7 @@
                 }
                 .user-name{
                     font-weight:300;
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
         }
@@ -46,8 +46,25 @@
     .right-column{
         width:70%;
         margin: 10px;
-        .right-column-title{
+        .right-column-message{
             margin: 0 10px 30px 10px;
+            .discover-btn{
+                background: $mainLightGreen;
+                color:$mainMidGreen;
+                margin-top:10px;
+                padding:5px 10px;
+                font-size:16px;
+                letter-spacing: 0.2px;
+                border: 2px solid transparent;
+                transition: ease-out all 0.2s;
+                &:hover{
+                    cursor:pointer;
+                    background: white;
+                    color:$mainLightGreen;
+                    border: 2px solid $mainLightGreen;
+                }
+            }
+
         }
         .booked-items{
             .card-booked-item{

@@ -36,7 +36,6 @@ class SpotBookingWidget extends React.Component {
             const costPerNight = this.props.spot.price;
 
             const totalCost = costPerNight * numDays;
-            // this.setState({ total_cost: totalCost });
 
             this.setState({
                 total_cost: totalCost,

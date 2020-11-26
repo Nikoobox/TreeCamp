@@ -34,17 +34,17 @@ class Splash extends React.Component{
                     </div>
                 </div>
                 <SpotIndexContainer />
-{/* window[spot.name] */}
+
                 <div className='splash-explore-box'>
                     <div className='image-box'> 
                         <img src={window.splash_tree_house} alt="" className='image-box-image'/>
                         <div className='image-box-box'>
-                            Own a tree house? Earn money with Treecamp
+                            <div className='box-title'>Own a tree house? Earn money with Treecamp</div>
+                            <div className='box-sub'>Join our community of brave tree house lovers and nature enthusiasts</div>
+                            <div className='box-button'><button>Learn more</button></div>
                         </div>
                     </div>
-                </div>
-
-                
+                </div> 
             </div>
         )
     }

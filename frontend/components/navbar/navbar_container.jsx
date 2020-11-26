@@ -10,7 +10,8 @@ const mapState = state => {
     let currentUserId = state.session.id;
 
     return {
-        currentUser: state.entities.users[currentUserId]
+        currentUser: state.entities.users[currentUserId],
+        currentUserId: state.session.id
     }
 }
 

@@ -12,9 +12,10 @@
             border-radius: 4px;
             margin:20px;
             color:black;
-            // cursor:pointer;
+            transition: ease-out all 0.3s;
             &:hover{
                 cursor:pointer;
+                background-color: rgb(245, 245, 245);
             }
             .card-img{
                 width:100%;

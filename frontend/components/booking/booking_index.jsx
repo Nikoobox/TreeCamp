@@ -13,20 +13,17 @@ class BookingIndex extends React.Component {
         this.props.fetchBookings();
     }
 
-
     render() {
-        console.log(this.props);
-        console.log(`spots: ${this.props.spots}`);
-        console.log(`bookings: ${this.props.bookings.length}`);
-        if (this.props.bookings.length === 0 || Object.keys(this.props.spots).length === 0) return null;
+        // console.log(this.props);
+
+        if (Object.keys(this.props.spots).length === 0) {
+            return null;
+        } 
         
         const { currentUser, spots, bookings,deleteBooking} = this.props;
 
-        const rendIndexItems = bookings.map((booking, idx)=>{
-            return <BookingIndexItem spots={spots} booking={booking} deleteBooking={deleteBooking} key={idx} num={idx+1}/>
-        })
+       
 
-        const bookingPlSing = bookings.length === 1 ? 'booking' : 'bookings'
 
         return (
             <div className='booking-index-container'>
@@ -38,14 +35,26 @@ class BookingIndex extends React.Component {
                         </div>
                     </div>
                     <div className='user-num-of-bookings'>
-                        Congrats! You have {bookings.length} {bookingPlSing} coming up!
+                        {bookings.length === 0 ? '' : 'Congrats! '} 
+                         You have {bookings.length} {bookings.length === 1 ? 'booking' : 'bookings'} coming up!
                     </div>
                 </div>
                 <div className='right-column'>
-                    <div className='right-column-title'>Your upcoming bookings...</div>
-
+                    <div className='right-column-message'>
+                        <div>
+                            {bookings.length === 0 ? 'You have no upcoming bookings. Discover the most unique tree houses in a world!' : 'Your upcoming bookings...'}
+                        </div>
+                        <div >
+                            
+                            {bookings.length === 0 ? <Link to={'/'}><button className='discover-btn'>Discover</button></Link>  : ''}
+                        </div>
+                        
+                    </div>
+                    
                     <div className='booked-items'>
-                        {rendIndexItems}
+                        {bookings.map((booking, idx) => {
+                            return <BookingIndexItem spots={spots} booking={booking} deleteBooking={deleteBooking} key={idx} num={idx + 1} />
+                        })}
                     </div>
                 </div>
             </div>
