@@ -9,7 +9,7 @@ class BookingIndexItem extends React.Component {
 
     render(){
         const{num, spots, deleteBooking, booking} = this.props;
-      
+        console.log(this.props);
         return(
             <div className='card-booked-item'>
                 <span>{num}</span>
@@ -19,7 +19,12 @@ class BookingIndexItem extends React.Component {
                 </div>
                 <div className="card-info-container">
                     <div className="item-name">
-                        {spots[booking.spot_id].title}
+                        <Link to={`/spots/${spots[booking.spot_id].id}`}>
+                            {spots[booking.spot_id].title}
+                        </Link>
+                    </div>
+                    <div className="item item-location">
+                        {spots[booking.spot_id].location}, {spots[booking.spot_id].country}
                     </div>
                     <div className="item">
                         <span>Check-in date:</span> {booking.checkin_date}

@@ -1,0 +1,52 @@
+.footer-container{
+    background: $mainAlmostBlack;
+    height: 70px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 30px;
+    bottom:0;
+    z-index: 100;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    .footer-date{
+        color: #555555;
+        a{
+            color: #555555;
+                transition: ease-out all 0.2s;
+            &:hover{
+                cursor:pointer;
+                color:$lightGrey;
+            }
+        }
+    }
+    .footer-message{
+        color: #555555;
+        font-size:14px;
+        a{
+            color: #555555;
+                transition: ease-out all 0.2s;
+            &:hover{
+                cursor:pointer;
+                color:$lightGrey;
+            }
+        }
+    }
+    .footer-social{
+        display:flex;
+        .social-item{
+            font-size:22px;
+            margin-left: 15px;
+            a{
+                color: #555555;
+                 transition: ease-out all 0.2s;
+                &:hover{
+                    cursor:pointer;
+                    color:$lightGrey;
+                }
+            }
+        }
+    }
+}

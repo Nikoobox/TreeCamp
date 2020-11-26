@@ -13,11 +13,14 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+       
         .user-info{
             display:flex;
             justify-content: center;
             margin:30px 0;
             font-size:14px;
+             position:sticky;
+            top:75px;
             .user-info-container{
                 border: 2px solid $mainLightGreen;
                 border-radius:50%;
@@ -40,6 +43,8 @@
         }
         .user-num-of-bookings{
             font-size: 14px;
+            position:sticky;
+            top:250px;
         }
 
     }
@@ -48,21 +53,32 @@
         margin: 10px;
         .right-column-message{
             margin: 0 10px 30px 10px;
-            .discover-btn{
-                background: $mainLightGreen;
-                color:$mainMidGreen;
-                margin-top:10px;
-                padding:5px 10px;
-                font-size:16px;
-                letter-spacing: 0.2px;
-                border: 2px solid transparent;
-                transition: ease-out all 0.2s;
-                &:hover{
-                    cursor:pointer;
-                    background: white;
-                    color:$mainLightGreen;
-                    border: 2px solid $mainLightGreen;
+            .right-column-message-0{
+                margin-top:80px;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .discover-btn-container{
+                display:flex;
+                justify-content:center;
+                .discover-btn{
+                    margin-top:20px;
+                    background: $mainLightGreen;
+                    color:$mainMidGreen;
+                    padding:5px 10px;
+                    font-size:16px;
+                    letter-spacing: 0.2px;
+                    border: 2px solid transparent;
+                    transition: ease-out all 0.2s;
+                    &:hover{
+                        cursor:pointer;
+                        background: white;
+                        color:$mainLightGreen;
+                        border: 2px solid $mainLightGreen;
+                    }
                 }
+
             }
 
         }
@@ -83,7 +99,15 @@
                     margin:10px;
                     .item-name{
                         font-size: 22px;
-                        margin-bottom: 15px;
+                        margin-bottom: 5px;
+                        a{
+                            border-bottom:1px solid transparent;
+                            color:$mainDarkerGrey;
+                            transition: ease-out all 0.2s;
+                            &:hover{
+                                border-bottom:2px solid $mainLightGreen;
+                            }
+                        }
                     }
                     .item{
                         font-size:15px;
@@ -91,6 +115,10 @@
                         span{
                             font-weight: bold;
                         }
+                    }
+                    .item-location{
+                        margin-bottom: 20px;
+                         font-weight:300;
                     }
                     .delete-booking-btn-container{
                         margin-top:20px;
