@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,12 +10,23 @@ class SpotIndexCard extends React.Component {
     }
 
     render() {
-        const { title, price, location, country, rating, photoUrls} = this.props.spot;
+        const { title, price, location, country, rating, photoUrls} = this.props.spot; 
 
         return (
                 <Link to={`/spots/${this.props.spot.id}`} className='spot-index-card'>
                     <div className='card-img'>
-                        <img src={`${photoUrls[0]}`} alt="" />
+                        {/* <img src={`${photoUrls[0]}`} alt="" /> */}
+
+                    <Carousel 
+                        defaultControlsConfig={{
+                            nextButtonText: '>',
+                            prevButtonText: '<'
+                        }} wrapAround={true}
+                    >
+                       
+                        <img src={`${photoUrls[0]}`} />
+                        <img src={`${photoUrls[1]}`} />
+                    </Carousel>
                     </div>
                     <div className='card-data'>
                         <div className='card-header'>
