@@ -131,7 +131,7 @@ spot3.photos.attach(io: img32, filename: '32.jpg')
 
 spot4 = Spot.create!({
     host_id: user4.id, 
-    title: "Cylindrical Treehouse", 
+    title: "Gibbon Experience", 
     description: "The second highest tree house in a world (40 meters or 100+ feet above the ground). At the top of a giant tree, visitors and over 100 workers alike wish it will last for centuries to come. The Gibbon Experience project is meant to be an allegory of our reconciliation with the rainforest", 
     price: 130,
     location: 'Bokeo Province',
@@ -140,6 +140,12 @@ spot4 = Spot.create!({
     latitude: 100.00,
     longitude: 200.00,
 })
+
+img41 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/41.jpg')
+img42 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/42.jpg')
+
+spot4.photos.attach(io: img41, filename: '41.jpg')
+spot4.photos.attach(io: img42, filename: '42.jpg')
 
 spot5 = Spot.create!({
     host_id: user5.id, 
@@ -153,6 +159,12 @@ spot5 = Spot.create!({
     longitude: 200.00,
 })
 
+img51 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/51.jpg')
+img52 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/52.jpg')
+
+spot5.photos.attach(io: img51, filename: '51.jpg')
+spot5.photos.attach(io: img52, filename: '52.jpg')
+
 spot6 = Spot.create!({
     host_id: user6.id, 
     title: "Hapuku Tree Houses", 
@@ -164,6 +176,12 @@ spot6 = Spot.create!({
     latitude: 100.00,
     longitude: 200.00,
 })
+
+img61 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/61.jpg')
+img62 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/62.jpg')
+
+spot6.photos.attach(io: img61, filename: '61.jpg')
+spot6.photos.attach(io: img62, filename: '62.jpg')
 
 # AREAS
 area1 = Area.create!({

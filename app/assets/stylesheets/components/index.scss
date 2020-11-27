@@ -5,54 +5,61 @@
     }
     .collection{
         display:flex;
+        flex-wrap: wrap;
         margin-bottom:75px;
+        width:100%;
         .spot-index-card{
-            margin-top:24px;
+            padding-left:20px;
+            padding-right:20px;
             width:33.33%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            margin:20px;
+            margin-top:24px;
+            margin-bottom:24px;
             color:black;
             transition: ease-out all 0.3s;
-            &:hover{
-                cursor:pointer;
-                background-color: rgb(245, 245, 245);
-            }
-            .card-img{
-                width:100%;
-                height: 200px;
-            }
-            img{
-                width:100%;
-                position:top;
-                height:195px;
-                object-fit: cover;
-            }
-            .card-data{
-                padding:12px;
-                .card-header{
-                    margin-bottom: 25px;
-                    .card-header-title{
-                        font-size:20px;
-                        margin-bottom: 5px;;
-                    }
-                    .card-header-location{
-                        font-size:14px;
-                        font-weight:300;
-                    }
+           
+            .card-container{
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                border-radius: 4px;
+                &:hover{
+                    cursor:pointer;
+                    background-color: rgb(245, 245, 245);
                 }
+                .card-img{
+                    width:100%;
+                    height: 200px;
+                }
+                img{
+                    width:100%;
+                    position:top;
+                    height:195px;
+                    object-fit: cover;
+                }
+                .card-data{
+                    padding:12px;
+                    .card-header{
+                        margin-bottom: 25px;
+                        .card-header-title{
+                            font-size:20px;
+                            margin-bottom: 5px;;
+                        }
+                        .card-header-location{
+                            font-size:14px;
+                            font-weight:300;
+                        }
+                    }
 
-                .card-footer{
-                    display:flex;
-                    justify-content:space-between;
-                    .card-footer-rating{
-                        color:$mainLightGreen;
-                        font-weight:bold;
+                    .card-footer{
+                        display:flex;
+                        justify-content:space-between;
+                        .card-footer-rating{
+                            color:$mainLightGreen;
+                            font-weight:bold;
+                        }
+                        .card-footer-price{
+                            font-size:18px;
+                        }
                     }
-                    .card-footer-price{
-                        font-size:18px;
-                    }
-                }
+                }  
             }
         }
     }

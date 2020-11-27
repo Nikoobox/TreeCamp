@@ -14,41 +14,43 @@ class SpotIndexCard extends React.Component {
 
         return (
                 <Link to={`/spots/${this.props.spot.id}`} className='spot-index-card'>
-                    <div className='card-img'>
-                        {/* <img src={`${photoUrls[0]}`} alt="" /> */}
+                    <div className='card-container'>
+                        <div className='card-img'>
+                            {/* <img src={`${photoUrls[0]}`} alt="" /> */}
 
-                    <Carousel 
-                        defaultControlsConfig={{
-                            nextButtonText: '>',
-                            prevButtonText: '<'
-                        }} wrapAround={true}
-                    >
-                       
-                        <img src={`${photoUrls[0]}`} />
-                        <img src={`${photoUrls[1]}`} />
-                    </Carousel>
-                    </div>
-                    <div className='card-data'>
-                        <div className='card-header'>
-                            <div className='card-header-title'>
-                                {title}
-                            </div>
-                            <div className='card-header-location'>
-                                {country} {location}
-                            </div>
+                            <Carousel
+                                defaultControlsConfig={{
+                                    nextButtonText: '>',
+                                    prevButtonText: '<'
+                                }} wrapAround={true}
+                            >
+                                <img src={`${photoUrls[0]}`} />
+                                <img src={`${photoUrls[1]}`} />
+                            </Carousel>
                         </div>
+                        <div className='card-data'>
+                            <div className='card-header'>
+                                <div className='card-header-title'>
+                                    {title}
+                                </div>
+                                <div className='card-header-location'>
+                                    {country} {location}
+                                </div>
+                            </div>
 
-                        <div className='card-footer'>
-                            <div className='card-footer-rating'>
-                            <FontAwesomeIcon icon={faThumbsUp} /> {rating}%
+                            <div className='card-footer'>
+                                <div className='card-footer-rating'>
+                                    <FontAwesomeIcon icon={faThumbsUp} /> {rating}%
+                                </div>
+                                <div className='card-footer-price'>
+                                    ${price}/night
+                                </div>
                             </div>
-                            <div className='card-footer-price'>
-                            ${price}/night
-                            </div>
+
+                            {/* <Link to={`/spots/${this.props.spot.id}`}>Show more</Link> */}
                         </div>
-
-                        {/* <Link to={`/spots/${this.props.spot.id}`}>Show more</Link> */}
                     </div>
+                   
                 </Link>
 
                 )

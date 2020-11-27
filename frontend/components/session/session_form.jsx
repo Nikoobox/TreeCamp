@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
         const { first_name, last_name, email, password } = this.state;
 
         const renderErrs = errors.map((err, idx) => {
-        return <div key={idx}> {err} </div>
+        return <div className='errors' key={idx}> {err} </div>
         })
 
         const signUpFields = formType === 'Sign Up' ? <div className='session-form-signup'>    
@@ -52,13 +52,15 @@ class SessionForm extends React.Component {
 
         const headerMessage = formType === 'Log In' ? 'Welcome back!' : 'Join Tree Camp';
 
+        const redirectToForm = formType === 'Log In' ? 
+            <Link to="/signup" className='' onClick={() => this.props.closeModal()}>Dont't have an account? Please <span> Sign Up</span></Link> : 
+            <Link to="/login" className='' onClick={() => this.props.closeModal()}>Existing user? Please <span>Sign In</span></Link>;
+
         return (
             <div className='session-modal'>
-                <h1> {message} </h1>
-                <h1>{headerMessage}</h1>
-
 
                 <form onSubmit={this.handleSubmit} className='session-form'>
+                <h1>{headerMessage}</h1>
 
                     <button onClick={this.demoUser} className='demo-user-button'> Demo User </button>
                     
@@ -69,6 +71,8 @@ class SessionForm extends React.Component {
                     <input onChange={this.update('password')} type="password" name="password" value={password} placeholder='Create a password' className='session-form-input'/>
 
                     <button className='session-form-button'> {buttonText} </button>
+
+                    <div className='redirect-to-form'>{redirectToForm}</div>
                 </form>
 
 

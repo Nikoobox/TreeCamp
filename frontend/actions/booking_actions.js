@@ -10,12 +10,10 @@ const receiveBookings = bookings => ({
     type: RECEIVE_BOOKINGS,
     bookings
 });
-
 const receiveBooking = booking => ({
     type: RECEIVE_BOOKING,
     booking
 });
-
 const removeBooking = bookingId => ({
     type: REMOVE_BOOKING,
     bookingId
@@ -27,7 +25,6 @@ export const receiveBookingErrors = (errors) => {
         errors
     })
 }
-
 export const clearBookingErrors = () => ({
     type: CLEAR_BOOKING_ERRORS
 });

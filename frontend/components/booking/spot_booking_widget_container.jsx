@@ -17,8 +17,15 @@ const mapState = (state, ownProps) => {
 const mapDisp = dispatch => {
     return {
         fetchBookings: () => dispatch(fetchBookings()),
-        createBooking: booking => dispatch(createBooking(booking)),
-        openModal: modal => dispatch(openModal(modal)),
+
+        createBooking: booking => {
+            dispatch(createBooking(booking))
+        },
+
+        openModal: modal => {
+            dispatch(openModal(modal));
+        },
+
         clearBookingErrors: ()=>dispatch(clearBookingErrors())
     }
 }

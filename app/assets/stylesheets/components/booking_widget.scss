@@ -4,9 +4,9 @@
             top:75px;
             margin-top:-50px;
             width:330px;
-            // height:100%;
             border: 1px solid $lightGrey;
             margin-left:20px;
+            height:100%;
             .price-container{
                 padding: 13px 10px;
                 border: 1px solid $lightGrey;
@@ -69,14 +69,17 @@
                 display:flex;
                 flex-direction:column;
                 align-items:center;
-                padding: 13px 10px;
+                padding: 0 10px;
                 font-size: 14px;
                 color:rgb(148, 26, 26);
+                .errors{
+                    padding: 5px 0;
+                }
                 // border: 1px solid $lightGrey;
             }
             .button-container{
                 padding: 13px 10px;
-                height:100%;
+                // height:100%;
                 display:block;
                 button{
                     color:white;
