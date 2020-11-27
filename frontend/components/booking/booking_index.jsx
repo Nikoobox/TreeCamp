@@ -18,7 +18,7 @@ class BookingIndex extends React.Component {
         if (Object.keys(this.props.spots).length === 0) {
             return null;
         } 
-        
+        // debugger
         const { currentUser, spots, bookings,deleteBooking} = this.props;
 
         return (

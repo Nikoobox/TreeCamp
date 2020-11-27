@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 
 class SpotBookingWidget extends React.Component {
     constructor(props) {
@@ -19,6 +21,7 @@ class SpotBookingWidget extends React.Component {
     }
 
     update(field) {
+        // this.props.clearBookingErrors();
         return (e) => {
             this.setState({ [field]: e.currentTarget.value })
         }
@@ -26,6 +29,7 @@ class SpotBookingWidget extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+
         if(this.props.currentUser){
             const checkin = this.state.checkin_date;
             const checkout = this.state.checkout_date;
@@ -34,16 +38,27 @@ class SpotBookingWidget extends React.Component {
             const diffTime = Math.abs(date2 - date1);
             const numDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             const costPerNight = this.props.spot.price;
-
             const totalCost = costPerNight * numDays;
 
-            this.setState({
-                total_cost: totalCost,
-            }, () => {
-                this.props.createBooking(this.state);
-                this.props.history.push(`/users/${this.props.currentUserId}/bookings`)
-            });
-        }else{
+            // this.setState({
+            //     total_cost: totalCost,
+            // }, () => {
+            //         this.props.createBooking(this.state)
+            //         // .then(this.props.history.push(`/users/${this.props.currentUserId}/bookings`))
+            //         //  this.props.history.push(`/users/${this.props.currentUserId}/bookings`)
+            // }).then(this.props.history.push(`/users/${this.props.currentUserId}/bookings`));
+            const newBooking = Object.assign({}, this.state, 
+                { total_cost: totalCost});
+
+            this.props.createBooking(newBooking);
+
+            if (checkin !== undefined && checkout !== undefined){
+                // debugger
+                this.props.clearBookingErrors();
+                // debugger
+                this.props.history.push(`/users/${this.props.currentUserId}/bookings`);
+            }
+        } else{
             this.props.openModal('signup')
         }
     }
@@ -62,6 +77,7 @@ class SpotBookingWidget extends React.Component {
 
     render() {
         const{ price } =this.props.spot;
+        const { errors } = this.props;
        
         return (
             <form className='booking-widget' onSubmit={this.handleSubmit}>
@@ -77,6 +93,7 @@ class SpotBookingWidget extends React.Component {
                             <input type='date' 
                                 placeholder='Select date' 
                                 onChange={this.update('checkin_date')}
+                                // value={this.state.checkin_date}
                             />
                         </div>
                     </div>
@@ -99,7 +116,11 @@ class SpotBookingWidget extends React.Component {
                             <div className='guest-num' onClick={this.handleVisitors('+')}> + </div> 
                         </div>
                     </div>
-
+                </div>
+                <div className='booking-widget-errors'>
+                    {errors.map((er, idx) => {
+                        return <div key={idx}>{er}</div>;
+                    })}
                 </div>
                 <div className='button-container'>
                     {/* <Link to={`/users/${this.props.currentUserId}/bookings`}> */}

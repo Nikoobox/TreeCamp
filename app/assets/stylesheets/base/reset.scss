@@ -1,25 +1,25 @@
-// html, main, body, section, article, div, header, nav, form, p, span, input, textarea, h1, h2, h3, h4, a, ul, ol, li, figcaption, footer, button, label {
-//     margin: 0;
-//     padding: 0;
-//     border: 0;
-
-//     font-size: 100%;
-//     vertical-align: baseline;
-//     color: #333333;
-//     background: transparent;
-//     box-sizing: border-box;
-// }
-
 *{
   border:0;
     margin:0;
     padding:0;
     box-sizing: border-box;
+    
 }
 
 html{
   scroll-behavior: smooth;
   color: #333333;
+}
+
+// keeping 100vh on low content pages
+.main{
+  min-height: calc(100vh - 200px);
+  @media (min-width: 1200px){
+        min-height: calc(100vh - 220px);
+    }
+    @media (min-width: 1600px){
+        min-height: calc(100vh - 220px);
+    }
 }
 
 ul {

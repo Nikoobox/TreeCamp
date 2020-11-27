@@ -12,23 +12,22 @@ import BookingIndexContainer from './booking/booking_index_container';
 import Modal from './modal/modal';
 
 const App = () => (
-    <div>
-        <Modal />
-        <header>
-            <NavbarContainer />
-        </header>
+    <>
+        <div className='main'>
+            <Modal />
+            <header>
+                <NavbarContainer />
+            </header>
 
-        <Switch>
-            <Route exact path="/" component={SplashContainer} />
-            <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-            <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
-        </Switch>
+            <Switch>
+                <Route exact path="/" component={SplashContainer} />
+                <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+                <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
+            </Switch>
 
-        <footer>
-            <FooterContainer />
-        </footer>
-
-    </div>
+        </div>
+        <FooterContainer />
+    </>
 );
 
 export default App;

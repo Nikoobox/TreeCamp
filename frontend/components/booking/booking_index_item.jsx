@@ -12,12 +12,13 @@ class BookingIndexItem extends React.Component {
         console.log(this.props);
         return(
             <div className='card-booked-item'>
-                <span>{num}</span>
+                
                 <div className="card-image">
                     <img src={`${spots[booking.spot_id].photoUrls[0]}`} alt=""/>
                     
                 </div>
                 <div className="card-info-container">
+                    <div className='booking-number'>{num}</div>
                     <div className="item-name">
                         <Link to={`/spots/${spots[booking.spot_id].id}`}>
                             {spots[booking.spot_id].title}

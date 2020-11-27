@@ -4,7 +4,7 @@
             top:75px;
             margin-top:-50px;
             width:330px;
-            height:100%;
+            // height:100%;
             border: 1px solid $lightGrey;
             margin-left:20px;
             .price-container{
@@ -26,17 +26,21 @@
                         margin-bottom: 5px;
                     }
                     .check-in-date{
+                        display:flex;
                         font-size:14px;
                         input{
-                            width:95px;
+                            // width:95px;
+                            width:100%;
                             cursor: pointer;
-                        }
+                        }                      
                     }
                     .check-out-date{
                         font-size:14px;
+                        display:flex;
                         input{
-                            width:95px;
+                            // width:95px;
                             cursor: pointer;
+                            width:100%;
                         }
                     }
                     
@@ -60,6 +64,15 @@
                     }
                 }
                 
+            }
+            .booking-widget-errors{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                padding: 13px 10px;
+                font-size: 14px;
+                color:rgb(148, 26, 26);
+                // border: 1px solid $lightGrey;
             }
             .button-container{
                 padding: 13px 10px;
