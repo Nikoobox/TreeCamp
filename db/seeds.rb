@@ -1,8 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-
 # Examples:
-#
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
@@ -51,6 +49,20 @@ user4 = User.create!({
     first_name: "Jaxon", 
     last_name: "Ford", 
     email: "jf@gmail.com", 
+    password: "1234567"
+})
+
+user5 = User.create!({
+    first_name: "Joseph", 
+    last_name: "White", 
+    email: "jw@gmail.com", 
+    password: "1234567"
+})
+
+user6 = User.create!({
+    first_name: "Michael", 
+    last_name: "Watkins", 
+    email: "mw@gmail.com", 
     password: "1234567"
 })
 
@@ -117,6 +129,42 @@ img32 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/32.jpg
 spot3.photos.attach(io: img31, filename: '31.jpg')
 spot3.photos.attach(io: img32, filename: '32.jpg')
 
+spot4 = Spot.create!({
+    host_id: user4.id, 
+    title: "Cylindrical Treehouse", 
+    description: "The second highest tree house in a world (40 meters or 100+ feet above the ground). At the top of a giant tree, visitors and over 100 workers alike wish it will last for centuries to come. The Gibbon Experience project is meant to be an allegory of our reconciliation with the rainforest", 
+    price: 130,
+    location: 'Bokeo Province',
+    country: 'Laos',
+    rating: 94,
+    latitude: 100.00,
+    longitude: 200.00,
+})
+
+spot5 = Spot.create!({
+    host_id: user5.id, 
+    title: "Free Spirit Spheres", 
+    description: "Spirit Spheres mission is to provide a venue for people to enjoy exceptional experiences while dwelling in a natural forest environment", 
+    price: 190,
+    location: 'Qualicum Beach',
+    country: 'Canada',
+    rating: 93,
+    latitude: 100.00,
+    longitude: 200.00,
+})
+
+spot6 = Spot.create!({
+    host_id: user6.id, 
+    title: "Hapuku Tree Houses", 
+    description: "The Tree Houses are designed to complement the natural environment, as your bedroom in the sky. Their large windows bring the tree canopies into the bedroom and provide impressive views of Kaikoura's dramatic mountains and the Pacific Ocean.", 
+    price: 290,
+    location: 'Kaikoura',
+    country: 'New Zealand',
+    rating: 92,
+    latitude: 100.00,
+    longitude: 200.00,
+})
+
 # AREAS
 area1 = Area.create!({
     spot_id: spot1.id, 
@@ -138,6 +186,28 @@ area3 = Area.create!({
     ada_access: true,
     max_guests: 3
 })
+
+area4 = Area.create!({
+    spot_id: spot4.id, 
+    num_sites: 2, 
+    ada_access: true,
+    max_guests: 8
+})
+
+area5 = Area.create!({
+    spot_id: spot5.id, 
+    num_sites: 1, 
+    ada_access: false,
+    max_guests: 2
+})
+
+area6 = Area.create!({
+    spot_id: spot6.id, 
+    num_sites: 2, 
+    ada_access: true,
+    max_guests: 4
+})
+
 
 
 # ESSENTIALS
@@ -162,6 +232,30 @@ essential3 = Essential.create!({
     elevator: true, 
     campfire: true,
     toilet: false,
+    pets: false
+})
+
+essential4 = Essential.create!({
+    spot_id: spot4.id, 
+    elevator: false, 
+    campfire: false,
+    toilet: true,
+    pets: false
+})
+
+essential5 = Essential.create!({
+    spot_id: spot5.id, 
+    elevator: false, 
+    campfire: true,
+    toilet: false,
+    pets: true
+})
+
+essential6 = Essential.create!({
+    spot_id: spot6.id, 
+    elevator: true, 
+    campfire: false,
+    toilet: true,
     pets: false
 })
 
@@ -199,6 +293,39 @@ amenity3 = Amenity.create!({
     zip_line: true
 })
 
+amenity4 = Amenity.create!({
+    spot_id: spot4.id, 
+    portable_water: true, 
+    kitchen: true,
+    shower: true,
+    wifi: false,
+    electricity: true,
+    bug_spray: false,
+    zip_line: true
+})
+
+amenity5 = Amenity.create!({
+    spot_id: spot5.id, 
+    portable_water: true, 
+    kitchen: false,
+    shower: true,
+    wifi: false,
+    electricity: true,
+    bug_spray: false,
+    zip_line: false
+})
+
+amenity6 = Amenity.create!({
+    spot_id: spot6.id, 
+    portable_water: true, 
+    kitchen: true,
+    shower: true,
+    wifi: true,
+    electricity: true,
+    bug_spray: false,
+    zip_line: false
+})
+
 # DETAIL
 detail1 = Detail.create!({
     spot_id: spot1.id, 
@@ -223,6 +350,33 @@ detail3 = Detail.create!({
     min_nights: '2', 
     check_in: 'after 1pm',
     check_out: 'after 12pm',
+    cancelation_policy: 'Strict',
+    on_arrival: 'Meet and greet'
+})
+
+detail4 = Detail.create!({
+    spot_id: spot4.id, 
+    min_nights: '3', 
+    check_in: 'after 12pm',
+    check_out: 'after 10am',
+    cancelation_policy: 'Strict',
+    on_arrival: 'Train station pick up'
+})
+
+detail5 = Detail.create!({
+    spot_id: spot5.id, 
+    min_nights: '4', 
+    check_in: 'after 11am',
+    check_out: 'after 10am',
+    cancelation_policy: 'Strict',
+    on_arrival: 'Meet and small guided tour'
+})
+
+detail6 = Detail.create!({
+    spot_id: spot6.id, 
+    min_nights: '2', 
+    check_in: 'after 12pm',
+    check_out: 'after 11am',
     cancelation_policy: 'Strict',
     on_arrival: 'Meet and greet'
 })
@@ -254,6 +408,34 @@ activity3 = Activity.create!({
     hiking: true,
     wildlife_watching: true
 })
+
+activity4 = Activity.create!({
+    spot_id: spot4.id, 
+    biking: false, 
+    fishing: true, 
+    stargazing: true, 
+    hiking: true,
+    wildlife_watching: true
+})
+
+activity5 = Activity.create!({
+    spot_id: spot5.id, 
+    biking: false, 
+    fishing: false, 
+    stargazing: false, 
+    hiking: true,
+    wildlife_watching: true
+})
+
+activity6 = Activity.create!({
+    spot_id: spot6.id, 
+    biking: false, 
+    fishing: false, 
+    stargazing: false, 
+    hiking: true,
+    wildlife_watching: false
+})
+
 
 # booking1 = Booking.create!({
 #     spot_id: spot1.id,
