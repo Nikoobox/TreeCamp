@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { AuthRoute } from '../util/route_util';
 // import GreetingContainer from "./greeting/greeting_container";
 // import LoginFormContainer from './session/login_form_container';
@@ -11,6 +11,7 @@ import SpotShowContainer from './spot/spot_show_container';
 import BookingIndexContainer from './booking/booking_index_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
+import NotFoundPage from './notfoundpage/not_found_page.jsx';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -27,10 +28,17 @@ const App = () => (
                 <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
-            </Switch>
+                {/* <Route path="/404" component={NotFoundPage} />
+                <Redirect to="/404" /> */}
+                <Route path="*" component={NotFoundPage} />
+                {/* <Redirect to="/404" /> */}
 
-        </div>
+            </Switch>
+                <footer>
+
         <FooterContainer />
+                </footer>
+        </div>
     </>
 );
 

@@ -48,14 +48,13 @@ class SpotBookingWidget extends React.Component {
                 { total_cost: totalCost});
 
             this.props.createBooking(newBooking);
-
             if (checkin !== undefined && checkout !== undefined){
-                // debugger
                 this.props.clearBookingErrors()
                 
                 this.props.history.push(`/users/${this.props.currentUserId}/bookings`);
-                // debugger
+                
             }
+
         } else{
             this.props.clearBookingErrors()
             this.props.openModal('signup')
