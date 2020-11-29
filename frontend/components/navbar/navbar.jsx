@@ -40,8 +40,8 @@ class Navbar extends React.Component{
 
         return(
             <div className='navbar-container'>
-                <a href="/" className='nav-logo-image'><span>TREE</span>{element}CAMP</a>
-            
+                <a href="/" className='nav-logo-image'><img src={`${tree_camp_logo}`} alt=""/>TREECAMP</a>
+                {/* <a href="/" className='nav-logo-image'><span>TREE</span>{element}CAMP</a> */}
                 <ul className='nav-right'>
                     
                     

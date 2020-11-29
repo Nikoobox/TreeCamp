@@ -14,11 +14,20 @@
 
 .nav-logo-image{
     color: $mainAlmostBlack;
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-    span{
-        color:$mainDarkGreen;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    font-weight:bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:$mainDarkGreen;
+    img{
+        width:27px;
+        margin-right:5px;
     }
+    // span{
+    //     color:$mainDarkGreen;
+    // }
 }
 
 .nav-right {
