@@ -5,7 +5,6 @@ import { fetchBookings, deleteBooking } from '../../actions/booking_actions';
 import { fetchSpot, fetchSpots } from '../../actions/spot_actions';
 
 
-
 const mapState = (state, ownProps) => {
 
     return {
@@ -28,6 +27,3 @@ const mapDisp = dispatch => {
 }
 
 export default connect(mapState, mapDisp)(BookingIndex);
-
-// import { openModal } from '../../actions/modal_actions';
-// openModal: modal => dispatch(openModal(modal))

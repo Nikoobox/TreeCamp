@@ -9,9 +9,11 @@ import FooterContainer from './footer/footer_container';
 import SplashContainer from './splash/splash_container';
 import SpotShowContainer from './spot/spot_show_container';
 import BookingIndexContainer from './booking/booking_index_container';
+import BookingEditContainer from './booking/booking_edit_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import NotFoundPage from './notfoundpage/not_found_page.jsx';
+// import About from './about/about.jsx';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -26,16 +28,14 @@ const App = () => (
                 <Route exact path="/" component={SplashContainer} />
                 <Route exact path="/spots/:spotId" component={SpotShowContainer} />
                 <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
+                <Route path="/users/:userId/bookings/:bookingId/edit" component={BookingEditContainer} />
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
-                {/* <Route path="/404" component={NotFoundPage} />
-                <Redirect to="/404" /> */}
                 <Route path="*" component={NotFoundPage} />
-                {/* <Redirect to="/404" /> */}
-
+                
             </Switch>
                 <footer>
-
+        
         <FooterContainer />
                 </footer>
         </div>

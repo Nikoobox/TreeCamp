@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import BookingIndexItem from './booking_index_item';
 
 class BookingIndex extends React.Component {
@@ -18,7 +19,6 @@ class BookingIndex extends React.Component {
         if (Object.keys(this.props.spots).length === 0) {
             return null;
         } 
-        // debugger
         const { currentUser, spots, bookings,deleteBooking} = this.props;
 
         return (
@@ -59,4 +59,4 @@ class BookingIndex extends React.Component {
     }
 }
 
-export default BookingIndex;
+export default withRouter(BookingIndex);

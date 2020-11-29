@@ -9,7 +9,6 @@ class SpotShowDetail extends React.Component {
 
     render() {
         const { detail } = this.props.spot;
-        // console.log(this.props);
 
         return (
             <div className='details-container'>

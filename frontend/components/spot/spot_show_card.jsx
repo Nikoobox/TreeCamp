@@ -46,100 +46,152 @@ class SpotShowCard extends React.Component{
                             </div>
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {wheelChairIcon}
-                        </div>
-                        <div className='item-info'>
-                            {area.ada_access ? '' : 'No'} ADA access
-                            </div>
+                        {area.ada_access ?
+                        <>
+                            <div className='item-icon'>{wheelChairIcon}</div>
+                            <div className='item-info'>ADA access </div>
+                        </> :
+                        <>
+                                <div className='item-icon na'>{wheelChairIcon}</div>
+                            <div className='item-info na'>No ADA access</div>
+                        </>}
                     </div>
                 </div>
 
                 <div className='cards cards-essential'>
                     <div className='cards-name'>Essentials</div>
                     <div className='item-container'>
-                        <div className='item-icon'>
+                        {/* <div className='item-icon'>
                             {campfireIcon}
                         </div>
                         <div className='item-info'>
                             {essential.campfire ? 'Campfires allowed' : 'Campfires not allowed'}
-                        </div>
+                        </div> */}
+                        {essential.campfire ?
+                        <>
+                            <div className='item-icon'>{campfireIcon}</div>
+                            <div className='item-info'>Campfires allowed </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{campfireIcon}</div>
+                            <div className='item-info na'>Campfires not allowed</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {elevatorIcon}
-                        </div>
-                        <div className='item-info'>
-                            {essential.elevator ? 'Elevator available' : 'Elevator is not available'}
-                        </div>
+                        {essential.elevator ?
+                        <>
+                            <div className='item-icon'>{elevatorIcon}</div>
+                            <div className='item-info'>Elevator available </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{elevatorIcon}</div>
+                            <div className='item-info na'>Elevator is not available</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {toiletIcon}
-                        </div>
-                        <div className='item-info'>
-                            {essential.toilet ? 'Toilet available' : 'Toilet is not available'}
-                        </div>
+                        {essential.toilet ?
+                        <>
+                            <div className='item-icon'>{toiletIcon}</div>
+                            <div className='item-info'>Toilet available </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{toiletIcon}</div>
+                            <div className='item-info na'>Toilet is not available</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {petsIcon}
-                        </div>
-                        <div className='item-info'>
-                            {essential.pets ? 'Pet friendly' : 'Please no pets'}
-                        </div>
+                        {essential.pets ?
+                        <>
+                            <div className='item-icon'>{petsIcon}</div>
+                            <div className='item-info'>Pet friendly </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{petsIcon}</div>
+                            <div className='item-info na'>Please no pets</div>
+                        </>}
                     </div>
                 </div>
 
                 <div className='cards cards-amenity'>
                     <div className='cards-name'>Amenities</div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {portWaterIcon}
-                        </div>
-                        <div className='item-info'>
-                            {amenity.portable_water ? 'Portable water available' : 'Portable water is not available'}
-                        </div>
+                        {amenity.portable_water ?
+                        <>
+                            <div className='item-icon'>{portWaterIcon}</div>
+                            <div className='item-info'>Portable water available </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{portWaterIcon}</div>
+                            <div className='item-info na'>Portable water is not available</div>
+                        </>}
+                        
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {kitchenIcon}
-                        </div>
-                        <div className='item-info'>
-                            {amenity.kitchen ? 'Kitchen available' : 'Kitchen is not available'}
-                        </div>
+                        {amenity.kitchen ?
+                        <>
+                            <div className='item-icon'>{kitchenIcon}</div>
+                            <div className='item-info'>Kitchen available</div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{kitchenIcon}</div>
+                            <div className='item-info na'>Kitchen is not available</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {showerIcon}
-                        </div>
-                        <div className='item-info'>
-                            {amenity.shower ? 'Shower available' : 'Shower is not available'}
-                        </div>
+                        {amenity.shower ?
+                        <>
+                            <div className='item-icon'>{showerIcon}</div>
+                            <div className='item-info'>Shower available</div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{showerIcon}</div>
+                            <div className='item-info na'>Shower is not available</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
+                        {/* <div className='item-icon'>
                             {wifiIcon}
                         </div>
                         <div className='item-info'>
                             {amenity.wifi ? 'Wifi provided' : 'Wifi is not provided'}
-                        </div>
+                        </div> */}
+                        {amenity.wifi ?
+                        <>
+                            <div className='item-icon'>{wifiIcon}</div>
+                            <div className='item-info'>Wifi provided </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{wifiIcon}</div>
+                            <div className='item-info na'>Wifi is not provided</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
-                            {elIcon}
-                        </div>
-                        <div className='item-info'>
-                            {amenity.electricity ? 'Electricity provided' : 'Electricity is not provided'}
-                        </div>
+                        {amenity.electricity ?
+                        <>
+                            <div className='item-icon'>{elIcon}</div>
+                            <div className='item-info'>Electricity provided </div>
+                        </> : 
+                        <>
+                            <div className='item-icon na'>{elIcon}</div>
+                            <div className='item-info na'>No electricity</div>
+                        </>}
                     </div>
                     <div className='item-container'>
-                        <div className='item-icon'>
+                        {/* <div className='item-icon'>
                             {bugsIcon}
                         </div>
                         <div className='item-info'>
                             {amenity.bug_spray ? 'Bug spray provided' : 'Bug spray is not provided'}
-                        </div>
+                        </div> */}
+                        {amenity.bug_spray ?
+                        <>
+                            <div className='item-icon'>{bugsIcon}</div>
+                            <div className='item-info'>Bug spray provided </div>
+                        </> :
+                        <>
+                            <div className='item-icon na'>{bugsIcon}</div>
+                            <div className='item-info na'>Bug spray is not provided</div>
+                        </>}
                     </div>
 
                 </div>

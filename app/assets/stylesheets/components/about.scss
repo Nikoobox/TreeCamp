@@ -1,0 +1,25 @@
+.about{
+    // margin: 150px 32px;
+    // @media (min-width: 1200px){
+    //     margin: 150px 100px;
+    // }
+    // @media (min-width: 1600px){
+    //     margin: 150px 150px;
+    // }
+    .about-container{
+        // width:50%;
+        // display:flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        .title{
+            font-size: 30px;
+            background:yellow;
+            margin-bottom:20px;
+        }
+        .description{
+    background:pink;
+        }
+
+    }
+}

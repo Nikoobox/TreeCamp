@@ -4,6 +4,7 @@ import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import SpotIndexContainer from '../spot/spot_index_container';
+import About from '../about/about';
 
 class Splash extends React.Component{
     constructor(props){
@@ -47,6 +48,8 @@ class Splash extends React.Component{
                         </div>
                     </div>
                 </div> 
+                
+                <About />
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class BookingIndexItem extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class BookingIndexItem extends React.Component {
 
     render(){
         const{num, spots, deleteBooking, booking} = this.props;
-        console.log(this.props);
+        // console.log(this.props);
         return(
             <div className='card-booked-item'>
                 
@@ -39,9 +40,11 @@ class BookingIndexItem extends React.Component {
                     <div className="item">
                         <span>Total cost: $</span>{booking.total_cost}
                     </div>
-                    <div className='edit-booking-btn-container'>
-                        <Link to=''>Edit Booking</Link>
-                    </div>
+                    {/* <div className='edit-booking-btn-container'>
+                        <Link to={`/users/${booking.visitor_id}/bookings/${booking.id}/edit`}>
+                            Edit this booking
+                        </Link>
+                    </div> */}
                     <div className='delete-booking-btn-container'>
                         <button onClick={()=>deleteBooking(booking.id)} className='delete-booking-btn'>Cancel Booking</button>
                     </div>
@@ -51,4 +54,4 @@ class BookingIndexItem extends React.Component {
         }
     }
     
-    export default BookingIndexItem;
+    export default withRouter(BookingIndexItem);

@@ -44,6 +44,7 @@ export const fetchBooking = bookingId => dispatch => {
 export const createBooking = booking => dispatch => {
     return APIUtil.createBooking(booking)
     .then(booking => {
+      
         return dispatch(receiveBooking(booking))
     },
     (err) => {

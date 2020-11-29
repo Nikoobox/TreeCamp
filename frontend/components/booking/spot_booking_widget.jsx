@@ -43,12 +43,14 @@ class SpotBookingWidget extends React.Component {
             const numDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             const costPerNight = this.props.spot.price;
             const totalCost = costPerNight * numDays;
-           
+            console.log(`this is checkin ${checkin}`);
+            console.log(`this is date1 ${date1}`);
             const newBooking = Object.assign({}, this.state, 
                 { total_cost: totalCost});
 
             this.props.createBooking(newBooking);
             if (checkin !== undefined && checkout !== undefined){
+               
                 this.props.clearBookingErrors()
                 
                 this.props.history.push(`/users/${this.props.currentUserId}/bookings`);
@@ -56,6 +58,7 @@ class SpotBookingWidget extends React.Component {
             }
 
         } else{
+         
             this.props.clearBookingErrors()
             this.props.openModal('signup')
             

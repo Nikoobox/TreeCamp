@@ -1,15 +1,18 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import SpotBookingWidget from "./spot_booking_widget.jsx";
-import { createBooking, clearBookingErrors, receiveBookingErrors } from '../../actions/booking_actions';
-// import { openModal, closeModal } from '../../actions/modal_actions';
+import BookingEdit from "./booking_edit.jsx";
+import { fetchSpot, fetchSpots } from '../../actions/spot_actions';
+import { updateBooking, clearBookingErrors, fetchBooking} from '../../actions/booking_actions';
 
 const mapState = (state, ownProps) => {
-    // console.log(state);
+    // console.log(state)
+    // console.log(ownProps)
     return {
-        // spots: state.entities.spots,
-        spot: state.entities.spots[ownProps.match.params.spotId],
-        currentUserId: state.session.id,
+        spots: state.entities.spots,
+        // spot: state.entities.spots[ownProps.match.params.spotId],
+        // bookings: state.entities.bookings,
+        booking: state.entities.bookings[ownProps.match.params.bookingId],
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.bookings
     }
@@ -18,17 +21,13 @@ const mapState = (state, ownProps) => {
 const mapDisp = dispatch => {
     return {
         fetchBooking: (bookingId) => dispatch(fetchBooking(bookingId)),
+        // fetchBookings: () => dispatch(fetchBookings()),
         fetchSpot: spotId => dispatch(fetchSpot(spotId)),
-        // createBooking: booking => {
-        //     dispatch(createBooking(booking))
-        // },
+        fetchSpots: () => dispatch(fetchSpots()),
 
-        // openModal: modal => {
-        //     dispatch(openModal(modal));
-        // },
-
-        clearBookingErrors: () => dispatch(clearBookingErrors())
+        updateBooking: booking => dispatch(updateBooking(booking))
+        // clearBookingErrors: () => dispatch(clearBookingErrors())
     }
 }
 
-export default connect(mapState, mapDisp)(SpotBookingWidget);
+export default withRouter(connect(mapState, mapDisp)(BookingEdit));
