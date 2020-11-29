@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Carousel from 'nuka-carousel';
+// import Carousel from 'nuka-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import SpotIndexContainer from '../spot/spot_index_container';
 import About from '../about/about';
+import Scroll from "react-scroll";
+const ScrollLink = Scroll.Link;
 
 class Splash extends React.Component{
     constructor(props){
@@ -44,7 +46,10 @@ class Splash extends React.Component{
                         <div className='image-box-box'>
                             <div className='box-title'>Own a tree house? Earn money with Treecamp</div>
                             <div className='box-sub'>Join our community of brave tree house lovers and nature enthusiasts</div>
-                            <div className='box-button'><button>Learn more</button></div>
+                            <ScrollLink to="/" className='box-button' to="about-section" duration={200}>
+                                <button>Learn more</button>
+                            </ScrollLink>
+                            
                         </div>
                     </div>
                 </div> 

@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTree } from '@fortawesome/free-solid-svg-icons';
+// import { animateScroll as scroll } from 'react-scroll';
+// import Scroll from "react-scroll";
+// const ScrollLink = Scroll.Link;
 
 class Navbar extends React.Component{
     constructor(props){
@@ -15,21 +18,23 @@ class Navbar extends React.Component{
     }
 
     render(){
-        // console.log(this.props)
         const { currentUser, logout } = this.props;
         const element = <FontAwesomeIcon icon={faTree} />
 
-        // this.props.history.push(`/users/${this.props.currentUserId}/bookings`)
-
         const whenCurrentUser = !currentUser ? 
             <>
-                <li>  <Link to="/" className='navbar-link'>About</Link> </li>
+                <li>  <Link to="/about" className='navbar-link'>About</Link> </li>
+
+                {/* <li>  <ScrollLink to="/" className='navbar-link' to="about-section" smooth={true} duration={200}>About</ScrollLink> </li> */}
+         
                 <li> <Link to="/" onClick={() => this.props.openModal('signup')} className='navbar-link'>Sign Up</Link>  </li>    
                 <li><Link to="/" onClick={() => this.props.openModal('login')} className='navbar-link'>Log In</Link> </li>
             </> : 
             <>
                 <li className='navbar-welcome-user' onClick={this.showUser}>Welcome,<span> {currentUser.first_name}</span>!</li>
-                <li>  <Link to="/" className='navbar-link'>About</Link> </li>
+                <li>  <Link to="/about" className='navbar-link'>About</Link> </li>
+                {/* <li>  <ScrollLink to="/" className='navbar-link' to="about-section"  duration={200}>About</ScrollLink> </li> */}
+
                 <li ><Link to="/"><button onClick={() => logout()} className='navbar-logout-btn'>Log Out</button></Link></li>
             </>
 

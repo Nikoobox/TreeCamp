@@ -8,18 +8,23 @@ class About extends React.Component {
     }
 
     render() {
-        
+
 
         return (
             <div className='about'>
-                <div className='about-container'>
-                    <div className='title'>
-                        About
-                    </div>
+                <div className='about-container' id='about-section'>
+                   <div className="about-title">About</div>
                     <div className='description'>
-                        Tree Camp is a booking platform for unique accomodations. Rent one of the thousands unique tree houses all over the world. Become a host, meet nature enthusiasts and support sustainable tourism. It is time to elevate yourself! 
+                        <div className='description-sub'>
+                            Tree Camp is a booking platform for unique accomodations. Rent one of the thousands unique tree houses all over the world. Ranging from pet-friendly hotels or eco-friendly hotels, glamping retreats and getaways. With inventory perfect for family vacations, romantic getaways, and near top solo travel destinations, Tree Camp is where to book. It is time to elevate yourself! 
+                        </div>
+                        <div className="description-sub">
+                            Become a host, meet nature enthusiasts and support sustainable tourism.
+                        </div>
+                        <div className='description-sub last'>
 
-                        Tree Camp was inspiried by Hipcamp website, that offers camping sites in all 50 states.
+                            Tree Camp was inspiried by Hipcamp website, that offers camping sites in all 50 states.
+                        </div>
                     </div>
                 </div>
             </div>
