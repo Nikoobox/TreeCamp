@@ -1,24 +1,7 @@
-# README
+# TREECAMP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[TREECAMP](https://tree-camp.herokuapp.com/#/ "TeeCamp Homepage") is the best platform to explore, search and book the most unique treehouses all over the world. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Logo]<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="250px" src="app/assets/images/tree_camp_logo.png" alt="Treecamp logo"></a>
+</div>
