@@ -1,12 +1,13 @@
 .booking-index-container{
     display:flex;
     margin: 130px 32px;
-    @media (min-width: 1200px){
-        margin: 150px 100px;
-    }
-    @media (min-width: 1600px){
-        margin: 150px 150px;
-    }
+    min-height: calc(100vh - 330px);
+    // @media (min-width: 1200px){
+    //     margin: 150px 100px;
+    // }
+    // @media (min-width: 1600px){
+    //     margin: 150px 150px;
+    // }
     .left-column{
         width:30%;
         margin: 10px;
