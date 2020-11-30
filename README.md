@@ -7,6 +7,8 @@
   <a href="https://tree-camp.herokuapp.com/#/"><img width="50px" src="app/assets/images/tree_camp_logo.png"></a>
 </div>
 
+
+
 - Users can login, signup or explore the site as demo users.
 - Password are encrypted with BCrypt for security 
 - Only logged in users are able to book treehouses. 
