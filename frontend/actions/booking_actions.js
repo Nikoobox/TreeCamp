@@ -44,10 +44,11 @@ export const fetchBooking = bookingId => dispatch => {
 export const createBooking = booking => dispatch => {
     return APIUtil.createBooking(booking)
     .then(booking => {
-      
+        // debugger
         return dispatch(receiveBooking(booking))
     },
     (err) => {
+        // debugger
         return dispatch(receiveBookingErrors(err.responseJSON))
     })
 }

@@ -12,6 +12,11 @@ class SessionForm extends React.Component {
         this.demoUser = this.demoUser.bind(this);
     }
 
+    componentWillUnmount(){
+        this.props.closeModal();
+        this.props.clearSessionErrors();
+    }
+
     demoUser(e) {
         e.preventDefault();
         const user = {
@@ -33,6 +38,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         const { errors, formType, message, buttonText} = this.props;
         const { first_name, last_name, email, password } = this.state;
 
@@ -59,11 +65,13 @@ class SessionForm extends React.Component {
         return (
             <div className='session-modal'>
 
-                <form onSubmit={this.handleSubmit} className='session-form'>
                 <h1>{headerMessage}</h1>
+                <div className='demo-user-button-box'>
+                    <button onClick={this.demoUser} className='demo-user-button' type='button'> Demo User </button>
 
-                    <button onClick={this.demoUser} className='demo-user-button'> Demo User </button>
-                    
+                </div>
+                
+                <form onSubmit={this.handleSubmit} className='session-form'>
                     {signUpFields}
                      
                     <input onChange={this.update('email')} type="email" name="email" value={email} placeholder='Email password' className='session-form-input'/>
@@ -72,9 +80,9 @@ class SessionForm extends React.Component {
 
                     <button className='session-form-button'> {buttonText} </button>
 
-                    <div className='redirect-to-form'>{redirectToForm}</div>
                 </form>
 
+                    <div className='redirect-to-form'>{redirectToForm}</div>
 
                 <div className="session-form-errors"> 
                     {renderErrs} 

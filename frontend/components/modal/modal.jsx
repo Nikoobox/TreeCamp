@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import { receiveErrors } from '../../actions/session_actions';
+import { clearBookingErrors } from '../../actions/booking_actions';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 
@@ -39,7 +40,8 @@ const mapDispatchToProps = dispatch => {
     return {
         closeModal: () => {
             dispatch(closeModal());
-            dispatch(receiveErrors([]))
+            dispatch(receiveErrors([]));
+            dispatch(clearBookingErrors())
         },
     };
 };

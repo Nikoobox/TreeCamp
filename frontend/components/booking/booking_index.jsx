@@ -14,9 +14,14 @@ class BookingIndex extends React.Component {
         this.props.fetchBookings();
     }
 
-    render() {
+    // componentWillUnmount() {
+        // this.props.closeModal();
+    // }
 
-        if (Object.keys(this.props.spots).length === 0) {
+    render() {
+    console.log(this.props);
+        if ((Object.keys(this.props.spots).length === 0)) {
+        // if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)){
             return null;
         } 
         const { currentUser, spots, bookings,deleteBooking} = this.props;
@@ -44,14 +49,20 @@ class BookingIndex extends React.Component {
                                 <Link to={'/'}><button className='discover-btn'>Discover</button></Link> 
                             </div>
                         </div> : 
-                        <div className='right-column-message'>Upcoming trips:</div>}
-
+                        <div className='right-column-message'>Upcoming trips:</div>
+                        
+                        }
                     </div>
                     
                     <div className='booked-items'>
                         {bookings.map((booking, idx) => {
                             return <BookingIndexItem spots={spots} booking={booking} deleteBooking={deleteBooking} key={idx} num={idx + 1} />
                         })}
+                        {bookings.length !== 0 ? 
+                         <div className='discover-btn-container'>
+                             <Link to={'/'}><button className='discover-btn'>Discover</button></Link> 
+                        </div>
+                        : '' }
                     </div>
                 </div>
             </div>

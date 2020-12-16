@@ -27,9 +27,12 @@
   display:flex;
   flex-direction:column;
   align-items: center;
+    h1{
+      padding-top:20px;
+    }
     .session-form{
       width:330px;
-      padding:15px;
+      padding:10px 15px 15px;
       display:flex;
       flex-direction: column;
       h1{
@@ -41,7 +44,7 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      padding: 0 10px;
+      padding: 0 10px 20px;
       font-size: 14px;
       color:rgb(148, 26, 26);
       .errors{
@@ -67,7 +70,7 @@
 }
 
 .session-form-input{
-  // width:320px;
+
   width:100%;
   padding: 18px 14px;
   margin-bottom: 10px;
@@ -80,11 +83,12 @@
   border-radius: 0;
   background:$mainLightGreen;
   color:white;
-  padding: 16px;
+  // padding: 0 16px 16px;
   border-radius:25px;
   border:1px solid transparent;
   font-size: 1rem;
   transition: ease-out all 0.2s;
+  line-height: 52px;;
   &:hover{
     cursor: pointer;
     transform: translateY(-3%);
@@ -93,6 +97,7 @@
 }
 .redirect-to-form{
   margin: 15px auto;
+  
   a{
     font-size:14px;
     
@@ -107,146 +112,24 @@
   }
 }
 
-.demo-user-button{
-  border-radius: 0;
-  margin-bottom: 10px;
-  background:$mainAlmostBlack;
-  color:white;
-  padding: 18px;
-  border:1px solid transparent;
-  font-size: 1rem;
-  transition: ease-out all 0.2s;
-  &:hover{
-    background:white;
-    color:$mainAlmostBlack;
-    border:1px solid rgb(13, 14, 14);
-    cursor: pointer;
+.demo-user-button-box{
+  padding:20px 15px 0px;;
+  width:330px;
+  .demo-user-button{
+    border-radius: 0;
+    width:100%;
+    background:$mainAlmostBlack;
+    color:white;
+    padding: 18px;
+    border:1px solid transparent;
+    font-size: 1rem;
+    transition: ease-out all 0.2s;
+    &:hover{
+      background:white;
+      color:$mainAlmostBlack;
+      border:1px solid rgb(13, 14, 14);
+      cursor: pointer;
+    }
   }
+
 }
-
-
-
-
-/////////////////////
-
-// .modal-background {
-//   position: fixed;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   background:rgba(0, 0, 0, 0.4);
-//   z-index: 101;
-// }
-
-// .modal-child {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   // width:330px;
-// }
-
-// .session-modal{
-//   background:white;
-//   text-align:center;
-//   // padding:3%; 
-//   display:flex;
-//   flex-direction:column;
-//   align-items: center;
-//     .session-form{
-//       h1{
-//         word-wrap: nowrap;
-//         margin-bottom:10px;
-//       }
-//     width:330px;
-//     padding:5%;
-//     display:flex;
-//     flex-direction: column;
-//   }
-//    .session-form-errors{
-//       display:flex;
-//       flex-direction:column;
-//       align-items:center;
-//       padding: 0 10px;
-//       font-size: 14px;
-//       color:rgb(148, 26, 26);
-//       .errors{
-//         padding: 5px 0;
-//       }
-//   }
-// }
-
-
-
-// .session-form-signup{
-//   display:flex;
-//     .session-form-input{
-//       width:50%;
-//     }
-// }
-
-// .session-form ::placeholder { 
-//     color: $mainAlmostBlack;
-//     opacity: 1; 
-//     font-weight: bold;
-//     font-size: 15px;
-// }
-
-// .session-form-input{
-//   // width:320px;
-//   width:100%;
-//   padding: 18px 14px;
-//   margin-bottom: 10px;
-//   font-size: 16px; 
-//   border:1px $mainAlmostBlack solid;
-//   border-radius: 0;
-// }
-
-// .session-form-button{
-//   border-radius: 0;
-//   background:$mainLightGreen;
-//   color:white;
-//   padding: 16px;
-//   border-radius:25px;
-//   border:1px solid transparent;
-//   font-size: 1rem;
-//   transition: ease-out all 0.2s;
-//   &:hover{
-//     cursor: pointer;
-//     transform: translateY(-3%);
-//     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, .2);
-//   }
-// }
-// .redirect-to-form{
-//   margin: 15px auto;
-//   a{
-//     font-size:14px;
-    
-//     color:$midGrey;
-//     font-weight:300;
-//     span{
-//       font-weight:400;
-//       &:hover{
-//         color:$mainDarkerGrey;
-//       }
-//     }
-//   }
-// }
-
-// .demo-user-button{
-//   border-radius: 0;
-//   margin-bottom: 10px;
-//   background:$mainAlmostBlack;
-//   color:white;
-//   padding: 18px;
-//   border:1px solid transparent;
-//   font-size: 1rem;
-//   transition: ease-out all 0.2s;
-//   &:hover{
-//     background:white;
-//     color:$mainAlmostBlack;
-//     border:1px solid rgb(13, 14, 14);
-//     cursor: pointer;
-//   }
-// }
