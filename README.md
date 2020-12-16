@@ -34,6 +34,6 @@
 
 
 <div align="center">
-  <a href="https://tree-camp.herokuapp.com/#/"><img width="30px" src="app/assets/images/arrow_down.png"></a>
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
 
