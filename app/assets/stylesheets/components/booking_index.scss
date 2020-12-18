@@ -134,9 +134,32 @@
                         margin-bottom: 20px;
                          font-weight:300;
                     }
+                    .edit-booking-btn-container{
+                        margin-top:20px;
+                        // width:200px;
+                        // color:black;
+                        .edit-booking-link{
+                             color:$mainDarkerGrey;
+                            // background: $mainLightGreen;
+                            // color:white;
+                            // padding:10px;
+                            // font-size:16px;
+                            // letter-spacing: 0.2px;
+                            // border: 2px solid transparent;
+                            transition: ease-out all 0.2s;
+                            &:hover{
+                                cursor:pointer;
+                                font-weight:bold;
+                                // background: white;
+                                // color:$mainLightGreen;
+                                // border: 2px solid $mainLightGreen;
+                            }
+                        }
+                    }
                     .delete-booking-btn-container{
                         margin-top:20px;
                         .delete-booking-btn{
+                            // width:200px;
                             background: $mainLightGreen;
                             color:white;
                             padding:10px;

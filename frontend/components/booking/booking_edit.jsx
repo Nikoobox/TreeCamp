@@ -58,15 +58,23 @@ class BookingEdit extends React.Component {
         e.preventDefault();
         const date1 = new Date(this.state.checkin_date);
         const date2 = new Date(this.state.checkout_date);
-        const numDays = Math.ceil((Math.abs(date2 - date1)) / (1000 * 60 * 60 * 24));
-        const costPerNight = this.props.booking.price_per_night;
+        if(date2<=date1){
+            const err = document.getElementById('errors');
+            err.innerText=
+            "Incorrect checkout date. Try again";
 
-        // this.setState({ total_cost: costPerNight * numDays });
-        const newBooking = Object.assign({}, this.state, { total_cost: costPerNight * numDays });
-        // console.log('this is new booking: ', newBooking)
-        this.props.updateBooking(newBooking).then(() => {
-            this.props.history.push(`/users/${this.props.currentUser.id}/bookings`);
-        })
+            return null;
+        }else{
+
+            const numDays = Math.ceil((Math.abs(date2 - date1)) / (1000 * 60 * 60 * 24));
+            const costPerNight = this.props.booking.price_per_night;
+    
+            const newBooking = Object.assign({}, this.state, { total_cost: costPerNight * numDays });
+            
+            this.props.updateBooking(newBooking).then(() => {
+                this.props.history.push(`/users/${this.props.currentUser.id}/bookings`);
+            })
+        }
     }
     handleVisitors(operation) {
         if (!this.props.booking) {
@@ -87,14 +95,6 @@ class BookingEdit extends React.Component {
         if (!this.props.booking || (this.state === null)) {
             return null;
         } 
-        // console.log('props from render')
-        // console.log(this.props)
-        // console.log('state from render')
-        // console.log(this.state)
-
-        const{total_cost}=this.state;
-        // const{id,title,description, country, location,price, rating}=this.props.spots[booking.spot_id]
-        // const { spot } = this.props.spots[booking.spot_id]
         return (
             <div className='edit-booking-container'>
                 <div className='card'>
@@ -130,10 +130,10 @@ class BookingEdit extends React.Component {
                                         value={this.state.checkout_date}
                                         // placeholder={this.state.checkout_date}
                                         onDayChange={this.update('checkout_date')}
-                                        selectedDay={this.state.checkout_date}
-                                        dayPickerProps={{
-                                            disabledDays: { before: this.state.checkin_date }
-                                        }}
+                                        // selectedDay={this.state.checkout_date}
+                                        // dayPickerProps={{
+                                        //     disabledDays: { before: this.state.checkin_date }
+                                        // }}     
                                     />
                                     </div>
 
@@ -147,6 +147,9 @@ class BookingEdit extends React.Component {
                                         </div>
                                     </div>
 
+                                    <div id='errors'>
+                                    </div>
+
                                     <button className='edit-btn'>Edit booking</button>
                                 </form>
                             </div>
@@ -156,7 +159,6 @@ class BookingEdit extends React.Component {
 
                 </div>
             </div>
-          
         )
     }
 }

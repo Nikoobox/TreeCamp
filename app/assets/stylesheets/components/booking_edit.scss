@@ -97,23 +97,25 @@
                                     cursor:pointer;
                                 }
                             }
-                            .total{
-                                
-                            }
                             .guests-plus{
                                 &:hover{
-                                        cursor:pointer;
-                                    }
+                                    cursor:pointer;
                                 }
+                            }
                         }
 
+                    }
+                    #errors{
+                        margin:10px 0;
+                        color:rgb(148, 26, 26);
+                        text-align: center;
                     }
                     .edit-btn{
                         color:white;
                         background: $mainLightGreen;
                         width:100%;
                         padding: 15px 15px;
-                        margin-top:10px;
+                        margin-top:15px;
                         font-size:18px;
                         letter-spacing: 0.2px;
                         border:2px solid transparent;
@@ -125,11 +127,7 @@
                         }
                     }
                 }
-    
             }
         }
-
     }
-    
-    
 }

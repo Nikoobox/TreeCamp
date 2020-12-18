@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit} from '@fortawesome/free-solid-svg-icons';
 
 class BookingIndexItem extends React.Component {
     constructor(props) {
@@ -10,7 +12,7 @@ class BookingIndexItem extends React.Component {
 
     render(){
         const{num, spots, deleteBooking, booking} = this.props;
-        // console.log(this.props);
+        const faEditIcon = <FontAwesomeIcon icon={faEdit} />
         return(
             <div className='card-booked-item'>
                 
@@ -40,9 +42,10 @@ class BookingIndexItem extends React.Component {
                     <div className="item">
                         <span>Total cost: $</span>{booking.total_cost}
                     </div>
+                    
                     <div className='edit-booking-btn-container'>
-                        <Link to={`/users/${booking.visitor_id}/bookings/${booking.id}/edit`}>
-                            Edit this booking
+                        <Link to={`/users/${booking.visitor_id}/bookings/${booking.id}/edit`} className='edit-booking-link'>
+                            {faEditIcon} <span>Edit this booking </span>
                         </Link>
                     </div>
                     <div className='delete-booking-btn-container'>
