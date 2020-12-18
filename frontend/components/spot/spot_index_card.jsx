@@ -11,7 +11,7 @@ class SpotIndexCard extends React.Component {
 
     render() {
         const { title, price, location, country, rating, photoUrls} = this.props.spot; 
-
+        // console.log(photoUrls[0])
         return (
                 <Link to={`/spots/${this.props.spot.id}`} className='spot-index-card'>
                     <div className='card-container'>

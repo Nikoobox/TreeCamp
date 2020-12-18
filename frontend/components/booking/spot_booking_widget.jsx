@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 
-
 class SpotBookingWidget extends React.Component {
     constructor(props) {
         super(props);
@@ -20,10 +19,6 @@ class SpotBookingWidget extends React.Component {
 
     componentWillUnmount() {
         this.props.clearBookingErrors();
-    }
-
-    componentDidMount() {
-       
     }
 
     update(field) {

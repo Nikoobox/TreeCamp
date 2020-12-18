@@ -40,11 +40,11 @@ class BookingIndexItem extends React.Component {
                     <div className="item">
                         <span>Total cost: $</span>{booking.total_cost}
                     </div>
-                    {/* <div className='edit-booking-btn-container'>
+                    <div className='edit-booking-btn-container'>
                         <Link to={`/users/${booking.visitor_id}/bookings/${booking.id}/edit`}>
                             Edit this booking
                         </Link>
-                    </div> */}
+                    </div>
                     <div className='delete-booking-btn-container'>
                         <button onClick={()=>deleteBooking(booking.id)} className='delete-booking-btn'>Cancel Booking</button>
                     </div>

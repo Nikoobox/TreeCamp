@@ -40,7 +40,7 @@ export const login = (user) => dispatch => {
             dispatch(closeModal())
         }, 
         (err) => { 
-            debugger
+            // debugger
             return dispatch(receiveErrors(err.responseJSON))
         })
 }

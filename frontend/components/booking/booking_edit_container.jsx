@@ -9,9 +9,7 @@ const mapState = (state, ownProps) => {
     // console.log(state)
     // console.log(ownProps)
     return {
-        spots: state.entities.spots,
-        // spot: state.entities.spots[ownProps.match.params.spotId],
-        // bookings: state.entities.bookings,
+        // spots: state.entities.spots,
         booking: state.entities.bookings[ownProps.match.params.bookingId],
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.bookings
@@ -20,10 +18,12 @@ const mapState = (state, ownProps) => {
 
 const mapDisp = dispatch => {
     return {
-        fetchBooking: (bookingId) => dispatch(fetchBooking(bookingId)),
-        // fetchBookings: () => dispatch(fetchBookings()),
+        fetchBooking: (bookingId) => {
+            // debugger
+            return dispatch(fetchBooking(bookingId))
+        },
         fetchSpot: spotId => dispatch(fetchSpot(spotId)),
-        fetchSpots: () => dispatch(fetchSpots()),
+        // fetchSpots: () => dispatch(fetchSpots()),
 
         updateBooking: booking => dispatch(updateBooking(booking))
         // clearBookingErrors: () => dispatch(clearBookingErrors())

@@ -10,8 +10,10 @@ class BookingIndex extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchSpots();
-        this.props.fetchBookings();
+        this.props.fetchSpots().then(()=>{
+
+            this.props.fetchBookings();
+        });
     }
 
     // componentWillUnmount() {
@@ -19,9 +21,9 @@ class BookingIndex extends React.Component {
     // }
 
     render() {
-    console.log(this.props);
-        if ((Object.keys(this.props.spots).length === 0)) {
-        // if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)){
+    // console.log(this.props);
+        // if ((Object.keys(this.props.spots).length === 0)) {
+        if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)){
             return null;
         } 
         const { currentUser, spots, bookings,deleteBooking} = this.props;

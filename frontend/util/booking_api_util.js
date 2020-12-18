@@ -5,12 +5,13 @@ export const fetchBookings = () => {
     })
 }
 
-export const fetchBooking = bookingId => (
-    $.ajax({
+export const fetchBooking = bookingId => {
+    // debugger
+    return $.ajax({
         method: 'GET',
         url: `/api/bookings/${bookingId}`
     })
-);
+};
 
 export const createBooking = booking => {
     // debugger

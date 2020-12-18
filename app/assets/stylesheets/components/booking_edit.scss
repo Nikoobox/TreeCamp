@@ -1,19 +1,135 @@
 .edit-booking-container{
-    // height:100vh;
-    width:100%;
-    min-height: calc(100vh - 220px);
-    .edit-form-container{
-        background:yellow;
-        margin-top:150px;
-        margin-bottom:10%;
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-        justify-content: center;
-        .form-content{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+    // padding-top:12%;
+    // margin: 0 10%;
+    .card{
+        // height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width:60%;
+    padding:10px;
+        #spot-box{
             display:flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:55%;
+            .spot-img{
+                height:100%;
+                img{
+                     position:top;
+                    height:290px;
+                    object-fit: cover;
+                    width:100%;
+                }
+            }
+        }
+        .edit-booking-box{
+            #spot-name{
+                font-size:22px;
+                margin-bottom: 20px;
+            }
+            width:45%;
+            // min-height: calc(100vh - 220px);
+            .edit-form-container{
+                .form-title{
+                    font-size:16px;
+                    font-weight:300;
+                }
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                justify-content: center;
+                .form-content{
+                    width:300px;
+                    display:flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    .date-box{
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 5px 0;
+                        .label{
+                            font-size: 16px;
+                            width:130px;
+                            font-weight:bold;
+                        }
+                        .DayPickerInput{
+                            width:150px;
+                            input{
+                                width:100%;
+                                border: black 1px solid;
+                                padding: 10px 5px;
+                                font-size: 18px;
+                                text-align: center;
+                                &:hover{
+                                    cursor:pointer;
+                                }
+                            }
+                        }
+                    }
+                    .guests{
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        // flex-direction: column;
+                        .guests-title{
+                            font-weight:bold;
+                        }
+                        .guests-adjustment{
+                            display:flex;
+                            .box{
+                                background-color: white;
+                                 width:50px;;
+                                border: black 1px solid;
+                                padding: 10px 5px;
+                                font-size: 18px;
+                                text-align: center;
+                            }
+                            .guests-minus{
+                               &:hover{
+                                    cursor:pointer;
+                                }
+                            }
+                            .total{
+                                
+                            }
+                            .guests-plus{
+                                &:hover{
+                                        cursor:pointer;
+                                    }
+                                }
+                        }
+
+                    }
+                    .edit-btn{
+                        color:white;
+                        background: $mainLightGreen;
+                        width:100%;
+                        padding: 15px 15px;
+                        margin-top:10px;
+                        font-size:18px;
+                        letter-spacing: 0.2px;
+                        border:2px solid transparent;
+                        &:hover{
+                            color: $mainLightGreen;
+                            background: white;
+                            border:2px solid $mainLightGreen;
+                            cursor: pointer; 
+                        }
+                    }
+                }
+    
+            }
         }
 
     }
+    
+    
 }

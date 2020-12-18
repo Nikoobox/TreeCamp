@@ -6,6 +6,11 @@ class Api::BookingsController < ApplicationController
         render :index
     end
 
+    def show
+        @booking = Booking.find(params[:id])
+        render :show
+    end
+
     def create
         # debugger
         @booking = Booking.new(booking_params)
