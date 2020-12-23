@@ -24,8 +24,6 @@ class SpotIndex extends React.Component{
                 <div className='collection'>
                     { allSpots }
                 </div>
-
-                
             </div>
         )
     }

@@ -36,7 +36,6 @@ class BookingEdit extends React.Component {
         .then(()=>{
             if(this.state !== null){
                 this.props.fetchSpot(this.state.spot_id).then((res)=>{
-                    // console.log('this is res from fetchSpot', res.spot.photoUrls[0]);
                     const imgs = res.spot.photoUrls;
                     const spotDiv = document.getElementById('spot-box');
                    console.log(res.spot)
@@ -113,7 +112,6 @@ class BookingEdit extends React.Component {
                                         </div>
                                         <DayPickerInput
                                             value={this.state.checkin_date}
-                                            // placeholder={this.state.checkin_date}
                                             onDayChange={this.update('checkin_date')}
                                             selectedDay={this.state.checkin_date}
                                             dayPickerProps={{
@@ -128,12 +126,7 @@ class BookingEdit extends React.Component {
                                         </div>
                                     <DayPickerInput
                                         value={this.state.checkout_date}
-                                        // placeholder={this.state.checkout_date}
-                                        onDayChange={this.update('checkout_date')}
-                                        // selectedDay={this.state.checkout_date}
-                                        // dayPickerProps={{
-                                        //     disabledDays: { before: this.state.checkin_date }
-                                        // }}     
+                                        onDayChange={this.update('checkout_date')} 
                                     />
                                     </div>
 

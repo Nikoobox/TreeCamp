@@ -4,8 +4,8 @@ import { createBooking, clearBookingErrors, receiveBookingErrors } from '../../a
 import { openModal} from '../../actions/modal_actions';
 import { clearSessionErrors } from '../../actions/session_actions';
 
-const mapState = (state, ownProps) => {
-    console.log(state);
+const mapState = (state) => {
+    // console.log(state);
     return {
         spots: state.entities.spots,
         currentUserId: state.session.id,

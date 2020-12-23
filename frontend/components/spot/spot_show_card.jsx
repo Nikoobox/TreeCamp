@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSprayCan, faBolt, faWifi, faShower, faUtensils, faHandHoldingWater, faDog, faToiletPaper, faArrowsAltV, faFire, faWheelchair, faUser, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
 
@@ -61,12 +60,6 @@ class SpotShowCard extends React.Component{
                 <div className='cards cards-essential'>
                     <div className='cards-name'>Essentials</div>
                     <div className='item-container'>
-                        {/* <div className='item-icon'>
-                            {campfireIcon}
-                        </div>
-                        <div className='item-info'>
-                            {essential.campfire ? 'Campfires allowed' : 'Campfires not allowed'}
-                        </div> */}
                         {essential.campfire ?
                         <>
                             <div className='item-icon'>{campfireIcon}</div>
@@ -149,12 +142,6 @@ class SpotShowCard extends React.Component{
                         </>}
                     </div>
                     <div className='item-container'>
-                        {/* <div className='item-icon'>
-                            {wifiIcon}
-                        </div>
-                        <div className='item-info'>
-                            {amenity.wifi ? 'Wifi provided' : 'Wifi is not provided'}
-                        </div> */}
                         {amenity.wifi ?
                         <>
                             <div className='item-icon'>{wifiIcon}</div>
@@ -177,12 +164,6 @@ class SpotShowCard extends React.Component{
                         </>}
                     </div>
                     <div className='item-container'>
-                        {/* <div className='item-icon'>
-                            {bugsIcon}
-                        </div>
-                        <div className='item-info'>
-                            {amenity.bug_spray ? 'Bug spray provided' : 'Bug spray is not provided'}
-                        </div> */}
                         {amenity.bug_spray ?
                         <>
                             <div className='item-icon'>{bugsIcon}</div>

@@ -16,10 +16,6 @@ class BookingIndex extends React.Component {
         });
     }
 
-    // componentWillUnmount() {
-        // this.props.closeModal();
-    // }
-
     render() {
     // console.log(this.props);
         // if ((Object.keys(this.props.spots).length === 0)) {

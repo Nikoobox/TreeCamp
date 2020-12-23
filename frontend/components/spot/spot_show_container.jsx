@@ -7,27 +7,17 @@ import { createBooking, deleteBooking } from '../../actions/booking_actions';
 
 
 const mapState = (state, ownProps) => {
-    let currentUserId = state.session.id;
     return {
         spot: state.entities.spots[ownProps.match.params.spotId],
         users: state.entities.users,
         spots: state.entities.spots,
-
-        //for booking form
-        // currentUserId: state.session.id,
     }
 }
 
 const mapDisp = dispatch => {
     return {
         fetchSpot: spotId => dispatch(fetchSpot(spotId)),
-        // fetchSpots: () => dispatch(fetchSpots()),
         fetchUsers: () => dispatch(fetchUsers()),
-        // updateUser: (user) => dispatch(updateUser(user)),
-
-        //for booking form
-        // createBooking: (booking) => dispatch(createBooking(booking)),
-        // deleteBooking: (bookingId) => dispatch(deleteBooking(bookingId)),
     }
 }
 

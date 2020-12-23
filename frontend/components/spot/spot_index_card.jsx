@@ -11,13 +11,10 @@ class SpotIndexCard extends React.Component {
 
     render() {
         const { title, price, location, country, rating, photoUrls} = this.props.spot; 
-        // console.log(photoUrls[0])
         return (
                 <Link to={`/spots/${this.props.spot.id}`} className='spot-index-card'>
                     <div className='card-container'>
                         <div className='card-img'>
-                            {/* <img src={`${photoUrls[0]}`} alt="" /> */}
-
                             <Carousel
                                 defaultControlsConfig={{
                                     nextButtonText: '>',
@@ -47,12 +44,9 @@ class SpotIndexCard extends React.Component {
                                 </div>
                             </div>
 
-                            {/* <Link to={`/spots/${this.props.spot.id}`}>Show more</Link> */}
                         </div>
                     </div>
-                   
                 </Link>
-
                 )
         }
 }

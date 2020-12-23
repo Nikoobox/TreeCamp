@@ -35,7 +35,4 @@ class Spot < ApplicationRecord
         foreign_key: :spot_id,
         class_name: 'Review'  
 
-
-    # testing active storage images
-    # has_one_attached :photo
 end

@@ -27,6 +27,7 @@ const App = () => (
                 <Route exact path="/" component={SplashContainer} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+                {/* <Route exact path="/spots/:spotId/reviews" component={SpotShowContainer} /> */}
                 <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
                 <Route path="/users/:userId/bookings/:bookingId/edit" component={BookingEditContainer} />
                 <AuthRoute exact path="/login" component={LoginFormContainer} />

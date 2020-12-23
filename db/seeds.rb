@@ -453,10 +453,3 @@ activity6 = Activity.create!({
     hiking: true,
     wildlife_watching: false
 })
-
-
-# booking1 = Booking.create!({
-#     spot_id: spot1.id,
-#     visitor_id: user1.id,
-#     num_visitors: 
-# })

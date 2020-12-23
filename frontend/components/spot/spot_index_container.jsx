@@ -12,7 +12,6 @@ const mapState = state => {
 const mapDisp = dispatch => {
   return {
     fetchSpots: () => dispatch(fetchSpots()),
-    // fetchSpot: spot => dispatch(fetchSpot(spot))
   }
 }
 
