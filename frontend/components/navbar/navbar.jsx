@@ -19,7 +19,7 @@ class Navbar extends React.Component{
 
     render(){
         const { currentUser, logout } = this.props;
-        const element = <FontAwesomeIcon icon={faTree} />
+        // const element = <FontAwesomeIcon icon={faTree} />
 
         const whenCurrentUser = !currentUser ? 
             <>

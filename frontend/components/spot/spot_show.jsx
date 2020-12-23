@@ -22,7 +22,7 @@ class SpotShow extends React.Component {
         if (!this.props.spot || !this.props.spot.area || !this.props.users){
             return null;
         }
-        console.log('!!!!! looking for history', this.props);
+        // console.log('!!!!! looking for history', this.props);
         const {spot, users} = this.props;
         const host = users[spot.host_id];
     

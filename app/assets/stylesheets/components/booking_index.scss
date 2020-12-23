@@ -2,12 +2,6 @@
     display:flex;
     margin: 130px 32px;
     min-height: calc(100vh - 330px);
-    // @media (min-width: 1200px){
-    //     margin: 150px 100px;
-    // }
-    // @media (min-width: 1600px){
-    //     margin: 150px 150px;
-    // }
     .left-column{
         width:30%;
         margin: 10px;
@@ -46,7 +40,6 @@
             position:sticky;
             top:250px;
         }
-
     }
     .right-column{
         width:70%;
@@ -136,16 +129,8 @@
                     }
                     .edit-booking-btn-container{
                         margin-top:20px;
-                        // width:200px;
-                        // color:black;
                         .edit-booking-link{
                              color:$mainDarkerGrey;
-                            // background: $mainLightGreen;
-                            // color:white;
-                            // padding:10px;
-                            // font-size:16px;
-                            // letter-spacing: 0.2px;
-                            // border: 2px solid transparent;
                             transition: ease-out all 0.2s;
                             &:hover{
                                 cursor:pointer;

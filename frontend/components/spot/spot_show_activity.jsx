@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrow, faHiking, faMoon, faBiking, faFish } from '@fortawesome/free-solid-svg-icons';
-
 
 class SpotShowActivity extends React.Component {
     constructor(props) {
@@ -45,13 +43,6 @@ class SpotShowActivity extends React.Component {
                 <div className='box-title'> Hiking </div>
             </div>
             : '';
-        
-        // const hikingRend = activity.hiking ?
-        //     <div className='box'>
-        //         <div className='box-icon'> {hikingIcon} </div>
-        //         <div className='box-title'> Hiking </div>
-        //     </div>
-        //     : '';
         
         const wildlifeRend = activity.wildlife_watching ?
             <div className='box'>

@@ -19,14 +19,24 @@ class ReviewCreate extends React.Component {
     componentDidMount() {
        
     }
+    componentWillUnmount() {
+
+    }
 
     handleSubmit(e){
         e.preventDefault();
-        
+        const spotId = this.state.spot_id
         this.props.createReview(this.state)
+            .then(() => {
+                this.setState({
+                    title: '',
+                    body: '',
+                    rating: 0
+                })
+            })
             .then(()=>{
                 debugger
-                this.props.history.push(`/spots/${this.state.spot_id}`)
+                this.props.history.push(`/spots/${spotId}`)
             })
 
     }
@@ -44,33 +54,35 @@ class ReviewCreate extends React.Component {
 
         return (
             <div className='review-create-container'>
-                <h3>Hi from review create!</h3>
+                <div className='header'>Write Review</div>
                 <form onSubmit={this.handleSubmit} className='review-form'>
-                    <label>Title</label>
-                    <input 
-                        type="text" 
-                        name='title'
-                        value={this.state.title}
-                        onChange={this.update('title')}
-                        />
-                    <br/>
-                    <label>Body</label>
-                    <textarea
-                        type="text"  
-                        name='body'
-                        value={this.state.body}
-                        onChange={this.update('body')}
-                    />
-                    <br />
-                    <label>Rating (1-10)</label>
-                    <input 
-                        type="number"
-                        name='rating'
-                        value={this.state.rating}
-                        onChange={this.update('rating')}
-                    />
-                    <br/>
-                    <button>Add Review</button>
+                  
+                        <input
+                            className='section' 
+                            placeholder='Review title' 
+                            type="text" 
+                            name='title'
+                            value={this.state.title}
+                            onChange={this.update('title')}/>
+                    
+                        <textarea
+                            className='section' 
+                            placeholder='Please describe your experience' 
+                            type="text"  
+                            name='body'
+                            rows="5"   
+                            value={this.state.body}
+                            onChange={this.update('body')}/>
+                   
+                        <input
+                            className='section' 
+                            placeholder='rating' 
+                            type="number"
+                            name='rating'
+                            value={this.state.rating}
+                            onChange={this.update('rating')}/>
+                    
+                    <button>Submit</button>
                 </form>
             </div>
         )

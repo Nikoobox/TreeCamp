@@ -19,7 +19,7 @@ console.log('from review index container: ', state)
 const mapDisp = dispatch => {
 
     return {
-        // fetchUsers: () => dispatch(fetchUsers()),
+        fetchUsers: () => dispatch(fetchUsers()),
         fetchReviews: (spotId) => dispatch(fetchReviews(spotId)),
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
         createReview: (review) => dispatch(createReview(review)),
