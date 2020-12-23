@@ -66,22 +66,21 @@
     }
    
     .review-create-container{
-        // background:rgb(95, 111, 184);
         margin:20px;
         width:75%;
         .header{
             font-size:22px;
-            margin: 30px 30px 10px;
+            margin: 40px 20px 10px;
         }
         .review-form{
             // border: 1px solid black;
             // display:inline-block;
             display:flex;
             flex-direction:column;
-            padding:20px;
+            padding:10px 20px 20px;
             .section{
                 padding:10px;
-                border: 2px solid black;
+                border: 1px solid black;
                 margin: 2px 0;
                 font-size:16px;
                 font-weight:300;
