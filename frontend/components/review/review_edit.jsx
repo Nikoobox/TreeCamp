@@ -18,6 +18,7 @@ class ReviewEdit extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.setState({created_at: this.state.updated_at})
         this.props.updateReview(this.state)
             .then(() => {
                 this.props.closeModal()
@@ -35,7 +36,7 @@ class ReviewEdit extends React.Component {
 
     render() {
         // console.log('props from review_edit: ', this.props);
-        // console.log('state from review_edit: ', this.state)
+        console.log('state from review_edit: ', this.state)
         const { errors } = this.props;
         return (
             <div className='review-edit-container'>

@@ -35,7 +35,7 @@ class ReviewIndex extends React.Component {
                 let buttonsCont='';
 
                 const dateOptions = { month: "long", day: "numeric", year: "numeric" };
-                const date = new Date(review.created_at).toLocaleDateString("en-US", dateOptions); 
+                const date = new Date(review.updated_at).toLocaleDateString("en-US", dateOptions); 
                 
                 let namesCont = <div className='user-name-box'>
                     <div className='name'>{users[review.author_id].first_name} </div>

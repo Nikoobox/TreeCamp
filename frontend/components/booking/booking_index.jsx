@@ -6,12 +6,10 @@ import BookingIndexItem from './booking_index_item';
 class BookingIndex extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     componentDidMount(){
         this.props.fetchBookings().then(()=>{
-            
             this.props.fetchSpots().then(()=>{
                 console.log('spots are fetched')
             })
