@@ -46,15 +46,14 @@
              }
              .buttons-box{
                 display:flex;
-                // flex-direction: column;
-                // width: 120px;
+                // align-items: flex-end;
                 .edit{
                     background: white;
                     font-size:16px;
                     margin-left: 30px;
-                    // margin-bottom:20px;
-                    // width:100%;
-                    // display:block;
+                    span{
+                        font-weight:300;
+                    }
                     &:hover{
                         cursor:pointer;
                     }

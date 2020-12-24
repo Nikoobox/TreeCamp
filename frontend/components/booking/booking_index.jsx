@@ -11,16 +11,16 @@ class BookingIndex extends React.Component {
     componentDidMount(){
         this.props.fetchBookings().then(()=>{
             this.props.fetchSpots().then(()=>{
-                console.log('spots are fetched')
+                console.log('spots are fetched');
             })
         });
     }
 
     render() {
     // console.log(this.props);
-        if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)) {
-            return null;
-        } 
+        // if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)) {
+        //     return null;
+        // } 
         const { currentUser, spots, bookings, deleteBooking} = this.props;
 
         return (
@@ -47,7 +47,6 @@ class BookingIndex extends React.Component {
                             </div>
                         </div> : 
                         <div className='right-column-message'>Upcoming trips:</div>
-                        
                         }
                     </div>
                     
