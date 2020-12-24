@@ -1,6 +1,7 @@
 .review-index-container{
     margin: 100px 75px 35px;
     width:65%;
+    
     .reviews-total-count{
         font-size:22px;
         margin: 30px;
@@ -37,13 +38,27 @@
                  }
              }
              .sub{
-                 margin-bottom:20px;
+                 margin-bottom:30px;
                  .title{
                     margin-bottom: 10px;
-                    font-size:20px;
+                    font-size:22px;
                  }
              }
              .buttons-box{
+                display:flex;
+                // flex-direction: column;
+                // width: 120px;
+                .edit{
+                    background: white;
+                    font-size:16px;
+                    margin-left: 30px;
+                    // margin-bottom:20px;
+                    // width:100%;
+                    // display:block;
+                    &:hover{
+                        cursor:pointer;
+                    }
+                }
                 .delete{
                     background: $mainLightGreen;
                     color:white;
@@ -67,12 +82,12 @@
         margin:20px 0;
         width:65%;
         .header{
+            display:inline-block;
             font-size:22px;
             margin: 40px 20px 10px;
+            border-bottom: solid 2px $mainLightGreen;
         }
         .review-form{
-            // border: 1px solid black;
-            // display:inline-block;
             display:flex;
             flex-direction:column;
             padding:10px 20px 20px;
@@ -88,8 +103,19 @@
                 font-weight:400;
                 font-size:16px;
             }
+            .rating-header{
+                margin-top:2px;
+                font-size:16px;
+                color:$midGrey;
+            }
+            .errors-box{
+                margin:10px 0;
+                .errors{
+                    color:$mainRed;
+                    margin:2px 0;
+                }
+            }
             button{
-                margin-top:10px;
                 width:40%;
                 background: $mainLightGreen;
                 color:white;
@@ -104,7 +130,6 @@
                     color:$mainLightGreen;
                     border: 2px solid $mainLightGreen;
                 }
-                
             }  
         }
     }

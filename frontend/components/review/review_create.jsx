@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import ReviewCreate from "./review_create.jsx";
 import { withRouter } from 'react-router-dom';
 
 class ReviewCreate extends React.Component {
@@ -20,7 +18,7 @@ class ReviewCreate extends React.Component {
        
     }
     componentWillUnmount() {
-
+        this.props.clearReviewErrors()
     }
 
     handleSubmit(e){
@@ -35,7 +33,7 @@ class ReviewCreate extends React.Component {
                 })
             })
             .then(()=>{
-                debugger
+                // debugger
                 this.props.history.push(`/spots/${spotId}`)
             })
 
@@ -51,12 +49,12 @@ class ReviewCreate extends React.Component {
 
     render() {
         console.log('props from review_create: ', this.props)
-
+        const {errors} = this.props;
         return (
             <div className='review-create-container'>
-                <div className='header'>Write Review</div>
+                <div className='header'>Write a Review:</div>
+
                 <form onSubmit={this.handleSubmit} className='review-form'>
-                  
                         <input
                             className='section' 
                             placeholder='Review title' 
@@ -73,17 +71,27 @@ class ReviewCreate extends React.Component {
                             rows="5"   
                             value={this.state.body}
                             onChange={this.update('body')}/>
-                   
+                        <label className='rating-header'>
+                            Rate your experience (1-10):
+                        </label>
+                        
                         <input
-                            className='section' 
+                        className='section'
                             placeholder='rating' 
                             type="number"
                             name='rating'
+                            min='1'
+                            max='10'
                             value={this.state.rating}
                             onChange={this.update('rating')}/>
-                    
+                        <div className='errors-box'>
+                            {errors.map((er, idx) => {
+                                return <div className='errors' key={idx}>{er}</div>;
+                            })}
+                        </div>
                     <button>Submit</button>
                 </form>
+
             </div>
         )
     }

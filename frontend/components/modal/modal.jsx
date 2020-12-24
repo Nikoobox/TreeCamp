@@ -5,6 +5,7 @@ import { receiveErrors } from '../../actions/session_actions';
 import { clearBookingErrors } from '../../actions/booking_actions';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
+import EditReviewContainer from '../review/review_edit_container';
 
 
 function Modal({ modal, closeModal }) {
@@ -12,12 +13,16 @@ function Modal({ modal, closeModal }) {
         return null;
     }
     let component;
-    switch (modal) {
+    switch (modal.modal) {
         case 'login':
             component = <LoginFormContainer />;
             break;
         case 'signup':
             component = <SignupFormContainer />;
+            break;
+        case 'edit-review':
+            // debugger
+            component = <EditReviewContainer info={modal.info}/>;
             break;
         default:
             return null;
@@ -33,7 +38,7 @@ function Modal({ modal, closeModal }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal,
     };
 };
 const mapDispatchToProps = dispatch => {

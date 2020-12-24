@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ReviewCreateContainer from "./review_create_container.jsx";
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 class ReviewIndex extends React.Component {
     constructor(props) {
@@ -25,7 +26,8 @@ class ReviewIndex extends React.Component {
 
     render() {
         // console.log('props from review_index: ', this.props)
-        const {reviews, deleteReview, currentUser, users} = this.props;
+        const {reviews, deleteReview, currentUser, users, openModal} = this.props;
+        const faEditIcon = <FontAwesomeIcon icon={faEdit} />
 
         let reviewsRend='';
         if (reviews.length !== 0){
@@ -47,6 +49,14 @@ class ReviewIndex extends React.Component {
                     buttonsCont = 
                     <div className='buttons-box'>
                         <button onClick={() => deleteReview(review.id)} className='delete'>Delete</button>
+                        <button onClick={() => openModal('edit-review', {
+                            reviewId: review.id,
+                            review: review
+                            })} className='edit'>
+                            {faEditIcon} <span>Edit Review </span>
+                        </button>
+
+                        
                     </div>
                 }
                return   (<div className='review-box' key={idx}>
@@ -62,6 +72,9 @@ class ReviewIndex extends React.Component {
                                     <div className='body'>
                                         {review.body}
                                     </div>
+                                    {/* <div className='rating'>
+                                        {review.rating*10}%
+                                    </div> */}
                                 </div>
                                 {buttonsCont}
                             </div>

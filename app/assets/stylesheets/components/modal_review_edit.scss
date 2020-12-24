@@ -1,0 +1,69 @@
+.review-edit-container{
+    padding:20px 10px;
+    width:500px;
+    background:white;
+    position:relative;
+    .close{
+        position:absolute;
+        right:30px;
+        top:10px;
+        font-size:50px;
+        font-weight:300;
+        transition: all ease-out 0.2s;
+        &:hover{
+            cursor:pointer;
+            color: $mainLightGreen;
+        }
+    }
+    .header{
+        display:inline-block;
+        font-size:22px;
+        margin: 20px 20px 10px;
+        border-bottom: solid 2px $mainLightGreen;
+    }
+    .review-form{
+        display:flex;
+        flex-direction:column;
+        padding:10px 20px 20px;
+        .section{
+            padding:10px;
+            border: 1px solid black;
+            margin: 2px 0;
+            font-size:16px;
+            font-weight:300;
+        } 
+        textarea.section{
+            font-family: 'Calibre', sans-serif;
+            font-weight:400;
+            font-size:16px;
+        }
+        .rating-header{
+            margin-top:2px;
+            font-size:16px;
+            color:$midGrey;
+        }
+        .errors-box{
+            margin:10px 0;
+            .errors{
+                color:$mainRed;
+                margin:2px 0;
+            }
+        }
+        button{
+            width:40%;
+            background: $mainLightGreen;
+            color:white;
+            padding:10px 10px;
+            font-size:18px;
+            letter-spacing: 0.2px;
+            border: 2px solid transparent;
+            transition: ease-out all 0.2s;
+            &:hover{
+                cursor:pointer;
+                background: white;
+                color:$mainLightGreen;
+                border: 2px solid $mainLightGreen;
+            }
+        }  
+    }
+}

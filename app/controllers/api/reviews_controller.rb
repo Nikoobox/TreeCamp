@@ -11,18 +11,24 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create
-        # debugger
         @review = Review.new(review_params)
-        # debugger
         if @review.save
+            render :show
+        else
+            render json: @review.errors.full_messages, status: 401
+        end
+    end
+
+    def update
+        @review = Review.find(params[:id])
+        # debugger
+         if @review.update_attributes(review_params)
             # debugger
             render :show
-            # debugger
-        else
+        else 
             # debugger
             render json: @review.errors.full_messages, status: 401
-            # debugger
-        end
+        end 
     end
 
     def destroy

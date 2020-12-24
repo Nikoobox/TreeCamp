@@ -35,6 +35,7 @@ export const fetchReviews = (spotId) => dispatch => {
             return dispatch(receiveReviews(reviews))
         })
 }
+
 export const fetchReview = reviewId => dispatch => {
     // debugger
     return APIUtil.fetchReview(reviewId)
@@ -42,29 +43,32 @@ export const fetchReview = reviewId => dispatch => {
             return dispatch(receiveReview(review))
         })
 }
+
 export const createReview = review => dispatch => {
-    debugger
+    // debugger
     return APIUtil.createReview(review)
         .then(review => {
-            debugger
+            // debugger
             return dispatch(receiveReview(review))
         },
             (err) => {
-                debugger
+                // debugger
                 return dispatch(receiveReviewErrors(err.responseJSON))
             })
 }
-// export const updateBooking = booking => dispatch => {
-//     return APIUtil.updateBooking(booking)
-//         .then(booking => {
-//             // debugger
-//             return dispatch(receiveBooking(booking))
-//         },
-//             (err) => {
-//                 // debugger
-//                 return dispatch(receiveBookingErrors(err.responseJSON))
-//             })
-// }
+
+export const updateReview = review => dispatch => {
+    return APIUtil.updateReview(review)
+        .then(review => {
+            // debugger
+            return dispatch(receiveReview(review))
+        },
+            (err) => {
+                // debugger
+                return dispatch(receiveReviewErrors(err.responseJSON))
+            })
+}
+
 export const deleteReview = reviewId => dispatch => {
     return APIUtil.deleteReview(reviewId)
         .then(() => {

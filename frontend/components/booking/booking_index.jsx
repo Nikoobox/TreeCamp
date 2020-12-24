@@ -12,17 +12,18 @@ class BookingIndex extends React.Component {
     componentDidMount(){
         this.props.fetchBookings().then(()=>{
             
-            this.props.fetchSpots();
+            this.props.fetchSpots().then(()=>{
+                console.log('spots are fetched')
+            })
         });
     }
 
     render() {
     // console.log(this.props);
-        // if ((Object.keys(this.props.spots).length === 0)) {
-        if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)){
+        if ((Object.keys(this.props.spots).length === 0) || (this.props.bookings.length === 0)) {
             return null;
         } 
-        const { currentUser, spots, bookings,deleteBooking} = this.props;
+        const { currentUser, spots, bookings, deleteBooking} = this.props;
 
         return (
             <div className='booking-index-container'>
