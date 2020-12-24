@@ -70,7 +70,7 @@ class SpotShow extends React.Component {
                 <SpotShowCard spot={spot}/>
                 <SpotShowDetail spot={spot}/>
                 <SpotShowActivity spot={spot} />
-                <SpotShowActivity spot={spot} />
+                {/* <SpotShowActivity spot={spot} /> */}
                 {/* <ReviewIndexContainer spot={spot} history={this.props.history}/> */}
                 <ReviewIndexContainer spot={spot} />
             </div>
