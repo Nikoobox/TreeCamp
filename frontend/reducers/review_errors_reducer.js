@@ -1,4 +1,4 @@
-import { RECEIVE_REVIEW, RECEIVE_REVIEW_ERRORS, CLEAR_REVIEW_ERRORS } from '../actions/REVIEW_actions';
+import { RECEIVE_REVIEW, RECEIVE_REVIEW_ERRORS, CLEAR_REVIEW_ERRORS } from '../actions/review_actions';
 
 const reviewErrorsReducer = (oldState = [], action) => {
     Object.freeze(oldState)
