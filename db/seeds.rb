@@ -66,6 +66,27 @@ user6 = User.create!({
     password: "1234567"
 })
 
+user7 = User.create!({
+    first_name: "Marina", 
+    last_name: "Zhur", 
+    email: "mz@gmail.com", 
+    password: "1234567"
+})
+
+user8 = User.create!({
+    first_name: "Terunobu", 
+    last_name: "Fujimori", 
+    email: "tf@gmail.com", 
+    password: "1234567"
+})
+# Geoffrey de Pykeford
+user9 = User.create!({
+    first_name: "Thomas", 
+    last_name: "Pritchard", 
+    email: "tp@gmail.com", 
+    password: "1234567"
+})
+
 # SPOTS
 # img1 = open('https://app-treecamp-dev.amazonaws.com/treecamp_photos/11.jpg')
 # img2 = open('https://app-treecamp-dev.amazonaws.com/treecamp_photos/12.jpg')
@@ -183,6 +204,60 @@ img62 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/62.jpg
 spot6.photos.attach(io: img61, filename: '61.jpg')
 spot6.photos.attach(io: img62, filename: '62.jpg')
 
+spot7 = Spot.create!({
+    host_id: user7.id, 
+    title: "Paarman Treehouse", 
+    description: "The structure is located in a small clearing among forest-like gardens, and respond similarly to the verticality of the surrounding trees in order to maximize views from the highest portion of the site. The building becomes a vertically arranged “clearing in the forest”, with living space on level one, a bedroom on level two and a roof deck on the third. A plant room is located at ground level below the building.", 
+    price: 240,
+    location: 'Cape Town',
+    country: 'South Africa',
+    rating: 93,
+    latitude: 150.00,
+    longitude: 220.00,
+})
+
+img71 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/71.jpg')
+img72 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/72.jpeg')
+
+spot7.photos.attach(io: img71, filename: '71.jpg')
+spot7.photos.attach(io: img72, filename: '72.jpeg')
+
+spot8 = Spot.create!({
+    host_id: user8.id, 
+    title: "Teahouse Tetsu", 
+    description: "Minimalism and fantasy, together. The interior of this teahouse is simple and modern, while the fantastical exterior looks like something from a Hiyao Miyazaki film. The interior view of the sliding wooden doors or shutters is just beautiful.", 
+    price: 270,
+    location: 'Hokuto City',
+    country: 'Japan',
+    rating: 93,
+    latitude: 120.00,
+    longitude: 240.00,
+})
+
+img81 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/81.jpg')
+img82 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/82.jpeg')
+
+spot8.photos.attach(io: img81, filename: '81.jpg')
+spot8.photos.attach(io: img82, filename: '82.jpeg')
+
+spot9 = Spot.create!({
+    host_id: user9.id, 
+    title: "Pitchford Hall Treehouse", 
+    description: "The famous Tree House at Pitchford, arguably the oldest in the world, is circa 17th Century origin - first mentioned in 1692 and situated in a large leaved lime tree (Tilia Platyphyllos).A part glazed door opens into the tree house to reveal a carved moulded cornice ceiling, stripped oak floor and gothic windows on all sides.", 
+    price: 195,
+    location: 'Pitchford',
+    country: 'UK',
+    rating: 90,
+    latitude: 120.00,
+    longitude: 240.00,
+})
+
+img91 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/91.png')
+img92 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/92.jpeg')
+
+spot9.photos.attach(io: img91, filename: '91.png')
+spot9.photos.attach(io: img92, filename: '92.jpeg')
+
 # AREAS
 area1 = Area.create!({
     spot_id: spot1.id, 
@@ -224,6 +299,27 @@ area6 = Area.create!({
     num_sites: 2, 
     ada_access: true,
     max_guests: 4
+})
+
+area7 = Area.create!({
+    spot_id: spot7.id, 
+    num_sites: 1, 
+    ada_access: true,
+    max_guests: 5
+})
+
+area8 = Area.create!({
+    spot_id: spot8.id, 
+    num_sites: 1, 
+    ada_access: false,
+    max_guests: 2
+})
+
+area9 = Area.create!({
+    spot_id: spot9.id, 
+    num_sites: 1, 
+    ada_access: false,
+    max_guests: 2
 })
 
 
@@ -275,6 +371,30 @@ essential6 = Essential.create!({
     campfire: false,
     toilet: true,
     pets: false
+})
+
+essential7 = Essential.create!({
+    spot_id: spot7.id, 
+    elevator: false, 
+    campfire: false,
+    toilet: true,
+    pets: true
+})
+
+essential8 = Essential.create!({
+    spot_id: spot8.id, 
+    elevator: false, 
+    campfire: false,
+    toilet: true,
+    pets: false
+})
+
+essential9 = Essential.create!({
+    spot_id: spot9.id, 
+    elevator: false, 
+    campfire: false,
+    toilet: false,
+    pets: true
 })
 
 # AMENITY
@@ -344,13 +464,46 @@ amenity6 = Amenity.create!({
     zip_line: false
 })
 
+amenity7 = Amenity.create!({
+    spot_id: spot7.id, 
+    portable_water: true, 
+    kitchen: true,
+    shower: true,
+    wifi: true,
+    electricity: true,
+    bug_spray: false,
+    zip_line: false
+})
+
+amenity8 = Amenity.create!({
+    spot_id: spot8.id, 
+    portable_water: true, 
+    kitchen: false,
+    shower: false,
+    wifi: true,
+    electricity: true,
+    bug_spray: false,
+    zip_line: false
+})
+
+amenity9 = Amenity.create!({
+    spot_id: spot9.id, 
+    portable_water: false, 
+    kitchen: false,
+    shower: false,
+    wifi: false,
+    electricity: false,
+    bug_spray: true,
+    zip_line: true
+})
+
 # DETAIL
 detail1 = Detail.create!({
     spot_id: spot1.id, 
     min_nights: '3', 
-    check_in: 'after 12pm',
-    check_out: 'after 10am',
-    cancelation_policy: 'Strict',
+    check_in: 'after 1pm',
+    check_out: 'after 11am',
+    cancelation_policy: 'Full refund guaranteed',
     on_arrival: 'Meet and greet'
 })
 
@@ -397,6 +550,33 @@ detail6 = Detail.create!({
     check_out: 'after 11am',
     cancelation_policy: 'Strict',
     on_arrival: 'Meet and greet'
+})
+
+detail7 = Detail.create!({
+    spot_id: spot7.id, 
+    min_nights: '3', 
+    check_in: 'after 12pm',
+    check_out: 'after 11:30am',
+    cancelation_policy: 'Strict',
+    on_arrival: 'N/A'
+})
+
+detail8 = Detail.create!({
+    spot_id: spot8.id, 
+    min_nights: '3', 
+    check_in: 'after 2pm',
+    check_out: 'after 11:30am',
+    cancelation_policy: 'Full refund guaranteed',
+    on_arrival: 'Small tea ceremony'
+})
+
+detail9 = Detail.create!({
+    spot_id: spot9.id, 
+    min_nights: '2', 
+    check_in: 'after 3pm',
+    check_out: 'after 10am',
+    cancelation_policy: 'Strict',
+    on_arrival: 'Guided tour around the village'
 })
 
 # ACTIVITY
@@ -452,4 +632,31 @@ activity6 = Activity.create!({
     stargazing: false, 
     hiking: true,
     wildlife_watching: false
+})
+
+activity7 = Activity.create!({
+    spot_id: spot7.id, 
+    biking: false, 
+    fishing: false, 
+    stargazing: true, 
+    hiking: true,
+    wildlife_watching: true
+})
+
+activity8 = Activity.create!({
+    spot_id: spot8.id, 
+    biking: true, 
+    fishing: false, 
+    stargazing: true, 
+    hiking: true,
+    wildlife_watching: true
+})
+
+activity9 = Activity.create!({
+    spot_id: spot9.id, 
+    biking: false, 
+    fishing: false, 
+    stargazing: true, 
+    hiking: true,
+    wildlife_watching: true
 })
