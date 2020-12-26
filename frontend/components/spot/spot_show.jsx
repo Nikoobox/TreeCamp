@@ -7,6 +7,7 @@ import SpotShowDetail from './spot_show_detail';
 import SpotShowActivity from './spot_show_activity';
 import SpotBookingWidgetContainer from '../booking/spot_booking_widget_container';
 import ReviewIndexContainer from '../review/review_index_container';
+import SpotMap from '../spot_map/spot_map';
 
 class SpotShow extends React.Component {
     constructor(props) {
@@ -22,7 +23,6 @@ class SpotShow extends React.Component {
         if (!this.props.spot || !this.props.spot.area || !this.props.users){
             return null;
         }
-        // console.log('!!!!! looking for history', this.props);
         const {spot, users} = this.props;
         const host = users[spot.host_id];
     
@@ -70,9 +70,14 @@ class SpotShow extends React.Component {
                 <SpotShowCard spot={spot}/>
                 <SpotShowDetail spot={spot}/>
                 <SpotShowActivity spot={spot} />
-                {/* <SpotShowActivity spot={spot} /> */}
                 {/* <ReviewIndexContainer spot={spot} history={this.props.history}/> */}
                 <ReviewIndexContainer spot={spot} />
+                <SpotMap
+                    spot={spot}
+                    spotId={spot.id}
+                    // singleBench={true}
+                    // fetchBench={fetchBench}
+                />
             </div>
         )
     }
