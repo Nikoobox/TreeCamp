@@ -32,6 +32,7 @@ class SpotShow extends React.Component {
         const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp } />
 
         return (
+            <>
             <div className='show-spot-container'>
                 <div className='show-spot-images'>
                     <img src={`${spot.photoUrls[0]}`} className='img-1' />
@@ -70,15 +71,16 @@ class SpotShow extends React.Component {
                 <SpotShowCard spot={spot}/>
                 <SpotShowDetail spot={spot}/>
                 <SpotShowActivity spot={spot} />
-                {/* <ReviewIndexContainer spot={spot} history={this.props.history}/> */}
                 <ReviewIndexContainer spot={spot} />
-                <SpotMap
+            </div>
+            <SpotMap
+                    users={users}
                     spot={spot}
                     spotId={spot.id}
                     // singleBench={true}
                     // fetchBench={fetchBench}
                 />
-            </div>
+            </>
         )
     }
 }

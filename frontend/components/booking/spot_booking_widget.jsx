@@ -40,8 +40,7 @@ class SpotBookingWidget extends React.Component {
             const costPerNight = this.props.spot.price;
             const totalCost = costPerNight * numDays;
             const newBooking = Object.assign({}, this.state, { total_cost: totalCost, visitor_id: this.props.currentUserId});
-            // if (checkin !== undefined && checkout !== undefined){
-                // console.log(newBooking)
+      
                 this.props.createBooking(newBooking).then(()=>{
                     this.props.history.push(`/users/${this.props.currentUserId}/bookings`);
                 })
@@ -65,7 +64,7 @@ class SpotBookingWidget extends React.Component {
     render() {
         const{ price } =this.props.spot;
         const { errors } = this.props;
-    //    console.log(this.state)
+
         return (
             <form className='booking-widget' onSubmit={this.handleSubmit}>
                 <div className='price-container'>

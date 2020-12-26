@@ -88,22 +88,17 @@ user9 = User.create!({
 })
 
 # SPOTS
-# img1 = open('https://app-treecamp-dev.amazonaws.com/treecamp_photos/11.jpg')
-# img2 = open('https://app-treecamp-dev.amazonaws.com/treecamp_photos/12.jpg')
-
-# spot1.photos.attach(io: img1, filename: '11.jpg')
-# spot1.photos.attach(io: img2, filename: '12.jpg')
 
 spot1 = Spot.create!({
     host_id: user1.id, 
     title: "Main Tree House", 
     description: "Welcome to the landscape hotel where nature and imagination run wild. The view is breathtaking. At Treehotel nature, ecological values, comfort and modern design are combined for an exciting adventure.", 
-    price: 250,
+    price: 750,
     location: 'Harads',
     country: 'Sweden',
     rating: 99,
-    latitude: 100.00,
-    longitude: 200.00,
+    latitude: 66.07292558993673,
+    longitude: 20.981878521577936,
 })
 
 img11 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/11.jpg')
@@ -122,8 +117,8 @@ spot2 = Spot.create!({
     location: 'Whistler',
     country: 'Canada',
     rating: 95,
-    latitude: 100.00,
-    longitude: 200.00,
+    latitude: 50.110834,
+    longitude: -122.955891,
 })
 
 img21 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/21.jpg')
@@ -135,13 +130,13 @@ spot2.photos.attach(io: img22, filename: '22.jpg')
 spot3 = Spot.create!({
     host_id: user3.id, 
     title: "Cylindrical Treehouse", 
-    description: "Taking sustainable vacationing to another level, the bilevel, beachfront treehouse sprawls over 700 square feet and was designed by Deture Culsign. ", 
-    price: 160,
+    description: "Taking sustainable vacationing to another level, the bilevel, beachfront treehouse sprawls over 700 square feet and was designed by Deture Culsign. This Treehouse is suspended in palm trees as living “piers” raised 6 feet above the ground. Room is outfitted with a King Bed, private bathroom, unobstructed ocean view and small lounge area with in-floor hammock", 
+    price: 565,
     location: 'Juluchuca',
     country: 'Mexico',
     rating: 96,
-    latitude: 100.00,
-    longitude: 200.00,
+    latitude: 17.449603,
+    longitude: -101.247187,
 })
 
 img31 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/31.jpg')
@@ -154,12 +149,12 @@ spot4 = Spot.create!({
     host_id: user4.id, 
     title: "Gibbon Experience", 
     description: "The second highest tree house in a world (40 meters or 100+ feet above the ground). At the top of a giant tree, visitors and over 100 workers alike wish it will last for centuries to come. The Gibbon Experience project is meant to be an allegory of our reconciliation with the rainforest", 
-    price: 130,
+    price: 190,
     location: 'Bokeo Province',
     country: 'Laos',
     rating: 94,
-    latitude: 100.00,
-    longitude: 200.00,
+    latitude: 20.463667,
+    longitude: 100.775925,
 })
 
 img41 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/41.jpg')
@@ -171,13 +166,13 @@ spot4.photos.attach(io: img42, filename: '42.jpg')
 spot5 = Spot.create!({
     host_id: user5.id, 
     title: "Free Spirit Spheres", 
-    description: "Spirit Spheres mission is to provide a venue for people to enjoy exceptional experiences while dwelling in a natural forest environment", 
-    price: 190,
+    description: "Spirit Spheres mission is to provide a venue for people to enjoy exceptional experiences while dwelling in a natural forest environment. We envision a truly world class resort – one that allows people to experience nature in relative luxury, while showcasing the majesty and true value of west coast rainforest.", 
+    price: 275,
     location: 'Qualicum Beach',
     country: 'Canada',
     rating: 93,
-    latitude: 100.00,
-    longitude: 200.00,
+    latitude: 49.382159771258294,
+    longitude: -124.61408167318442,
 })
 
 img51 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/51.jpg')
@@ -190,12 +185,12 @@ spot6 = Spot.create!({
     host_id: user6.id, 
     title: "Hapuku Tree Houses", 
     description: "The Tree Houses are designed to complement the natural environment, as your bedroom in the sky. Their large windows bring the tree canopies into the bedroom and provide impressive views of Kaikoura's dramatic mountains and the Pacific Ocean.", 
-    price: 290,
+    price: 710,
     location: 'Kaikoura',
     country: 'New Zealand',
     rating: 92,
-    latitude: 100.00,
-    longitude: 200.00,
+    latitude: -42.31308606992812,
+    longitude: 173.73696692676364,
 })
 
 img61 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/61.jpg')
@@ -208,12 +203,12 @@ spot7 = Spot.create!({
     host_id: user7.id, 
     title: "Paarman Treehouse", 
     description: "The structure is located in a small clearing among forest-like gardens, and respond similarly to the verticality of the surrounding trees in order to maximize views from the highest portion of the site. The building becomes a vertically arranged “clearing in the forest”, with living space on level one, a bedroom on level two and a roof deck on the third. A plant room is located at ground level below the building.", 
-    price: 240,
+    price: 350,
     location: 'Cape Town',
     country: 'South Africa',
     rating: 93,
-    latitude: 150.00,
-    longitude: 220.00,
+    latitude: -34.02222438212954,
+    longitude: 18.406172208499374,
 })
 
 img71 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/71.jpg')
@@ -230,9 +225,10 @@ spot8 = Spot.create!({
     location: 'Hokuto City',
     country: 'Japan',
     rating: 93,
-    latitude: 120.00,
-    longitude: 240.00,
+    latitude: 35.82195406581344,
+    longitude: 138.35306926866812,
 })
+
 
 img81 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/81.jpg')
 img82 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/82.jpeg')
@@ -248,8 +244,8 @@ spot9 = Spot.create!({
     location: 'Pitchford',
     country: 'UK',
     rating: 90,
-    latitude: 120.00,
-    longitude: 240.00,
+    latitude: 52.63344128930087,
+    longitude: -2.6992601902108166,
 })
 
 img91 = open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/91.png')
