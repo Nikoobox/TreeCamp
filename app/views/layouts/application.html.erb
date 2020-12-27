@@ -6,12 +6,12 @@
     <meta property="og:description" content="Treecamp is the best platform to explore, search and book the most unique treehouses all over the world"/>
     <meta property="og:url" content="http://tree-camp.herokuapp.com/"/>
 
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
+    <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
-    <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
 
     <title>TreeCamp</title>
 
