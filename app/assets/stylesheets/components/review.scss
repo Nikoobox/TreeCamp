@@ -25,10 +25,25 @@
              margin: 10px 20px;
              .user-name-box{
                  display:flex;
-                 margin-bottom:10px;
+                 align-items: center;
+                 margin-bottom:20px;
                  position:relative;
+                 .thumb-up{
+                     margin-right:5px;
+                     width:30px;
+                     height:30px;
+                     line-height: 30px;
+                     border-radius:50%;
+                     background: $mainLightGreen;
+                     text-align: center;
+                     color:white;
+                 }
                  .name{
                      margin-right:5px;
+                     font-weight: bold;
+                 }
+                 span{
+                     font-weight: 300;
                  }
                  .review-created-date{
                      position: absolute;

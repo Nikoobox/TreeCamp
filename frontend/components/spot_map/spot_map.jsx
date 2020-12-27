@@ -18,7 +18,6 @@ class SpotMap extends React.Component {
             mapTypeControl:false
         };
 
-        // wrap this.mapNode in a Google Map
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         // this.MarkerManager = new MarkerManager(this.map);
         // this.MarkerManager.updateMarkers(this.props.spot);

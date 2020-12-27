@@ -2,7 +2,7 @@ import React from 'react';
 import ReviewCreateContainer from "./review_create_container.jsx";
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 class ReviewIndex extends React.Component {
     constructor(props) {
@@ -28,6 +28,7 @@ class ReviewIndex extends React.Component {
         // console.log('props from review_index: ', this.props)
         const {reviews, deleteReview, currentUser, users, openModal} = this.props;
         const faEditIcon = <FontAwesomeIcon icon={faEdit} />
+        const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} />
 
         let reviewsRend='';
         if (reviews.length !== 0){
@@ -38,8 +39,10 @@ class ReviewIndex extends React.Component {
                 const date = new Date(review.updated_at).toLocaleDateString("en-US", dateOptions); 
                 
                 let namesCont = <div className='user-name-box'>
+                    <div className='thumb-up'>{thumbsUpIcon} </div>
                     <div className='name'>{users[review.author_id].first_name} </div>
                     <div className='name'>{users[review.author_id].last_name} </div>
+                    <span>recommends this listing.</span>
                     <div className='review-created-date'>
                         {date}
                     </div>

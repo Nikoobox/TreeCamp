@@ -14,7 +14,9 @@ class SpotBookingWidget extends React.Component {
             spot_id: this.props.spot.id,
             visitor_id: this.props.currentUserId
         }
+        
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.calcTotal = this.calcTotal.bind(this);
     }
 
     componentWillUnmount() {
@@ -64,7 +66,7 @@ class SpotBookingWidget extends React.Component {
     render() {
         const{ price } =this.props.spot;
         const { errors } = this.props;
-
+        // let total = (this.state.checkin_date && this.state.checkin_date) ? 
         return (
             <form className='booking-widget' onSubmit={this.handleSubmit}>
                 <div className='price-container'>
