@@ -75,6 +75,6 @@
   <img width="75%" src="readme/booking.gif">
 </div>
 
-<div align="center" style="margin:20px 0;">
+<div align="center" style="margin:200px 0;">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px"  src="app/assets/images/arrow_down.png"></a>
 </div>
