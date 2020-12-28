@@ -13,10 +13,11 @@
 - Users can login, signup or explore the site as demo users.
 - Password are encrypted with BCrypt for security 
 - Only logged in users are able to book treehouses. 
-- Users can preview their existing bookings on bookings show page.
-- Users can delete their bookings on bookings show page.
+- Users can preview their existing bookings on bookings index page.
+- Users can delete and edit their bookings on bookings show page.
+- Logged in users can review the site and edit or delete their review
 - Visitors can browse treehouses and see features and details.
-
+- Sites are displayed with Google Maps API.
 
 
 <div align="center">
@@ -31,6 +32,8 @@
 - HTML5
 - CSS
 - React, Redux
+- Google Maps API
+- AWS S3
 
 
 <div align="center">
