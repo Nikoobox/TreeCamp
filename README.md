@@ -10,7 +10,7 @@
 
 ## Table of Contents 
 
-- [Technologies and Languages](#technologies-and-languanges)
+- [Technologies](#technologies)
 - [Features](#features)
   * [User Authentication](#user-authentication)
   * [Listings](#listings)
@@ -35,7 +35,7 @@
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
 
-### Technologies and Languages
+### Technologies
 - Javascript
 - Ruby, Ruby on Rails
 - HTML5
