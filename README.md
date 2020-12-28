@@ -10,7 +10,7 @@
 
 ## Table of Contents 
 
-- [Technologies and Languages](#technologies)
+- [Technologies and Languages](#technologies-and-languanges)
 - [Features](#features)
   * [User Authentication](#user-authentication)
   * [Listings](#listings)
