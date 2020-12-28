@@ -16,10 +16,24 @@
   * [Listings](#listings)
   * [Bookings](#bookings)
   * [Reviews](#reviews)
-  * [Search](#search)
-- [Future Directions](#future-directions)
+  * [Maps](#maps)
+- [Future](#future)
 
 ## Background and Overview
+### Technologies
+- Javascript
+- Ruby, Ruby on Rails
+- HTML5
+- CSS
+- React, Redux
+- Google Maps API
+- AWS S3
+
+
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
+
 ### Features
 - Users can login, signup or explore the site as demo users.
 - Password is encrypted with BCrypt for security 
@@ -35,17 +49,8 @@
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
 
-### Technologies
-- Javascript
-- Ruby, Ruby on Rails
-- HTML5
-- CSS
-- React, Redux
-- Google Maps API
-- AWS S3
-
-
-<div align="center">
-  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+#### User Authentication
+- BCrypt is utilized for account security. Only logged in users are able to access all website features. Modals are used to simplify users experience.
+<div>
+  <img width="30%" src="readme/user_auth.gif">
 </div>
-
