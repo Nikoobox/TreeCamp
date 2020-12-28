@@ -52,5 +52,5 @@
 #### User Authentication
 - BCrypt is utilized for account security. Only logged in users are able to access all website features. Modals are used to simplify users experience.
 <div>
-  <img width="30%" src="readme/user_auth.gif">
+  <img width="80%" src="readme/user_auth.gif">
 </div>
