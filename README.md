@@ -64,6 +64,17 @@
 <div>
   <img width="75%" src="readme/site.gif">
 </div>
+
 <div align="center">
-  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" margin-top='20px' src="app/assets/images/arrow_down.png"></a>
+</div>
+
+#### Bookings
+- Logged in or demo users can book a tree house. Checkin, checkout dates and number of guests must be provided. On successful booking, a user is redirected to the bookings index page.
+<div>
+  <img width="75%" src="readme/booking.gif">
+</div>
+
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" margin-top='20px' src="app/assets/images/arrow_down.png"></a>
 </div>
