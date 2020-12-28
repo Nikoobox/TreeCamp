@@ -13,7 +13,7 @@
 - [Technologies](#technologies)
 - [Features](#features)
   * [User Authentication](#user-authentication)
-  * [Listings](#listings)
+  * [Sites](#Sites)
   * [Bookings](#bookings)
   * [Reviews](#reviews)
   * [Maps](#maps)
@@ -37,7 +37,7 @@
 ### Features
 - Users can login, signup or explore the site as demo users.
 - Password is encrypted with BCrypt for security 
-- Only logged in users are able to book treehouses. 
+- Only logged in users are able to book treehouses(sites). 
 - Users can preview their existing bookings on bookings index page.
 - Users can delete and edit their bookings on bookings index page.
 - Logged in users can leave a review for the site and edit/delete their review.
@@ -52,5 +52,18 @@
 #### User Authentication
 - BCrypt is utilized for account security. Only logged in users are able to access all website features. Modals are used to simplify users experience.
 <div>
-  <img width="30%" src="readme/user_auth.gif">
+  <img width="90%" src="readme/user_auth.gif">
+</div>
+
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
+
+#### Sites
+- Visitors can browse treehouses(sites). They can view site information, essentials, amenities, available activities, read the reviews and see the site location on Google Map
+<div>
+  <img width="90%" src="readme/site_view.gif">
+</div>
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
