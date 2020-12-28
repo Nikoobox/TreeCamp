@@ -66,7 +66,7 @@
 </div>
 
 <div align="center">
-  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" margin-top='20px' src="app/assets/images/arrow_down.png"></a>
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
 
 #### Bookings
@@ -75,6 +75,6 @@
   <img width="75%" src="readme/booking.gif">
 </div>
 
-<div align="center">
-  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" margin-top='20px' src="app/assets/images/arrow_down.png"></a>
+<div align="center" margin-top='20px'>
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px"  src="app/assets/images/arrow_down.png"></a>
 </div>
