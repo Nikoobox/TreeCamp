@@ -55,8 +55,15 @@
   <img width="90%" src="readme/user_auth.gif">
 </div>
 
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
+
 #### Sites
 - Visitors can browse treehouses(sites). They can view site information, essentials, amenities, available activities, read the reviews and see the site location on Google Map
 <div>
-  <img width="90%" src="readme/user_auth.gif">
+  <img width="90%" src="readme/site_view.gif">
+</div>
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
