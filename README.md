@@ -1,9 +1,7 @@
 # TREECAMP
-
 [TREECAMP](https://tree-camp.herokuapp.com/#/ "TeeCamp Homepage") is the best platform to explore, search and book the most unique treehouses all over the world. 
 
-
-
+<p>&nbsp;</p>
 <div align="center">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="50px" src="app/assets/images/tree_camp_logo.png"></a>
 </div>
@@ -29,7 +27,6 @@
 - Google Maps API
 - AWS S3
 
-
 <div align="center">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
@@ -43,7 +40,6 @@
 - Logged in users can leave a review for the site and edit/delete their review.
 - Visitors can browse treehouses and see features and details.
 - Sites are displayed with Google Maps API.
-
 
 <div align="center">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
