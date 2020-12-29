@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import ReviewCreate from "./review_create.jsx";
-import { deleteReview, createReview } from '../../actions/review_actions';
+import { deleteReview, createReview, fetchReviews } from '../../actions/review_actions';
 import { clearReviewErrors } from '../../actions/review_actions';
 import { withRouter } from 'react-router-dom';
+import { updateSpot  } from '../../actions/spot_actions';
 
-const mapState = (state) => {
-    // console.log('state from create review container: ', state)
+const mapState = (state, ownProps) => {
     return {
         currentUser: state.entities.users[state.session.id],
         review: {
@@ -14,6 +14,8 @@ const mapState = (state) => {
             rating: 0
             },
         errors: state.errors.reviews,
+        spot: state.entities.spots[ownProps.match.params.spotId],
+        // spotId: 
     }
 }
 
@@ -22,7 +24,9 @@ const mapDisp = dispatch => {
     return {
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
         createReview: (review) => dispatch(createReview(review)),
-        clearReviewErrors: () => dispatch(clearReviewErrors())
+        fetchReviews: (spotId) => dispatch(fetchReviews(spotId)),
+        clearReviewErrors: () => dispatch(clearReviewErrors()),
+        updateSpot: (spot) => dispatch(updateSpot(spot))
     }
 }
 

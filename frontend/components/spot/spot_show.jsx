@@ -23,6 +23,7 @@ class SpotShow extends React.Component {
         if (!this.props.spot || !this.props.spot.area || !this.props.users){
             return null;
         }
+        // console.log('FROM SPOT SHOW',this.props);
         const {spot, users} = this.props;
         const host = users[spot.host_id];
     
@@ -51,6 +52,7 @@ class SpotShow extends React.Component {
 
                         <div className='container-rating'>
                             <span>{thumbsUpIcon} {rating}%</span> Recommend
+                            <div id='spotRating'></div>
                         </div>
 
                         <div className='container-host-description'>

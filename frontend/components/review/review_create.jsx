@@ -23,7 +23,7 @@ class ReviewCreate extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const spotId = this.state.spot_id
+        // const spotId = this.state.spot_id
         this.props.createReview(this.state)
             .then(() => {
                 this.setState({
@@ -32,11 +32,28 @@ class ReviewCreate extends React.Component {
                     rating: 0
                 })
             })
-            .then(()=>{
+            // console.log()
+        let newRating=0
+        let revSum = 0;
+        this.props.fetchReviews(this.props.spot.id)
+            .then((res)=>{
+                // console.log('RES REVIEW',res.reviews)
+                let revNum = Object.values(res.reviews).length;
+                
                 // debugger
-                this.props.history.push(`/spots/${spotId}`)
+                Object.values(res.reviews).forEach((review)=>{
+                    revSum += parseInt(review.rating);
+                })
+                console.log('REVSUM', revSum);
+                console.log('REVNUM', revNum);
+                
+                newRating = (revSum / revNum).toFixed(1);
+                console.log('NEW RATING', newRating)
+                const spotEdit = Object.assign({}, this.props.spot, { rating: newRating*10 });
+                console.log('SPOT EDIT', spotEdit)
+                this.props.updateSpot(spotEdit)
             })
-
+            // debugger
     }
 
     update(field){
@@ -48,7 +65,7 @@ class ReviewCreate extends React.Component {
     }
 
     render() {
-        console.log('props from review_create: ', this.props)
+        // console.log('props from review_create: ', this.props)
         const {errors} = this.props;
         return (
             <div className='review-create-container'>

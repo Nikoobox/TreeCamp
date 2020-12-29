@@ -14,3 +14,11 @@ export const fetchSpot = spotId => (
         url: `/api/spots/${spotId }`
     })
 );
+
+export const updateSpot = (spot) => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `api/spots/${spot.id}`,
+        data: { spot }
+    })
+}

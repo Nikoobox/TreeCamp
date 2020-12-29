@@ -3,7 +3,7 @@
 
 <p>&nbsp;</p>
 <div align="center">
-  <a href="https://tree-camp.herokuapp.com/#/"><img width="50px" src="app/assets/images/tree_camp_logo.png"></a>
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="80px" src="app/assets/images/tree_camp_logo.png"></a>
 </div>
 
 ## Table of Contents 

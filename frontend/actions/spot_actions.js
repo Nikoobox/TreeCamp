@@ -27,3 +27,11 @@ export const fetchSpot = spotId => dispatch => {
     .then(spot=> dispatch(receiveSpot(spot))
     )
 }
+
+export const updateSpot = spot => dispatch => {
+    return APIUtil.updateSpot(spot)
+        .then(spot => {
+            // debugger
+            return dispatch(receiveSpot(spot))
+        })
+}
