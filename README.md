@@ -15,7 +15,7 @@
   * [Bookings](#bookings)
   * [Reviews](#reviews)
   * [Maps](#maps)
-- [Future Upgrades](#future)
+- [Future Upgrades](#future-upgrades)
 
 ## Background and Overview
 ### Technologies
