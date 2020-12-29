@@ -8,6 +8,8 @@ class ReviewIndex extends React.Component {
     constructor(props) {
         super(props);
 
+    this.handleDelete = this.handleDelete.bind(this);
+    this.updateRating = this.updateRating.bind(this);
     }
 
     componentDidMount() {
@@ -20,8 +22,26 @@ class ReviewIndex extends React.Component {
         })
     }
 
-    componentWillUnmount() {
-    
+    handleDelete(reviewId){
+        this.props.deleteReview(reviewId)
+            .then(()=>{
+                this.updateRating();
+            })
+    }
+//instead of fetching more reviews, use this.props.reviews values
+    updateRating() {
+        let newRating = 0
+        let revSum = 0;
+        this.props.fetchReviews(this.props.spot.id)
+            .then((res) => {
+                let revNum = Object.values(res.reviews).length;
+                Object.values(res.reviews).forEach((review) => {
+                    revSum += parseInt(review.rating);
+                })
+                newRating = (revSum / revNum).toFixed(1);
+                const spotEdit = Object.assign({}, this.props.spot, { rating: newRating * 10 });
+                this.props.updateSpot(spotEdit)
+            })
     }
 
     render() {
@@ -51,10 +71,13 @@ class ReviewIndex extends React.Component {
                 if (currentUser && (review.author_id === currentUser.id)){
                     buttonsCont = 
                     <div className='buttons-box'>
-                        <button onClick={() => deleteReview(review.id)} className='delete'>Delete</button>
+                        <button onClick={()=>this.handleDelete(review.id)} className='delete'>Delete</button>
+                        {/* <button onClick={() => deleteReview(review.id)} className='delete'>Delete</button> */}
                         <button onClick={() => openModal('edit-review', {
                             reviewId: review.id,
-                            review: review
+                            review: review,
+                            spotId: this.props.spotId,
+                            spot: this.props.spot
                             })} className='edit'>
                             {faEditIcon} <span>Edit Review </span>
                         </button>

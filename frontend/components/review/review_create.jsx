@@ -12,6 +12,7 @@ class ReviewCreate extends React.Component {
             rating: this.props.review.rating
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateRating = this.updateRating.bind(this);
     }
 
     componentDidMount() {
@@ -23,7 +24,6 @@ class ReviewCreate extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        // const spotId = this.state.spot_id
         this.props.createReview(this.state)
             .then(() => {
                 this.setState({
@@ -31,29 +31,30 @@ class ReviewCreate extends React.Component {
                     body: '',
                     rating: 0
                 })
+            }).then(()=>{
+                this.updateRating();
+
             })
-            // console.log()
-        let newRating=0
+    }
+
+    updateRating(){
+        let newRating = 0
         let revSum = 0;
         this.props.fetchReviews(this.props.spot.id)
-            .then((res)=>{
-                // console.log('RES REVIEW',res.reviews)
+            .then((res) => {
                 let revNum = Object.values(res.reviews).length;
-                
-                // debugger
-                Object.values(res.reviews).forEach((review)=>{
+
+                Object.values(res.reviews).forEach((review) => {
                     revSum += parseInt(review.rating);
                 })
-                console.log('REVSUM', revSum);
-                console.log('REVNUM', revNum);
-                
+                // console.log('REVSUM', revSum);
+                // console.log('REVNUM', revNum);
+
                 newRating = (revSum / revNum).toFixed(1);
-                console.log('NEW RATING', newRating)
-                const spotEdit = Object.assign({}, this.props.spot, { rating: newRating*10 });
-                console.log('SPOT EDIT', spotEdit)
+                // console.log('NEW RATING', newRating)
+                const spotEdit = Object.assign({}, this.props.spot, { rating: newRating * 10 });
                 this.props.updateSpot(spotEdit)
             })
-            // debugger
     }
 
     update(field){

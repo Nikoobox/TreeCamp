@@ -6,12 +6,10 @@ class ReviewEdit extends React.Component {
         super(props);
         this.state = this.props.info.review;
 
+        this.updateRating = this.updateRating.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidMount() {
-
-    }
     componentWillUnmount() {
         this.props.clearReviewErrors()
     }
@@ -20,10 +18,34 @@ class ReviewEdit extends React.Component {
         e.preventDefault();
         this.setState({created_at: this.state.updated_at})
         this.props.updateReview(this.state)
-            .then(() => {
-                this.props.closeModal()
+            .then(()=>{
+                this.updateRating()
             })
+            
 
+    }
+
+    updateRating() {
+        let newRating = 0
+        let revSum = 0;
+        this.props.fetchReviews(this.props.info.spotId)
+            .then((res) => {
+                let revNum = Object.values(res.reviews).length;
+
+                Object.values(res.reviews).forEach((review) => {
+                    revSum += parseInt(review.rating);
+                })
+                // console.log('REVSUM', revSum);
+                // console.log('REVNUM', revNum);
+
+                newRating = (revSum / revNum).toFixed(1);
+                // console.log('NEW RATING', newRating)
+                const spotEdit = Object.assign({}, this.props.info.spot, { rating: newRating * 10 });
+                this.props.updateSpot(spotEdit)
+                    .then(() => {
+                        this.props.closeModal()
+                    })
+            })
     }
 
     update(field) {
@@ -36,7 +58,7 @@ class ReviewEdit extends React.Component {
 
     render() {
         // console.log('props from review_edit: ', this.props);
-        console.log('state from review_edit: ', this.state)
+        console.log('state from review_edit: ', this.props)
         const { errors } = this.props;
         return (
             <div className='review-edit-container'>
