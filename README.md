@@ -17,6 +17,7 @@
   * [Maps](#maps)
   * [Page Not Found](#page-not-found)
 - [Future Upgrades](#future-upgrades)
+- [Future Upgrades](#future-upgrades)
 
 ## Background and Overview
 ### Technologies
