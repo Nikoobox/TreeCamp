@@ -15,9 +15,6 @@ class ReviewCreate extends React.Component {
         this.updateRating = this.updateRating.bind(this);
     }
 
-    componentDidMount() {
-       
-    }
     componentWillUnmount() {
         this.props.clearReviewErrors()
     }
@@ -33,7 +30,6 @@ class ReviewCreate extends React.Component {
                 })
             }).then(()=>{
                 this.updateRating();
-
             })
     }
 
@@ -47,11 +43,8 @@ class ReviewCreate extends React.Component {
                 Object.values(res.reviews).forEach((review) => {
                     revSum += parseInt(review.rating);
                 })
-                // console.log('REVSUM', revSum);
-                // console.log('REVNUM', revNum);
 
                 newRating = (revSum / revNum).toFixed(1);
-                // console.log('NEW RATING', newRating)
                 const spotEdit = Object.assign({}, this.props.spot, { rating: newRating * 10 });
                 this.props.updateSpot(spotEdit)
             })
@@ -67,7 +60,6 @@ class ReviewCreate extends React.Component {
 
     render() {
         // console.log('props from review_create: ', this.props)
-        const {errors} = this.props;
         return (
             <div className='review-create-container'>
                 <div className='header'>Write a Review:</div>
@@ -80,7 +72,7 @@ class ReviewCreate extends React.Component {
                             name='title'
                             value={this.state.title}
                             onChange={this.update('title')}/>
-                    
+
                         <textarea
                             className='section' 
                             placeholder='Please describe your experience' 
@@ -89,10 +81,10 @@ class ReviewCreate extends React.Component {
                             rows="5"   
                             value={this.state.body}
                             onChange={this.update('body')}/>
+
                         <label className='rating-header'>
                             Rate your experience (1-10):
                         </label>
-                        
                         <input
                         className='section'
                             placeholder='rating' 
@@ -102,11 +94,13 @@ class ReviewCreate extends React.Component {
                             max='10'
                             value={this.state.rating}
                             onChange={this.update('rating')}/>
+
                         <div className='errors-box'>
-                            {errors.map((er, idx) => {
-                                return <div className='errors' key={idx}>{er}</div>;
-                            })}
+                        {this.props.errors.map((er, idx) => {
+                            return <div className='errors' key={idx}>{er}</div>;
+                        })}
                         </div>
+                        
                     <button>Submit</button>
                 </form>
 

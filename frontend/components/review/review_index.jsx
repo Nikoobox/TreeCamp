@@ -17,7 +17,7 @@ class ReviewIndex extends React.Component {
         .then(()=>{
             this.props.fetchUsers()
             .then(()=>{
-                console.log('users are fetched')
+                let usrs = '';
             })
         })
     }
@@ -32,21 +32,30 @@ class ReviewIndex extends React.Component {
     updateRating() {
         let newRating = 0
         let revSum = 0;
-        this.props.fetchReviews(this.props.spot.id)
-            .then((res) => {
-                let revNum = Object.values(res.reviews).length;
-                Object.values(res.reviews).forEach((review) => {
+        // this.props.fetchReviews(this.props.spot.id)
+        //     .then((res) => {
+        //         let revNum = Object.values(res.reviews).length;
+        //         Object.values(res.reviews).forEach((review) => {
+        //             revSum += parseInt(review.rating);
+        //         })
+        //         newRating = (revSum / revNum).toFixed(1);
+        //         const spotEdit = Object.assign({}, this.props.spot, { rating: newRating * 10 });
+        //         this.props.updateSpot(spotEdit)
+        //     })
+        // this.props.fetchReviews(this.props.spot.id)
+        //     .then((res) => {
+                let revNum = this.props.reviews.length;
+                this.props.reviews.forEach((review) => {
                     revSum += parseInt(review.rating);
                 })
                 newRating = (revSum / revNum).toFixed(1);
                 const spotEdit = Object.assign({}, this.props.spot, { rating: newRating * 10 });
                 this.props.updateSpot(spotEdit)
-            })
+            // })
     }
 
     render() {
-        // console.log('props from review_index: ', this.props)
-        const {reviews, deleteReview, currentUser, users, openModal} = this.props;
+        const {reviews, currentUser, users, openModal} = this.props;
         const faEditIcon = <FontAwesomeIcon icon={faEdit} />
         const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} />
 

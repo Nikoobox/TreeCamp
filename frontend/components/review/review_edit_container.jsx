@@ -7,7 +7,6 @@ import { closeModal } from '../../actions/modal_actions';
 import { updateSpot } from '../../actions/spot_actions';
 
 const mapState = (state) => {
-    console.log('state from EDIT review container: ', state)
     return {
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.reviews

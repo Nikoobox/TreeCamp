@@ -8,7 +8,7 @@ class SpotMap extends React.Component {
     componentDidMount() {
         const center = { lat: this.props.spot.latitude, lng: this.props.spot.longitude };
         const myCenter = { lat: (this.props.spot.latitude), lng: (this.props.spot.longitude-0.03) };
-        console.log('my center',myCenter);
+        // console.log('my center',myCenter);
         const mapOptions = {
             center: myCenter, 
             mapTypeId: 'terrain',
@@ -38,7 +38,7 @@ class SpotMap extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const {spot, users} = this.props
         return (
             <div className="map" id='map-container' ref="map">

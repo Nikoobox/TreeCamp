@@ -8,7 +8,6 @@ class BookingEdit extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.booking
-        console.log('this is state', this.state)
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -38,7 +37,6 @@ class BookingEdit extends React.Component {
                 this.props.fetchSpot(this.state.spot_id).then((res)=>{
                     const imgs = res.spot.photoUrls;
                     const spotDiv = document.getElementById('spot-box');
-                   console.log(res.spot)
                     spotDiv.innerHTML = 
                     `
                     <div class='spot-img'>

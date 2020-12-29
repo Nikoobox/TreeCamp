@@ -6,8 +6,6 @@ import { openModal } from '../../actions/modal_actions';
 import { updateSpot } from '../../actions/spot_actions';
 
 const mapState = (state, ownProps) => {
-
-// console.log('from review index container: ', state)
     return {
         spotId: ownProps.spot.id,
         currentUser: state.entities.users[state.session.id],
@@ -17,7 +15,6 @@ const mapState = (state, ownProps) => {
 }
 
 const mapDisp = dispatch => {
-
     return {
         fetchUsers: () => dispatch(fetchUsers()),
         fetchReviews: (spotId) => dispatch(fetchReviews(spotId)),

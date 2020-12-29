@@ -10,13 +10,11 @@ class MarkerManager {
     }
 
     updateMarkers(spot) {
-        console.log("time to update");
         this.createMarkerFromSpot(spot)
     }
 
     createMarkerFromSpot(spot) {
         const position = new google.maps.LatLng(spot.latitude, spot.longitude);
-        // const position = new google.maps.LatLng(37.7758, -122.435);
         const marker = new google.maps.Marker({
             position,
             map: this.map,

@@ -23,7 +23,6 @@ class SpotShow extends React.Component {
         if (!this.props.spot || !this.props.spot.area || !this.props.users){
             return null;
         }
-        console.log('FROM SPOT SHOW',this.props);
         const {spot, users} = this.props;
         const host = users[spot.host_id];
     
@@ -79,8 +78,6 @@ class SpotShow extends React.Component {
                     users={users}
                     spot={spot}
                     spotId={spot.id}
-                    // singleBench={true}
-                    // fetchBench={fetchBench}
                 />
             </>
         )

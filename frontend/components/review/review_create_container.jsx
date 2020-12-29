@@ -15,12 +15,10 @@ const mapState = (state, ownProps) => {
             },
         errors: state.errors.reviews,
         spot: state.entities.spots[ownProps.match.params.spotId],
-        // spotId: 
     }
 }
 
 const mapDisp = dispatch => {
-
     return {
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
         createReview: (review) => dispatch(createReview(review)),
