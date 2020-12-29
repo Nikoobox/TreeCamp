@@ -20,7 +20,7 @@ class Footer extends React.Component{
                 </div>
 
                 <div className="footer-message">
-                    Made with love, passion and <a href='https://www.appacademy.io/' rel='noopener noreferrer' target="_blank">Aap Academy</a> guidance
+                    Made with love, passion and <a href='https://www.appacademy.io/' rel='noopener noreferrer' target="_blank">App Academy</a> guidance
                 </div>
 
                 <div className="footer-social">
