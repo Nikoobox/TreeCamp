@@ -15,7 +15,8 @@
   * [Bookings](#bookings)
   * [Reviews](#reviews)
   * [Maps](#maps)
-- [Future](#future)
+  * [Page Not Found](#page-not-found)
+- [Future Upgrades](#future-upgrades)
 
 ## Background and Overview
 ### Technologies
@@ -99,3 +100,19 @@
 <div align="center">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
+<p>&nbsp;</p>
+
+#### Page Not Found
+- Users will be redirected to 404 Not Found page when type non-existing url.
+<div>
+  <img width="75%" src="readme/notfound.png">
+</div>
+<p>&nbsp;</p>
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
+<p>&nbsp;</p>
+
+### Future Upgrades
+- Add search functionality.
+- Allow users to create/add their treehouses
