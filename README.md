@@ -15,6 +15,7 @@
   * [Bookings](#bookings)
   * [Reviews](#reviews)
   * [Maps](#maps)
+  * [Not Found](#not-found)
 - [Future Upgrades](#future-upgrades)
 
 ## Background and Overview
@@ -94,6 +95,17 @@
 - On the bottom of the spot show page, an approximate site location is displayed with Google Maps API. Site information summary is provided for reference.
 <div>
   <img width="75%" src="readme/map.png">
+</div>
+<p>&nbsp;</p>
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
+<p>&nbsp;</p>
+
+#### Not Found
+- Users will be redirected to 404 Not Found page when type non-existing url.
+<div>
+  <img width="75%" src="readme/notfound.png">
 </div>
 <p>&nbsp;</p>
 <div align="center">
