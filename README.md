@@ -15,7 +15,7 @@
   * [Bookings](#bookings)
   * [Reviews](#reviews)
   * [Maps](#maps)
-  * [Not Found](#not-found)
+  * [Page Not Found](#page-not-found)
 - [Future Upgrades](#future-upgrades)
 
 ## Background and Overview
@@ -102,7 +102,7 @@
 </div>
 <p>&nbsp;</p>
 
-#### Not Found
+#### Page Not Found
 - Users will be redirected to 404 Not Found page when type non-existing url.
 <div>
   <img width="75%" src="readme/notfound.png">
