@@ -52,8 +52,8 @@
 </div>
 <p>&nbsp;</p>
 -Rails backend Active Record validations are used to monitor user credentials and deliver error messages to advise the user.
-<div>
-  <img width="25%" src="readme/user_auth_img.png">
+<div align="center">
+  <img width="20%" src="readme/user_auth_img.png">
 </div>
 <p>&nbsp;</p>
 <div align="center">
@@ -62,7 +62,7 @@
 
 #### Sites
 - Visitors can browse treehouses(sites). They can view site information, essentials, amenities, available activities, read the reviews and see the site location on Google Map
-<div>
+<div >
   <img width="75%" src="readme/site.gif">
 </div>
 <p>&nbsp;</p>
