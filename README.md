@@ -51,6 +51,10 @@
   <img width="75%" src="readme/user_auth.gif">
 </div>
 <p>&nbsp;</p>
+<div>
+  <img width="75%" src="readme/user_auth.png">
+</div>
+<p>&nbsp;</p>
 <div align="center">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
