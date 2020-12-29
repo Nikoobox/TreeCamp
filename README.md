@@ -102,4 +102,5 @@
 <p>&nbsp;</p>
 
 ### Future Upgrades
-- Add search functionality
+- Add search functionality.
+- Allow users to create/add their treehouses
