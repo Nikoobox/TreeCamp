@@ -13,6 +13,7 @@ Amenity.destroy_all;
 Detail.destroy_all;
 Activity.destroy_all;
 Booking.destroy_all;
+Review.destroy_all;
 
 
 
