@@ -52,7 +52,7 @@
 </div>
 <p>&nbsp;</p>
 -Rails backend Active Record validations are used to monitor user credentials and deliver error messages to advise the user.
-<div align="center">
+<div>
   <img width="20%" src="readme/user_auth_img.png">
 </div>
 <p>&nbsp;</p>
@@ -84,6 +84,16 @@
 - On the spot show page, logged in users can write, delete or edit their reviews. Spot rating is dynimically updated based on the average reviews rating
 <div>
   <img width="75%" src="readme/reviews.gif">
+</div>
+<p>&nbsp;</p>
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
+
+#### Maps
+- On the bottom of the spot show page, an approximate site location is displayed with Google Maps API. Site information summary is provided for reference.
+<div>
+  <img width="75%" src="readme/map.png">
 </div>
 <p>&nbsp;</p>
 <div align="center">
