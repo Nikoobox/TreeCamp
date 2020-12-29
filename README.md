@@ -79,3 +79,13 @@
 <div align="center">
   <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
 </div>
+
+#### Reviews
+- On the spot show page, logged in users can write, delete or edit their reviews. Spot rating is dynimically updated based on the average reviews rating
+<div>
+  <img width="75%" src="readme/reviews.gif">
+</div>
+<p>&nbsp;</p>
+<div align="center">
+  <a href="https://tree-camp.herokuapp.com/#/"><img width="20px" src="app/assets/images/arrow_down.png"></a>
+</div>
