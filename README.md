@@ -52,7 +52,7 @@
 </div>
 <p>&nbsp;</p>
 <div>
-  <img width="75%" src="readme/user_auth.png">
+  <img width="75%" src="readme/user_auth_img.png">
 </div>
 <p>&nbsp;</p>
 <div align="center">
