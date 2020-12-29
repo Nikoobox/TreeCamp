@@ -51,6 +51,7 @@
   <img width="75%" src="readme/user_auth.gif">
 </div>
 <p>&nbsp;</p>
+-Rails backend Active Record validations are used to monitor user credentials and deliver error messages to advise the user.
 <div>
   <img width="25%" src="readme/user_auth_img.png">
 </div>
