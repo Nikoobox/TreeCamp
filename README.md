@@ -105,7 +105,7 @@
 #### Page Not Found
 - Users will be redirected to 404 Not Found page when type non-existing url.
 <div>
-  <img width="75%" src="readme/notfound.png">
+  <img width="30%" src="readme/notfound.png">
 </div>
 <p>&nbsp;</p>
 <div align="center">
@@ -113,6 +113,41 @@
 </div>
 <p>&nbsp;</p>
 
+### Code Highlights
+- Code below demonstrates how the spot rating is updated after the user writes a new review.
+```javascript
+handleSubmit(e){
+    e.preventDefault();
+    this.props.createReview(this.state)
+      .then(() => {
+          this.setState({
+              title: '',
+              body: '',
+              rating: 0
+          })
+      }).then(()=>{
+          this.updateRating();
+      })
+}
+
+updateRating(){
+    let newRating = 0
+    let revSum = 0;
+    this.props.fetchReviews(this.props.spot.id)
+      .then((res) => {
+          let revNum = Object.values(res.reviews).length;
+
+          Object.values(res.reviews).forEach((review) => {
+              revSum += parseInt(review.rating);
+          })
+
+          newRating = (revSum / revNum).toFixed(1);
+          const spotEdit = Object.assign({}, this.props.spot, { rating: newRating * 10 });
+          this.props.updateSpot(spotEdit)
+      })
+}
+```
+<p>&nbsp;</p>
 ### Future Upgrades
 - Add search functionality.
 - Allow users to create/add their treehouses
