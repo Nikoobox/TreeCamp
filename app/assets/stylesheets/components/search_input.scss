@@ -1,0 +1,123 @@
+.splash-main-search-box{
+    width:100%;
+    margin-bottom: 75px;
+    .search-box-inner{
+        display:flex;
+        box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
+        padding:17px;
+        // position:relative;
+        .search-box-inner-input{
+            width: 48%;
+            // box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            display:flex;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+             box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            span{
+                margin:auto;
+                padding-left: 10px;
+            }
+            .search-box-input{
+                font-weight: 300;
+                padding: 14px;
+                font-size:16px;
+                width: 100%;
+                border:none;
+                letter-spacing: 1px;
+            }
+            .ui.selection.dropdown{
+                // box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+                border-radius: 0;
+                border:0;
+                font-size:16px;
+                line-height: 24px;;
+            }
+            .ui.active.visible.fluid.selection.dropdown{
+                border:0;
+                box-shadow: none;
+            }
+            .visible.menu.transition{
+                .option{
+                    .text{
+                        padding-left:0;
+                    }
+                }
+            }
+            // #locations-box{
+            //     position: absolute;
+            //     top:55px;
+            //     width:100%;
+            //     z-index:101;
+            //     background:white;
+            //     // box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
+            //     .country{
+            //         text-align:left;
+            //         margin: 5px 40px;
+            //         padding: 10px 0;
+            //         border-bottom: 1px solid $lightGrey;
+            //     }
+            // }
+            // .hide{
+            //     display:none;
+            // }
+            // .DateRangePicker{
+            //     color: black;
+            //     .DateRangePickerInput{
+            //         // display:flex;
+            //         .DateInput_input{
+            //             font-size:12px!important;
+            //         }
+            //     }
+            //     .DateRangePickerInput_arrow,.DateRangePickerInput_arrow_1{
+            //         display:none!important;
+            //         color: transparent;
+            //     }
+
+            // }
+        }
+        .search-box-input::-webkit-input-placeholder{
+            color: grey;
+            opacity: 1;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        button{
+            border-radius: 0;
+            padding: 14px;
+            border: none;
+            width:16%;
+            margin-left: 10px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        .search-box-dates{
+            color:$mainLightGreen;
+            background: $mainLightGreenBk;
+            border:1px solid $mainLightGreen;
+        }
+        .search-box-all-listings{
+            background: white;
+            color: grey;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        .search-box-button{
+            background:$mainLightGreen;
+            color:white;
+            border:2px solid transparent;
+            font-size: 1rem;
+            transition: ease-out all 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            &:hover{
+                color:$mainLightGreen;
+                background: white;
+                border:2px solid $mainLightGreen;
+            }
+        }
+    }
+}
+
+.ui.selection.dropdown:focus {
+  outline: none;
+}

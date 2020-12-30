@@ -11,6 +11,7 @@ import BookingIndexContainer from './booking/booking_index_container';
 import BookingEditContainer from './booking/booking_edit_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
+import SearchContainer from './search/search_container';
 import NotFoundPage from './notfoundpage/not_found_page.jsx';
 import About from './about/about.jsx';
 import Modal from './modal/modal';
@@ -27,11 +28,11 @@ const App = () => (
                 <Route exact path="/" component={SplashContainer} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-                {/* <Route exact path="/spots/:spotId/reviews" component={SpotShowContainer} /> */}
                 <Route exact path="/users/:userId/bookings" component={BookingIndexContainer} />
                 <Route path="/users/:userId/bookings/:bookingId/edit" component={BookingEditContainer} />
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
+                {/* <Route exact path="/search/:locationId" component={SearchContainer} /> */}
                 <Route path="*" component={NotFoundPage} />
             </Switch>
                 <footer>

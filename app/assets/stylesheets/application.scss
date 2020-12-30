@@ -39,7 +39,10 @@
 @import "components/review.scss";
 @import "components/modal_review_edit.scss";
 @import "components/spot_map.scss";
-
+@import 'react-dates/lib/css/_datepicker.css';
+@import "components/search_input.scss";
+@import "components/search_input_custom.css";
+@import 'semantic-ui-css/semantic.min.css';
 //test font
 // @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');

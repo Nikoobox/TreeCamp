@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import SpotIndexContainer from '../spot/spot_index_container';
+import SearchInput from '../search/search_input';
 import About from '../about/about';
 import Scroll from "react-scroll";
 const ScrollLink = Scroll.Link;
@@ -23,19 +24,7 @@ class Splash extends React.Component{
                     <div className='splash-main-subtitle'> Book one of these tree house cabin rentals today and stay in the trees!</div>
                 </div>
 
-                <div className='splash-main-search-box'>
-                    <div className='search-box-inner'>
-                        <div className='search-box-inner-input'>
-                            <span>{searchIcon}</span>
-                            <input type="search" placeholder='Climb the tallest tree ...' className='search-box-input'/>
-                        </div>
-
-                        <button className='search-box-dates'>Enter dates</button>
-                        <button className='search-box-all-listings'>All listings</button>
-                        <button className='search-box-button'>Search</button>
-
-                    </div>
-                </div>
+                <SearchInput/>
                 <SpotIndexContainer />
 
                 <div className='splash-explore-box'>
