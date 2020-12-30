@@ -74,6 +74,7 @@
 
 #### Bookings
 - Logged in or demo users can book a tree house. Checkin, checkout dates and number of guests must be provided. On successful booking, a user is redirected to the bookings index page.
+- All bookings are displayed on booking index page. User can edit or delete exosting booking.
 <div>
   <img width="75%" src="readme/booking2.gif">
 </div>
