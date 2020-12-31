@@ -13,56 +13,83 @@ class SearchInput extends React.Component {
             startDate:null,
             endDate:null,
             location:'',
-            display:false
+            display:false,
+            value:''
         }
     }
 
-    showLocations(){
-        const locations = [
-            ['Sweden', 1],
-            [ 'Canada', 2 ],
-            [ 'Mexico', 3 ],
-            [ 'Laos', 4 ],
-            [ 'New Zealand', 5 ],
-            [ 'South Africa', 6 ],
-            ['Japan',7],
-            ['UK', 8]
-        ]
-        const locDiv = document.getElementById('locations-box');
-        locations.forEach((loc)=>{
-            let div = document.createElement('div')
-            div.innerHTML = 
-                `
-                <div class='country' key=${loc[1]} id =${loc[1]}>
-                    ${loc[0]}
-                </div>
-                `
-            locDiv.appendChild(div)
-            
+    // showLocations(){
+    //     const locations = [
+    //         ['Sweden', 1],
+    //         [ 'Canada', 2 ],
+    //         [ 'Mexico', 3 ],
+    //         [ 'Laos', 4 ],
+    //         [ 'New Zealand', 5 ],
+    //         [ 'South Africa', 6 ],
+    //         ['Japan',7],
+    //         ['UK', 8]
+    //     ]
+    // }
 
-        })
+    handleInput(field) {
+        console.log(field)
+        return (e) => {
+            console.log(e)
+            this.setState({
+                [field]: e.currentTarget.value
+            })
+        }
     }
 
-
-
     render() {
-        // console.log(this.props);
         console.log(this.state);
-        // let func = !this.state.display ? () => this.showLocations() : null;
         const searchIcon = <FontAwesomeIcon icon={faSearch} />
-        const friendOptions = [
+
+        const {value} = this.state;
+
+        const searchOptions = [
             {
-                key: 'Sweden',
+                key: 1,
                 text: 'Sweden',
-                value: 'Sweden',
+                value: 1,
                 // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
             },
             {
-                key: 'Canada',
+                key: 2,
                 text: 'Canada',
-                value: 'Canada',
-                // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
+                value: 2,
             },
+            {
+                key: 3,
+                text: 'Mexico',
+                value: 3,
+            },
+            {
+                key: 4,
+                text: 'Laos',
+                value: 4,
+            },
+            {
+                key: 5,
+                text: 'New Zealand',
+                value: 5,
+            },
+            {
+                key: 6,
+                text: 'South Africa',
+                value: 6,
+            },
+            {
+                key: 7,
+                text: 'Japan',
+                value: 7,
+            }
+            ,
+            {
+                key: 8,
+                text: 'UK',
+                value: 8,
+            }
         
         ]
         return (
@@ -79,7 +106,9 @@ class SearchInput extends React.Component {
                             placeholder='Select Destination'
                             fluid
                             selection
-                            options={friendOptions}
+                            options={searchOptions}
+                            onChange={this.handleInput()}
+                            value={value}
                         />
                     </div>
                     <DateRangePicker

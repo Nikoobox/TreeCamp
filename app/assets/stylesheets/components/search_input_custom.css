@@ -8,11 +8,11 @@
     margin-left:10px;
 }
 .DateRangePicker_picker__portal{
-    background-color: rgba(0,0,0,.025);
-    /* background: transparent; */
+    /* background-color: rgba(0,0,0,.025); */
+    background: transparent;
     position:absolute;
     /* z-index:1000; */
-    top:50px; 
+    top:160px; 
     /* left:50%;
     /* height:auto;
     width:auto; */
