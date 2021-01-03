@@ -13,10 +13,14 @@
             justify-content: center;
             text-align: center;
             position: relative;
-             box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
             span{
                 margin:auto;
                 padding-left: 10px;
+            }
+            .search{
+                padding:14px!important;
+                line-height: 24px!important;
             }
             .search-box-input{
                 font-weight: 300;
@@ -31,7 +35,8 @@
                 border-radius: 0;
                 border:0;
                 font-size:16px;
-                line-height: 24px;;
+                line-height: 24px;
+                padding:14px;
             }
             .ui.active.visible.fluid.selection.dropdown{
                 border:0;
@@ -43,6 +48,9 @@
                         padding-left:0;
                     }
                 }
+            }
+            .dropdown.icon{
+                display:none;
             }
             // #locations-box{
             //     position: absolute;
@@ -106,7 +114,7 @@
             background:$mainLightGreen;
             color:white;
             border:2px solid transparent;
-            font-size: 1rem;
+            font-size: 16px;
             transition: ease-out all 0.2s;
             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
             &:hover{

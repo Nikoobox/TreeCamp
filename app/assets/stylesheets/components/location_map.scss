@@ -1,0 +1,21 @@
+.location-map-container{
+    min-height:100vh;
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 150px 64px 0;
+    .left{
+        width:50%;
+        background:yellow;
+        .location-container{
+            .spot-box{
+                margin: 20px;
+            }
+        }
+    }
+    .right{
+        width:50%;
+        background:grey;
+    }
+
+}

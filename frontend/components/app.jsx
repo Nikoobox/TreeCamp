@@ -11,7 +11,7 @@ import BookingIndexContainer from './booking/booking_index_container';
 import BookingEditContainer from './booking/booking_edit_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import SearchContainer from './search/search_container';
+import LocationMapContainer from './search/location_map_container';
 import NotFoundPage from './notfoundpage/not_found_page.jsx';
 import About from './about/about.jsx';
 import Modal from './modal/modal';
@@ -32,7 +32,7 @@ const App = () => (
                 <Route path="/users/:userId/bookings/:bookingId/edit" component={BookingEditContainer} />
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
-                {/* <Route exact path="/search/:locationId" component={SearchContainer} /> */}
+                <Route exact path="/browse/:locationId" component={LocationMapContainer} />
                 <Route path="*" component={NotFoundPage} />
             </Switch>
                 <footer>

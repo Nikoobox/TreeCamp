@@ -21,6 +21,10 @@
     justify-content: center;
     align-items: center;
     color:$mainDarkGreen;
+    line-height: 24px;
+    &:hover{
+        color: $mainAlmostBlack;
+    }
     img{
         width:27px;
         margin-right:5px;
@@ -34,6 +38,7 @@
 }
 
 .nav-right {
+    font-size:16px;
     li{
         margin:auto
     }
