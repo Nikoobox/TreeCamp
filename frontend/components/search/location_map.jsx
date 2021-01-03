@@ -14,7 +14,7 @@ class LocationMap extends React.Component {
 
     componentDidMount() {
         this.props.fetchSpots();
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }
 
 
@@ -23,7 +23,7 @@ class LocationMap extends React.Component {
         if (this.props.spots.length === 0) return null; 
         // console.log('the props from maps is: ', this.props.spots);
         // console.log(this.props.countryName);
-
+        
 
         let country, location, lat, lon;
         this.props.spots.forEach((spot)=>{

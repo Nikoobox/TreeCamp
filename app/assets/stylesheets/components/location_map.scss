@@ -3,19 +3,135 @@
     display:flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 150px 64px 0;
+    margin: 110px 64px 100px;
+    @media (min-width: 1200px){
+        margin: 110px 100px 100px;
+    }
+    @media (min-width: 1600px){
+        margin: 150px 150px 100px;
+    }
     .left{
-        width:50%;
-        background:yellow;
-        .location-container{
-            .spot-box{
-                margin: 20px;
+        width:40%;
+        margin: 0 40px 0 0;
+        display: flex;
+        flex-direction:column;
+        align-content:flex-start;
+        .spot-card{
+            margin-bottom:75px;
+            max-width:500px;
+            color:black;
+            transition: ease-out all 0.3s;
+        
+            .card-container{
+                // box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                border-bottom: 1px solid rgba(222, 222, 222, 1);
+                border-radius: 8px 8px 0 0;
+                overflow: hidden;
+                &:hover{
+                    cursor:pointer;
+                    background-color: rgb(245, 245, 245);
+                }
+                .card-img{
+                    width:100%;
+                    height: 200px;
+                    // border-radius: 8px;
+                }
+                img{
+                    width:100%;
+                    // position:top;
+                    height:195px;
+                    object-fit: cover;
+                }
+                .card-data{
+                    padding:12px;
+                    .card-header{
+                        margin-bottom: 25px;
+                        .card-header-title{
+                            font-size:20px;
+                            margin-bottom: 5px;;
+                        }
+                        .card-header-location{
+                            font-size:14px;
+                            font-weight:300;
+                        }
+                    }
+
+                    .card-footer{
+                        display:flex;
+                        justify-content:space-between;
+                        .card-footer-rating{
+                            color:$mainLightGreen;
+                            font-weight:bold;
+                        }
+                        .card-footer-price{
+                            font-size:18px;
+                        }
+                    }
+                }  
             }
         }
     }
-    .right{
-        width:50%;
-        background:grey;
-    }
 
+    .right{
+        width:60%;
+        // background:grey;
+        position: sticky;
+        top: 110px;
+        // margin-bottom:50px;
+        .map-container{
+            width:100%;
+            height:580px;
+           
+            @media (min-width: 1600px){
+                height:800px;
+            }
+            .info-window-box{
+                display:flex;
+                .img-box{
+                    width:110px;
+                    height:150px;
+                    img{
+                        width:100%;
+                        height:150px;
+                        position:top;
+                        object-fit: cover;
+                    }
+                }
+                .spot-box{
+                    width:200px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content: space-between;
+                    padding:10px;
+                    .title{
+                        font-size:18px;
+                        font-weight:bold;
+                    }
+                    .footer-box{
+                        display:flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                        font-weight:bold;
+                        font-size: 20px;
+                        .rating{
+                            color:$mainLightGreen;
+                        }
+                        .price{
+                            font-size:16px;
+                        } 
+                    }
+                }
+            }
+            .gm-style .gm-style-iw-c{
+                padding:0;
+            }
+            .gm-style-iw-d{
+                overflow: hidden !important;
+            }
+        }
+    }
+}
+
+.gm-ui-hover-effect{
+    display: none !important;
 }

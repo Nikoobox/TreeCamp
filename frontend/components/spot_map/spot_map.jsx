@@ -1,6 +1,6 @@
 import React from 'react';
 // import { withRouter } from 'react-router-dom';
-import MarkerManager from '../../util/marker_manager';
+// import MarkerManager from '../../util/marker_manager';
 
 
 class SpotMap extends React.Component {
