@@ -94,7 +94,12 @@
 </div>
 
 #### Maps
-- On the bottom of the spot show page, an approximate site location is displayed with Google Maps API. Site information summary is provided for reference.
+- After the user selects desired destination from the search bar, new page is rendered with site locations marked with Google Maps markers. Additional site information is available on marker hover. 
+- The second location of Google Maps is on the bottom of the spot show page. Site information summary is provided for reference.
+<div>
+  <img width="75%" src="readme/map_spots.gif">
+</div>
+<p>&nbsp;</p>
 <div>
   <img width="75%" src="readme/map.png">
 </div>
@@ -152,5 +157,5 @@ updateRating(){
 <p>&nbsp;</p>
 
 ### Future Upgrades
-- Add search functionality.
+- Improve search functionality.
 - Allow users to create/add their treehouses
