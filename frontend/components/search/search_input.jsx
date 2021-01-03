@@ -30,7 +30,7 @@ class SearchInput extends React.Component {
     }
 
     handleSearch(){
-        if(this.state.startDate && (this.state.location !== '')){
+        if(this.state.location !== ''){
             // this.props.history.push(`/browse/${this.state.value}`);
             this.props.history.push({
                 pathname: `/browse/${this.state.value}`,
@@ -39,6 +39,13 @@ class SearchInput extends React.Component {
                 }
             });
             
+        } else{
+            this.props.history.push({
+                pathname: `/browse/2`,
+                state: {
+                    country: 'Canada'
+                }
+            });
         }
     }
 
