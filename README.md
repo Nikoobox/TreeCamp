@@ -94,7 +94,7 @@
 </div>
 
 #### Maps
-- After selecting desired destination from the search bar, new page with available sites is rendered with Google Maps. Additional site information is available on marker hover. 
+- After selecting desired destination from the search bar, new page with available sites is rendered. Sites are marked on Google Map with google.maps.Marker. Additional site information is available on marker hover.  
 - The second location of Google Maps is on the bottom of the spot show page. Site information summary is provided for reference.
 <div>
   <img width="75%" src="readme/map_spots.gif">
