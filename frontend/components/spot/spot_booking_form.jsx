@@ -22,7 +22,7 @@ class SpotBookingForm extends React.Component {
     render() {
         const { spot, spots, errorsBooking, createBooking, deleteBooking, currentUserId } = this.props;
         // console.log(this.state);
-        console.log(this.props);
+        // console.log(this.props);
         
         return (
             // <form className='booking-widget'>
