@@ -86,7 +86,7 @@
 #### Reviews
 - On the spot show page, logged in users can write, delete or edit their reviews. Spot rating is dynimically updated based on the average reviews rating
 <div>
-  <img width="75%" src=`${open('https://app-treecamp-seeds.s3.amazonaws.com/treecamp-photos/11.jpg')}`>
+  <img width="75%" src="readme/reviews.gif">
 </div>
 <p>&nbsp;</p>
 <div align="center">
