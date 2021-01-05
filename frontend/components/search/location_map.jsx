@@ -1,5 +1,4 @@
-import React, { createElement } from 'react';
-import MarkerManager from '../../util/marker_manager';
+import React from 'react';
 import Map from './map';
 import Location from './location';
 import { withRouter } from 'react-router-dom';
@@ -17,8 +16,6 @@ class LocationMap extends React.Component {
         window.scrollTo(0, 0);
     }
 
-
-
     render() {
         if (this.props.spots.length === 0) return null; 
         // console.log('the props from maps is: ', this.props.spots);
@@ -31,18 +28,25 @@ class LocationMap extends React.Component {
                 country = spot.country;
                 lat= spot.latitude;
                 lon = spot.longitude;
+            } else if (this.props.countryName === 'All Spots') {
+                country = 'Canada';
+                lat = 50.110834;
+                lon = -122.955891;
             }
         })
 
         const properSpots = this.props.spots.filter((spot)=>{
             if (spot.country === this.props.countryName){
                 return spot
+            } else if (this.props.countryName === 'All Spots'){
+                return spot
             }
         })
-// console.log('PORPERSPOTS', properSpots)
+
         return (
             <div className='location-map-container'>
                 <div className='left'>
+                    {properSpots.length === 9 ? <div className='loc-main-title'> Discover All Treehouses: </div> : <div className='loc-main-title'> Discover {this.props.countryName}: </div>}
                     {properSpots.map((spot, idx)=>{
                         return <Location 
                                     spot={spot}

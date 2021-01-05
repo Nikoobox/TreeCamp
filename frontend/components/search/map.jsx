@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import MarkerManager from '../../util/marker_manager';
 import { withRouter } from 'react-router-dom';
 

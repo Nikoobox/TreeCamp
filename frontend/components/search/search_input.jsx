@@ -41,9 +41,9 @@ class SearchInput extends React.Component {
             
         } else{
             this.props.history.push({
-                pathname: `/browse/2`,
+                pathname: `/browse/9`,
                 state: {
-                    country: 'Canada'
+                    country: 'All Spots'
                 }
             });
         }
@@ -117,7 +117,7 @@ class SearchInput extends React.Component {
                         readOnly
                         daySize={40}
                     />
-                    <button className='search-box-all-listings'>All listings</button>
+                    {/* <button className='search-box-all-listings'>All listings</button> */}
                     <button className='search-box-button' onClick={()=>this.handleSearch()}>Search</button>
 
                 </div>
