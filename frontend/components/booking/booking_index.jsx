@@ -11,7 +11,7 @@ class BookingIndex extends React.Component {
     componentDidMount(){
         this.props.fetchBookings().then(()=>{
             this.props.fetchSpots().then(()=>{
-                console.log('spots are fetched');
+                // console.log('spots are fetched');
             })
         });
     }

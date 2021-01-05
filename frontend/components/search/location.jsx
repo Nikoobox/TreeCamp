@@ -9,13 +9,13 @@ class Location extends React.Component {
         super(props);
 
     }
-    
+
     componentDidMount() {
         // window.scrollTo(0, 0);
     }
 
     render() {
-        console.log('the props from location: ', this.props);
+        // console.log('the props from location: ', this.props);
         const { title, price, location, country, rating, photoUrls } = this.props.spot; 
         return (
             

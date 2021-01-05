@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const { errors, formType, message, buttonText} = this.props;
         const { first_name, last_name, email, password } = this.state;
 
