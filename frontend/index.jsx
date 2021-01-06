@@ -5,7 +5,7 @@ import { signup, login, logout } from './util/session_api_util';
 import { fetchSpots, fetchSpot } from './actions/spot_actions';
 import Root from './components/root'
 import {openModal} from './actions/modal_actions';
-// import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-css/semantic.min.css';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
