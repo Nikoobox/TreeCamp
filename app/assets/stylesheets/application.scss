@@ -13,6 +13,7 @@
  *= require_self
  */
  
+//  @import 'semantic-ui-css/semantic.min.css';
 
  //reset
 @import "base/reset.scss";
@@ -23,7 +24,6 @@
 
 
 //components
-@import 'semantic-ui-css/semantic.min.css';
 @import "components/modal.scss";
 @import "components/navbar.scss";
 @import "components/index.scss";
