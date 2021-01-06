@@ -5,6 +5,9 @@ import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import { Dropdown } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
+// import 'semantic-ui-dropdown/dropdown.css'
+
+// import '../../../node_modules/semantic-ui-dropdown/dropdown.css';
 
 class SearchInput extends React.Component {
     constructor(props) {
@@ -21,8 +24,6 @@ class SearchInput extends React.Component {
     }
 
     handleInput(e, data) {
-            // console.log('e is: ', e)
-            // console.log('data is: ', data)
         return  this.setState({
                 value: data.value,
                 location: e.target.innerText
@@ -31,7 +32,6 @@ class SearchInput extends React.Component {
 
     handleSearch(){
         if(this.state.location !== ''){
-            // this.props.history.push(`/browse/${this.state.value}`);
             this.props.history.push({
                 pathname: `/browse/${this.state.value}`,
                 state: {
@@ -51,13 +51,8 @@ class SearchInput extends React.Component {
 
     render() {
         const searchIcon = <FontAwesomeIcon icon={faSearch} />
-        
         const {value} = this.state;
-        // console.log('the state is: ',this.state);
-        if(this.state.startDate){
-            // console.log('START DATE IS', this.state.startDate._d);
-        }
-
+       
         const searchOptions = [
             { key: 1,
             text: 'Sweden',
@@ -117,7 +112,6 @@ class SearchInput extends React.Component {
                         readOnly
                         daySize={40}
                     />
-                    {/* <button className='search-box-all-listings'>All listings</button> */}
                     <button className='search-box-button' onClick={()=>this.handleSearch()}>Search</button>
 
                 </div>

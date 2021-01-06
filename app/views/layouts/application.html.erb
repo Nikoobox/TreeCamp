@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <!-- <link
+      async
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css"
+    />
+    <script
+      async
+      src="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.js"
+    ></script>-->
+
       <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-21EVCLGH5M"></script>
     <script>
@@ -10,14 +20,13 @@
 
       gtag('config', 'G-21EVCLGH5M');
     </script>
-       
+
     <meta property="og:title" content="Tree Camp" />
     <meta property='og:image' content="<%= image_url('linkedin_treecamp.png') %>"/>
     <meta property="og:description" content="Treecamp is the best platform to explore, search and book the most unique treehouses all over the world"/>
     <meta property="og:url" content="http://tree-camp.herokuapp.com/"/>
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
-    <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -40,7 +49,7 @@
       window.arrow_right = "<%= image_url('arrow_right.png') %>"
       window.arrow_down = "<%= image_url('arrow_down.png') %>"
     </script>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
