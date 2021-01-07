@@ -13,9 +13,11 @@
  *= require_self
  */
  
- @import 'semantic-ui-css/semantic.min.css';
+// @import 'semantic-ui-css/semantic.min.css';
+// @import 'components/test.scss';
 
- //reset
+@import url("//cdn.jsdelivr.net/npm/semantic-ui@2.0.1/dist/semantic.min.css");
+
 @import "base/reset.scss";
 
 //general
