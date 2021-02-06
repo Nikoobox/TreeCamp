@@ -19,11 +19,10 @@ class Navbar extends React.Component{
 
     render(){
         const { currentUser, logout } = this.props;
-        // const element = <FontAwesomeIcon icon={faTree} />
 
         const whenCurrentUser = !currentUser ? 
             <>
-                <li>  <Link to="/about" className='navbar-link'>About</Link> </li>
+                {/* <li>  <Link to="/about" className='navbar-link'>About</Link> </li> */}
 
                 {/* <li>  <ScrollLink to="/" className='navbar-link' to="about-section" smooth={true} duration={200}>About</ScrollLink> </li> */}
          
@@ -32,7 +31,7 @@ class Navbar extends React.Component{
             </> : 
             <>
                 <li className='navbar-welcome-user' onClick={this.showUser}>Welcome,<span> {currentUser.first_name}</span>!</li>
-                <li>  <Link to="/about" className='navbar-link'>About</Link> </li>
+                {/* <li>  <Link to="/about" className='navbar-link'>About</Link> </li> */}
                 {/* <li>  <ScrollLink to="/" className='navbar-link' to="about-section"  duration={200}>About</ScrollLink> </li> */}
 
                 <li ><Link to="/"><button onClick={() => logout()} className='navbar-logout-btn'>Log Out</button></Link></li>

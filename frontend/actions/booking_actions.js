@@ -36,7 +36,6 @@ export const fetchBookings = () => dispatch => {
     })
 }
 export const fetchBooking = bookingId => dispatch => {
-    // debugger
     return APIUtil.fetchBooking(bookingId)
     .then(booking => {
         return dispatch(receiveBooking(booking))
@@ -45,22 +44,18 @@ export const fetchBooking = bookingId => dispatch => {
 export const createBooking = booking => dispatch => {
     return APIUtil.createBooking(booking)
     .then(booking => {
-        // debugger
         return dispatch(receiveBooking(booking))
     },
     (err) => {
-        // debugger
         return dispatch(receiveBookingErrors(err.responseJSON))
     })
 }
 export const updateBooking = booking => dispatch => {
     return APIUtil.updateBooking(booking)
     .then(booking => {
-        // debugger
         return dispatch(receiveBooking(booking))
     },
     (err) => {
-        // debugger
         return dispatch(receiveBookingErrors(err.responseJSON))
     })
 }

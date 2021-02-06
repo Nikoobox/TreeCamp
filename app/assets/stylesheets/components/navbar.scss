@@ -14,7 +14,7 @@
 
 .nav-logo-image{
     color: $mainAlmostBlack;
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 1.5px;
     font-weight:bold;
     display:flex;
@@ -26,7 +26,7 @@
         color: $mainAlmostBlack;
     }
     img{
-        width:27px;
+        width:30px;
         margin-right:5px;
     }
 }
@@ -38,7 +38,7 @@
 }
 
 .nav-right {
-    font-size:16px;
+    font-size:18px;
     li{
         margin:auto
     }
@@ -68,7 +68,7 @@
     color:white;
     border: 2px solid transparent;
     margin-left: 20px;
-    padding:5px;
+    padding:5px 10px;
     transition: ease-out all 0.2s;
     &:hover{
         background: white;

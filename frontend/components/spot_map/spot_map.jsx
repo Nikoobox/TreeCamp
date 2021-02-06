@@ -38,7 +38,6 @@ class SpotMap extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
         const {spot, users} = this.props
         return (
             <div className="map" id='map-container' ref="map">

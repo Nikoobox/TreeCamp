@@ -6,7 +6,6 @@ export const fetchBookings = () => {
 }
 
 export const fetchBooking = bookingId => {
-    // debugger
     return $.ajax({
         method: 'GET',
         url: `/api/bookings/${bookingId}`
@@ -14,7 +13,6 @@ export const fetchBooking = bookingId => {
 };
 
 export const createBooking = booking => {
-    // debugger
     return $.ajax({
         method: 'POST',
         url: `/api/bookings`,

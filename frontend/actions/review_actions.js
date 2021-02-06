@@ -37,7 +37,6 @@ export const fetchReviews = (spotId) => dispatch => {
 }
 
 export const fetchReview = reviewId => dispatch => {
-    // debugger
     return APIUtil.fetchReview(reviewId)
         .then(review => {
             return dispatch(receiveReview(review))
@@ -45,14 +44,11 @@ export const fetchReview = reviewId => dispatch => {
 }
 
 export const createReview = review => dispatch => {
-    // debugger
     return APIUtil.createReview(review)
         .then(review => {
-            // debugger
             return dispatch(receiveReview(review))
         },
             (err) => {
-                // debugger
                 return dispatch(receiveReviewErrors(err.responseJSON))
             })
 }
@@ -60,11 +56,9 @@ export const createReview = review => dispatch => {
 export const updateReview = review => dispatch => {
     return APIUtil.updateReview(review)
         .then(review => {
-            // debugger
             return dispatch(receiveReview(review))
         },
             (err) => {
-                // debugger
                 return dispatch(receiveReviewErrors(err.responseJSON))
             })
 }

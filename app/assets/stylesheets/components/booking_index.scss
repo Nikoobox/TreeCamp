@@ -75,19 +75,30 @@
         }
         .booked-items{
             .card-booked-item{
+                border-radius:16px;
                 display: flex;
+                height:300px;
                 margin-bottom:40px;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
                 .card-image{
                     width:50%;
-                    margin:10px;
+                    // margin:10px;
+                    // height:100%;
+                    // position:relative;
+                    border-radius: 16px 0 0 16px;
+                    height:300px;
                     img{
+                         border-radius: 16px 0 0 16px;
+                        height:300px;
+                         object-position:top;
+                        // position:absolute;
+                        object-fit: cover;
                         width:100%;
                     }
                 }
                 .card-info-container{
                     width:50%;
-                    margin:10px;
+                    margin:10px 10px 10px 20px;
                     position:relative;
                     .booking-number{
                         position:absolute;
@@ -167,12 +178,12 @@
                 justify-content:center;
                 .discover-btn{
                     margin-top:20px;
-                    background: $mainLightGreen;
-                    color:$mainMidGreen;
-                    padding:5px 10px;
+                    background: white;
+                    color:black;
+                    padding:8px 12px;
                     font-size:16px;
                     letter-spacing: 0.2px;
-                    border: 2px solid transparent;
+                    border: 2px solid black;
                     transition: ease-out all 0.2s;
                     &:hover{
                         cursor:pointer;

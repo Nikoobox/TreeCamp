@@ -18,7 +18,6 @@ class BookingIndexItem extends React.Component {
                 
                 <div className="card-image">
                     <img src={`${spots[booking.spot_id].photoUrls[0]}`} alt=""/>
-                    
                 </div>
                 <div className="card-info-container">
                     <div className='booking-number'>{num}</div>
