@@ -10,24 +10,43 @@
     border:none;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     margin-left:10px;
+    @media(max-width: 768px){
+        width:100%;
+        margin-left:0;
+        margin: 5px 0;
+        display:flex;
+        flex-direction: column;
+    }
 }
 .DateRangePicker_picker__portal{
-    /* background-color: rgba(0,0,0,.025); */
     background: transparent;
     position:absolute;
-    /* z-index:1000; */
     top:90px; 
-    /* left:50%;
-    /* height:auto;
-    width:auto; */
 }
 .DayPicker{
-    /* position:absolute;
-    top:0; */
     box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    // @media(max-width: 768px){
+        
+    //     display:flex;
+    //     flex-direction: column;
+    // }
 }
 .DateRangePickerInput__withBorder{
     border:0;
+}
+.DatePicker__transitionContainer{
+  @media(max-width: 768px){
+        
+        display:flex;
+        flex-direction: column;
+    }
+}
+.DatePicker__focusRegion{
+  @media(max-width: 768px){
+        
+        display:flex;
+        flex-direction: column;
+    }
 }
 
 .DateInput_input{
@@ -39,7 +58,6 @@
            
 .DateRangePickerInput_arrow{
     display:none;
-    /* color: transparent; */
 }
 .DateRangePickerInput{
     display:flex;

@@ -79,6 +79,8 @@ class SearchInput extends React.Component {
             text: 'UK',
             value: 8}
         ]
+        // const smallDevice = window.matchMedia('(max-width: 400px)').matches;
+        // const orientation = smallDevice ? VERTICAL_ORIENTATION : HORIZONTAL_ORIENTATION;
         return (
             <div className='splash-main-search-box'>
                 <div className='search-box-inner'>
@@ -107,6 +109,8 @@ class SearchInput extends React.Component {
                         endDatePlaceholderText=""
                         noBorder={false}
                         hideKeyboardShortcutsPanel={true}
+                        // orientation={orientation}
+                        // withPortal={smallDevice}
                         withPortal
                         block
                         readOnly

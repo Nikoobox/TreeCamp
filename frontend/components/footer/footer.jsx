@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaRegUser, FaChevronUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaRegUser} from 'react-icons/fa';
 import { BsFillTriangleFill } from "react-icons/bs";
 
 

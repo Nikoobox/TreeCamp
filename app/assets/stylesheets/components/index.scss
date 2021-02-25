@@ -8,6 +8,9 @@
         flex-wrap: wrap;
         margin-bottom:75px;
         width:100%;
+        @media(max-width: 768px){
+            // flex-wrap: nowrap;
+        }
         .spot-index-card{
             padding-left:20px;
             padding-right:20px;
@@ -16,6 +19,16 @@
             margin-bottom:24px;
             color:black;
             transition: ease-out all 0.3s;
+             @media(max-width: 992px){
+                // flex-wrap: nowrap;
+                width:50%;
+                // flex:1;
+            }
+            @media(max-width: 768px){
+                // flex-wrap: nowrap;
+                width:100%;
+                // flex:1;
+            }
            
             .card-container{
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
