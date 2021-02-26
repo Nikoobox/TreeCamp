@@ -8,7 +8,7 @@
         border-radius:16px;
         @media(max-width: 768px){
             // flex-direction:column;
-            overflow: hidden;
+            // overflow: hidden;
         }
         .search-box-inner-input{
             width: 100%;
@@ -45,6 +45,7 @@
                 box-shadow: none;
             }
             .visible.menu.transition{
+                // z-index: 1000;
                 .option{
                     .text{
                         padding-left:0;
