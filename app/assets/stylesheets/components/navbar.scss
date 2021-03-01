@@ -28,6 +28,9 @@
     &:hover{
         color: $mainAlmostBlack;
     }
+    @media(max-width: 768px){
+        font-size: 22px;
+    }
     img{
         width:30px;
         margin-right:5px;
@@ -38,9 +41,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-right {
     font-size:18px;
     li{
         margin:auto
@@ -58,12 +58,75 @@
         margin-left: 20px;
         text-align: center;
         padding:2px;
+        border-bottom:2px solid white;
+        transition: 0.2s all ease-out;
         &:hover{
             border-bottom:2px solid $mainLightGreen;
             cursor: pointer;
         }
+        @media(max-width: 768px){
+            // color: $mainWhite;
+        }
+    }
+    .hide-link{
+        display:block;
+        @media(max-width: 768px){
+            display:none;
+        }
+    }
+    .dropdown{
+        display:none;
+        background-color: transparent;
+        .burger{
+            width:35px;
+            height:35px;
+            // background-color: transparent;
+            svg{
+                width:100%;
+                height:100%;
+                background-color: white;;
+                fill:$mainDarkGreen;
+                color:$mainDarkerGrey;
+            }
+        }
+        @media(max-width: 768px){
+            display:block;
+            // .dropdown-menu .show{
+            //     display:flex;
+            //     flex-direction: column;
+            //     align-items: center;
+            //     justify-content: center;
+            // }
+
+        }
+        .dropdown-menu.show{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top:5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size:18px;
+            padding:30px;
+            color:$mainDarkerGrey;
+            border-radius: 16px;
+            .dropdown-item{
+                padding:10px 5px;
+                transition: ease-out all 0.2s;
+                color:$mainDarkerGrey;
+                &:hover{
+                    // font-weight:600;
+                    background-color: rgb(245, 245, 245);
+                }
+            }
+        }
     }
 }
+// .hide-link{
+
+// }
+
+
 
 
 .navbar-logout-btn{
