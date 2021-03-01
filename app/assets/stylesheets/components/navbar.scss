@@ -76,7 +76,7 @@
     }
     .dropdown{
         display:none;
-        background-color: transparent;
+        background-color: white;
         .burger{
             width:35px;
             height:35px;
@@ -90,6 +90,7 @@
             }
         }
         @media(max-width: 768px){
+            
             display:block;
             // .dropdown-menu .show{
             //     display:flex;
@@ -100,6 +101,7 @@
 
         }
         .dropdown-menu.show{
+            background-color: white;
             display:flex;
             flex-direction: column;
             align-items: flex-start;
