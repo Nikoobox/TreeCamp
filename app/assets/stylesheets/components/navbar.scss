@@ -105,20 +105,23 @@
             display:flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            // justify-content: center;
             margin-top:5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            // box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             font-size:24px;
-            padding:20px;
+            padding-top:20%;
             color:$mainDarkerGrey;
             border-radius: 16px;
-            width:50vw;
-            height:50vh;
+            width:100vw;
+            height:100vh;
             .dropdown-item{
-                padding:30px 0;
+                margin: 20px 0;
+                padding:10px 0;
                 transition: ease-out all 0.2s;
+                border-bottom: 5px solid white;
                 color:$mainDarkerGrey;
                 &:hover{
+                     border-bottom: 5px solid $mainLightGreen;
                     // font-weight:600;
                     // background-color: rgb(245, 245, 245);
                 }
