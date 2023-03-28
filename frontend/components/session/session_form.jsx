@@ -1,95 +1,145 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class SessionForm extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            first_name: "", last_name: "", email: "", password: "" };
+    this.state = {
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+    };
 
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.demoUser = this.demoUser.bind(this);
-    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
+  }
 
-    componentWillUnmount(){
-        this.props.closeModal();
-        this.props.clearSessionErrors();
-    }
+  componentWillUnmount() {
+    this.props.closeModal();
+    this.props.clearSessionErrors();
+  }
 
-    demoUser(e) {
-        e.preventDefault();
-        const user = {
-            first_name: "demo", last_name: "user", email: "demo@gmail.com", password: "1234567"
-        };
-        this.props.login(user);
-    }
+  demoUser(e) {
+    e.preventDefault();
+    const user = {
+      first_name: "demo",
+      last_name: "user",
+      email: "demo@gmail.com",
+      password: "1234567",
+    };
+    this.props.login(user);
+  }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-    }
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+  }
 
-    update(field) {
-        return (e) => {
-            this.setState({ [field]: e.currentTarget.value })
-        }
-    }
+  update(field) {
+    return (e) => {
+      this.setState({ [field]: e.currentTarget.value });
+    };
+  }
 
-    render() {
-        // console.log(this.props)
-        const { errors, formType, message, buttonText} = this.props;
-        const { first_name, last_name, email, password } = this.state;
+  render() {
+    const { errors, formType, message, buttonText } = this.props;
+    const { first_name, last_name, email, password } = this.state;
 
-        const renderErrs = errors.map((err, idx) => {
-        return <div className='errors' key={idx}> {err} </div>
-        })
+    const renderErrs = errors.map((err, idx) => {
+      return (
+        <div className="errors" key={idx}>
+          {" "}
+          {err}{" "}
+        </div>
+      );
+    });
 
-        const signUpFields = formType === 'Sign Up' ? <div className='session-form-signup'>    
-            <input onChange={this.update('first_name')} 
-                type="text" name="firstname" value={first_name} placeholder='First name' 
-                className='session-form-input'/>
+    const signUpFields =
+      formType === "Sign Up" ? (
+        <div className="session-form-signup">
+          <input
+            onChange={this.update("first_name")}
+            type="text"
+            name="firstname"
+            value={first_name}
+            placeholder="First name"
+            className="session-form-input"
+          />
 
-            <input onChange={this.update('last_name')} 
-                type="text" name="lastname" value={last_name} placeholder='Last name' 
-                className='session-form-input'/>
-            </div> : '';
+          <input
+            onChange={this.update("last_name")}
+            type="text"
+            name="lastname"
+            value={last_name}
+            placeholder="Last name"
+            className="session-form-input"
+          />
+        </div>
+      ) : (
+        ""
+      );
 
-        const headerMessage = formType === 'Log In' ? 'Welcome back!' : 'Join Tree Camp';
+    const headerMessage =
+      formType === "Log In" ? "Welcome back!" : "Join Tree Camp";
 
-        const redirectToForm = formType === 'Log In' ? 
-            <Link to="/signup" className='' onClick={() => this.props.closeModal()}>Dont't have an account? Please <span> Sign Up</span></Link> : 
-            <Link to="/login" className='' onClick={() => this.props.closeModal()}>Existing user? Please <span>Sign In</span></Link>;
+    const redirectToForm =
+      formType === "Log In" ? (
+        <Link to="/signup" className="" onClick={() => this.props.closeModal()}>
+          Dont't have an account? Please <span> Sign Up</span>
+        </Link>
+      ) : (
+        <Link to="/login" className="" onClick={() => this.props.closeModal()}>
+          Existing user? Please <span>Sign In</span>
+        </Link>
+      );
 
-        return (
-            <div className='session-modal'>
+    return (
+      <div className="session-modal">
+        <h1>{headerMessage}</h1>
+        <div className="demo-user-button-box">
+          <button
+            onClick={this.demoUser}
+            className="demo-user-button"
+            type="button"
+          >
+            {" "}
+            Demo User{" "}
+          </button>
+        </div>
 
-                <h1>{headerMessage}</h1>
-                <div className='demo-user-button-box'>
-                    <button onClick={this.demoUser} className='demo-user-button' type='button'> Demo User </button>
+        <form onSubmit={this.handleSubmit} className="session-form">
+          {signUpFields}
 
-                </div>
-                
-                <form onSubmit={this.handleSubmit} className='session-form'>
-                    {signUpFields}
-                     
-                    <input onChange={this.update('email')} type="email" name="email" value={email} placeholder='Email password' className='session-form-input'/>
-                    
-                    <input onChange={this.update('password')} type="password" name="password" value={password} placeholder='Create a password' className='session-form-input'/>
+          <input
+            onChange={this.update("email")}
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Email password"
+            className="session-form-input"
+          />
 
-                    <button className='session-form-button'> {buttonText} </button>
+          <input
+            onChange={this.update("password")}
+            type="password"
+            name="password"
+            value={password}
+            placeholder="Create a password"
+            className="session-form-input"
+          />
 
-                </form>
+          <button className="session-form-button"> {buttonText} </button>
+        </form>
 
-                    <div className='redirect-to-form'>{redirectToForm}</div>
+        <div className="redirect-to-form">{redirectToForm}</div>
 
-                <div className="session-form-errors"> 
-                    {renderErrs} 
-                </div>
-            </div>
-        )
-    }
+        <div className="session-form-errors">{renderErrs}</div>
+      </div>
+    );
+  }
 }
 
 export default SessionForm;

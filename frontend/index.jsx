@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
-import { signup, login, logout } from './util/session_api_util';
-import { fetchSpots, fetchSpot } from './actions/spot_actions';
+import { login } from './util/session_api_util';
+import { fetchSpots} from './actions/spot_actions';
 import Root from './components/root'
 import {openModal} from './actions/modal_actions';
-// import '../node_modules/semantic-ui-css/semantic.min.css';
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,15 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     //test start here
-
     window.login = login
     window.openModal = openModal;
     window.dispatch = store.dispatch;
-
     window.getState = store.dispatch;
     window.fetchSpots = fetchSpots;
-    
-
     //test ends here
 
     ReactDOM.render(<Root store={store}/>, root);
