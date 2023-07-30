@@ -1,0 +1,15 @@
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/nikolayshatalov/.rbenv/versions/2.7.1/bin/ruby -I /Users/nikolayshatalov/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20230729-23566-1ieqb2o.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20230729-23566-169daej/skiptrace/internal
