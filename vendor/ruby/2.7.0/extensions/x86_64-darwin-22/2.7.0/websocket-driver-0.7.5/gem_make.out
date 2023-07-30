@@ -1,0 +1,15 @@
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/nikolayshatalov/.rbenv/versions/2.7.1/bin/ruby -I /Users/nikolayshatalov/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20230729-23566-8q2jbr.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20230729-23566-za775g

@@ -1,0 +1,17 @@
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/racc-1.6.2/ext/racc/cparse
+/Users/nikolayshatalov/.rbenv/versions/2.7.1/bin/ruby -I /Users/nikolayshatalov/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20230729-23566-ajtizn.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/racc-1.6.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/racc-1.6.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/racc-1.6.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230729-23566-1xilgst/racc

@@ -1,0 +1,24 @@
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/date-3.3.3/ext/date
+/Users/nikolayshatalov/.rbenv/versions/2.7.1/bin/ruby extconf.rb
+checking for rb_category_warn()... no
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/date-3.3.3/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20230729-27894-f3fj9i sitelibdir\=./.gem.20230729-27894-f3fj9i clean
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/date-3.3.3/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20230729-27894-f3fj9i sitelibdir\=./.gem.20230729-27894-f3fj9i
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.bundle
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/date-3.3.3/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20230729-27894-f3fj9i sitelibdir\=./.gem.20230729-27894-f3fj9i install
+/usr/bin/install -c -m 0755 date_core.bundle ./.gem.20230729-27894-f3fj9i
+
+current directory: /Users/nikolayshatalov/Desktop/My Computer/Aap_Academy/project_1/vendor/ruby/2.7.0/gems/date-3.3.3/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20230729-27894-f3fj9i sitelibdir\=./.gem.20230729-27894-f3fj9i clean
